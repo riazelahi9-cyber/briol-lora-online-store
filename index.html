@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Discover jewellery, hair accessories, DIY supplies and more at BRIOLLORA. Shop from Pakistan and enquire about international delivery.">
+  <meta name="theme-color" content="#f8f5f0">
+  <title>BRIOLLORA — Little Details, Lovely Things</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <div class="announcement">Thoughtful finds, creative details · Pakistan & international enquiries</div>
+  <header class="site-header">
+    <a class="brand" href="#"><span class="brand-mark">B</span><span>BRIOLLORA<small>little details, lovely things</small></span></a>
+    <nav class="desktop-nav">
+      <a href="index.html">Home</a><a href="index.html#shop">Shop All</a><a href="bags.html">Bags</a><a href="jewellery.html">Jewellery</a><a href="hair-accessories.html">Hair Accessories</a><a href="diy-supplies.html">DIY Supplies</a><a href="gifts-accessories.html">Gifts</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-button" id="searchToggle" aria-label="Search">⌕</button>
+      <button class="cart-button" id="cartOpen">Bag <span id="cartCount">0</span></button>
+      <button class="menu-button" id="menuToggle" aria-label="Open menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <p class="eyebrow">A little something special</p>
+        <h1>Make room for<br><em>lovely little things.</em></h1>
+        <p class="hero-text">Explore thoughtful accessories, jewellery and creative finds picked to add a special touch to everyday moments.</p>
+        <a class="primary-button" href="#shop">Explore the collection <span>↗</span></a>
+        <div class="hero-note"><span class="note-dot"></span> 55 products currently listed</div>
+      </div>
+      <div class="hero-art">
+        <div class="hero-orbit orbit-one"></div><div class="hero-orbit orbit-two"></div>
+        <div class="hero-photo"><img src="https://static-01.daraz.pk/p/82851e8b39d9faa85bbc11871fcf6237.jpg" alt="Pearl necklace from the collection"></div>
+        <div class="floating-tag tag-top">Made for your moments</div>
+        <div class="floating-tag tag-bottom">Discover your detail ✦</div>
+      </div>
+    </section>
+
+    <section class="benefit-strip">
+      <div><span>✧</span><strong>Curated collection</strong><small>Accessories & creative finds</small></div>
+      <div><span>♡</span><strong>Easy enquiries</strong><small>Ask about your favourite item</small></div>
+      <div><span>↗</span><strong>Worldwide interest</strong><small>International delivery by enquiry</small></div>
+    </section>
+
+    <section class="category-section" aria-label="Shop by category"><div class="section-heading"><div><p class="eyebrow">Browse by collection</p><h2>Find your <em>kind of lovely.</em></h2></div><p class="section-intro">Explore each collection in its own dedicated section.</p></div><div class="category-grid">
+<a class="category-tile" href="bags.html"><span>01 / COLLECTION</span><strong>Bags & Purses</strong><small>Shop bags ↗</small></a>
+<a class="category-tile" href="jewellery.html"><span>02 / COLLECTION</span><strong>Jewellery</strong><small>Shop jewellery ↗</small></a>
+<a class="category-tile" href="hair-accessories.html"><span>03 / COLLECTION</span><strong>Hair Accessories</strong><small>Shop hair accessories ↗</small></a>
+<a class="category-tile" href="diy-supplies.html"><span>04 / COLLECTION</span><strong>DIY Supplies</strong><small>Shop DIY ↗</small></a>
+<a class="category-tile" href="gifts-accessories.html"><span>05 / COLLECTION</span><strong>Gifts & Accessories</strong><small>Explore gifts ↗</small></a>
+</div></section>
+    <section class="shop-section" id="shop">
+      <div class="section-heading">
+        <div><p class="eyebrow">The BRIOLLORA edit</p><h2>Find your <em>favourite.</em></h2></div>
+        <p class="section-intro">Browse the products currently available in our catalogue. Select a variation to see its listed price.</p>
+      </div>
+      <div class="toolbar">
+        <div class="search-wrap" id="searchWrap"><span>⌕</span><input id="searchInput" type="search" placeholder="Search products..." aria-label="Search products"></div>
+        <div class="filters" id="categoryFilters"></div>
+        <select id="sortSelect" aria-label="Sort products">
+          <option value="featured">Featured</option><option value="low">Price: low to high</option><option value="high">Price: high to low</option><option value="az">Name: A to Z</option>
+        </select>
+      </div>
+      <div class="results-line"><span id="resultsCount">Loading collection…</span><span>Prices shown in PKR</span></div>
+      <div class="product-grid" id="productGrid"></div>
+      <div class="empty-state" id="emptyState" hidden>No products match your search. Try another name or category.</div>
+    </section>
+
+    <section class="story-section" id="about">
+      <div class="story-image"><img src="https://static-01.daraz.pk/p/6a06384258f3e8fc55f6b4e3f19080b8.jpg" alt="Pearl bow hair accessory"></div>
+      <div class="story-copy"><p class="eyebrow">A note from us</p><h2>Small details.<br><em>Big personality.</em></h2><p>BRIOLLORA brings together accessories, jewellery and creative essentials for people who love adding their own touch. Browse the collection and message us with any questions about colours, variations or delivery.</p><a href="#shop" class="text-link">Shop the collection ↗</a></div>
+    </section>
+    <section class="shipping-note">
+      <div><p class="eyebrow">From Pakistan, with care</p><h2>Shopping from somewhere else?</h2><p>Pakistan orders and international delivery enquiries are welcome. Shipping availability, cost and delivery time are confirmed individually before an order is accepted.</p></div>
+      <a class="outline-button" href="https://www.daraz.pk/shop/c6oyrmcc" target="_blank" rel="noopener">Visit our Daraz store ↗</a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a class="brand footer-brand" href="#"><span class="brand-mark">B</span><span>BRIOLLORA<small>little details, lovely things</small></span></a>
+    <p>© <span id="year"></span> BRIOLLORA. Product prices and availability may change.</p>
+    <div><a href="https://www.instagram.com/briol_lora_real/" target="_blank" rel="noopener">Instagram</a><a href="https://www.daraz.pk/shop/c6oyrmcc" target="_blank" rel="noopener">Daraz store</a></div>
+  </footer>
+
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping bag">
+    <div class="drawer-head"><div><p class="eyebrow">Your selection</p><h3>Your bag</h3></div><button class="close-button" id="cartClose" aria-label="Close bag">×</button></div>
+    <div class="cart-items" id="cartItems"><p class="cart-empty">Your bag is waiting for something lovely.</p></div>
+    <div class="drawer-foot"><div class="subtotal"><span>Estimated subtotal</span><strong id="cartSubtotal">Rs. 0</strong></div><p class="fine-print">Shipping is not included. Final price and delivery options will be confirmed before order acceptance.</p><button class="primary-button full-button" id="whatsappCheckout">Place order ↗</button><a class="daraz-link" href="https://www.daraz.pk/shop/c6oyrmcc" target="_blank" rel="noopener">Prefer Daraz? Visit the store</a></div>
+  </aside>
+
+  <div class="modal-backdrop" id="productModalBackdrop">
+    <div class="product-modal" role="dialog" aria-modal="true" aria-label="Product details">
+      <button class="close-button modal-close" id="modalClose" aria-label="Close">×</button>
+      <div class="modal-image"><img id="modalImage" src="" alt=""></div>
+      <div class="modal-info"><p class="eyebrow" id="modalCategory"></p><h3 id="modalName"></h3><p class="modal-description" id="modalDescription"></p><label for="variantSelect">Choose an option</label><select id="variantSelect"></select><div class="modal-price" id="modalPrice"></div><p class="stock-note" id="modalStock"></p><button class="primary-button full-button" id="addToBag">Add to bag</button><a class="daraz-link" id="modalDaraz" href="https://www.daraz.pk/shop/c6oyrmcc" target="_blank" rel="noopener">View Daraz store ↗</a></div>
+    </div>
+  </div>
+
+  <div class="modal-backdrop" id="orderModalBackdrop"><div class="order-modal" role="dialog" aria-modal="true" aria-labelledby="orderTitle"><button class="close-button order-close" id="orderClose" aria-label="Close">×</button><p class="eyebrow">Almost yours</p><h2 id="orderTitle">Complete your order</h2><p class="order-intro">Enter your delivery details. Your order summary will be sent to BRIOLLORA on WhatsApp for confirmation.</p><form id="orderForm">
+    <div class="form-grid"><label>Full name<input name="name" required maxlength="80" autocomplete="name" placeholder="Your full name"></label><label>WhatsApp number<input name="phone" required type="tel" maxlength="25" autocomplete="tel" placeholder="e.g. +92 3XX XXXXXXX"></label><label>Country<input name="country" required maxlength="60" autocomplete="country-name" value="Pakistan"></label><label>City<input name="city" required maxlength="60" autocomplete="address-level2" placeholder="Your city"></label><label class="full-field">Complete delivery address<textarea name="address" required maxlength="400" rows="3" autocomplete="street-address" placeholder="House, street, area and postal code"></textarea></label><label class="full-field">Order type<select name="orderType" id="orderType"><option value="Pakistan order — COD request">Pakistan order — Cash on Delivery request</option><option value="International order enquiry">International order enquiry</option></select></label><label class="full-field">Additional notes (optional)<textarea name="notes" maxlength="300" rows="2" placeholder="Preferred colour, delivery instructions, etc."></textarea></label></div>
+    <p class="fine-print">No online payment is collected on this website. Cash on Delivery and shipping are subject to confirmation. International shipping costs and availability will be confirmed before accepting the order.</p><button class="primary-button full-button" type="submit">Send order on WhatsApp ↗</button></form></div></div>
+
+  <script src="assets/config.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>
