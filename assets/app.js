@@ -19,6 +19,27 @@ function closeCart(){$("cartDrawer").classList.remove("open");$("drawerBackdrop"
 function checkout(){if(!cart.length){alert("Your bag is empty. Please add a product first.");return}closeCart();$("orderModalBackdrop").classList.add("show")}
 function sendOrder(e){e.preventDefault();if(!cart.length){alert("Your bag is empty. Please add a product first.");return}let number=(window.BRIOLLORA_CONFIG?.WHATSAPP_NUMBER||"").replace(/\D/g,"");if(!number){alert("Order form is ready, but WhatsApp is not activated. Add your confirmed WhatsApp number in assets/config.js before publishing.");return}let fd=new FormData(e.target);let total=cart.reduce((n,x)=>n+x.price*x.qty,0);let lines=cart.map(x=>`- ${x.name} | ${x.variant} | Qty ${x.qty} | ${money(x.price*x.qty)}`);let msg=`NEW BRIOLLORA ORDER\n\nCustomer: ${fd.get("name")}\nWhatsApp: ${fd.get("phone")}\nCountry: ${fd.get("country")}\nCity: ${fd.get("city")}\nAddress: ${fd.get("address")}\nOrder type: ${fd.get("orderType")}\n\nITEMS\n${lines.join("\n")}\n\nEstimated product subtotal: ${money(total)}\nAdditional notes: ${fd.get("notes")||"None"}\n\nPlease confirm stock, shipping charges and final payable amount.`;window.open(`https://wa.me/${number}?text=${encodeURIComponent(msg)}`,"_blank","noopener");}
 
-async function init(){try{let res=await fetch("data/products.json");products=await res.json();renderFilters();renderProducts()}catch(e){$("resultsCount").textContent="Could not load product catalogue. Please run this website through a web host or local server."}}
+function setupSearch(){
+  const toggle = $("searchToggle");
+  const wrap = $("searchWrap");
+  const input = $("searchInput");
+
+  if(!toggle || !wrap || !input) return;
+
+  toggle.addEventListener("click",()=>{
+    document.getElementById("shop")?.scrollIntoView({
+      behavior:"smooth",
+      block:"start"
+    });
+
+    wrap.classList.add("search-highlight");
+    input.focus({preventScroll:true});
+
+    window.setTimeout(()=>{
+      wrap.classList.remove("search-highlight");
+    },1200);
+  });
+}
+async function init(){setupSearch();try{let res=await fetch("data/products.json");products=await res.json();renderFilters();renderProducts()}catch(e){$("resultsCount").textContent="Could not load product catalogue. Please run this website through a web host or local server."}}
 $("searchInput").addEventListener("input",e=>{searchTerm=e.target.value.toLowerCase().trim();renderProducts()});$("sortSelect").addEventListener("change",renderProducts);$("cartOpen").addEventListener("click",openCart);$("cartClose").addEventListener("click",closeCart);$("drawerBackdrop").addEventListener("click",closeCart);$("whatsappCheckout").addEventListener("click",checkout);$("variantSelect").addEventListener("change",updateModalPrice);$("addToBag").addEventListener("click",()=>{if(selectedProduct){let v=selectedProduct.variants[Number($("variantSelect").value)||0];if(v.stock>0)addCart(selectedProduct,v)}});$("modalClose").addEventListener("click",()=>$("productModalBackdrop").classList.remove("show"));$("productModalBackdrop").addEventListener("click",e=>{if(e.target===$("productModalBackdrop"))$("productModalBackdrop").classList.remove("show")});$("menuToggle").addEventListener("click",()=>{let nav=document.querySelector(".desktop-nav");nav.style.display=nav.style.display==="flex"?"none":"flex";nav.style.position="absolute";nav.style.top="68px";nav.style.left="0";nav.style.right="0";nav.style.padding="18px";nav.style.background="#fffdf9";nav.style.flexDirection="column";nav.style.gap="18px"});$("year").textContent=new Date().getFullYear();init();
 $("orderClose").addEventListener("click",()=>$("orderModalBackdrop").classList.remove("show"));$("orderModalBackdrop").addEventListener("click",e=>{if(e.target===$("orderModalBackdrop"))$("orderModalBackdrop").classList.remove("show")});$("orderForm").addEventListener("submit",sendOrder);
