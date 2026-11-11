@@ -5,3 +5,23 @@
 @media(max-width:650px){.category-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.category-tile{min-height:145px;padding:16px}.category-tile strong{font-size:18px}.category-hero{padding:55px 7%}.order-modal{padding:27px 20px}.form-grid{grid-template-columns:1fr}.full-field{grid-column:auto}.desktop-nav{display:none}.menu-button{display:block}}
 
 .modal-backdrop{display:flex;align-items:center;justify-content:center;padding:12px}
+
+
+/* BRIOLLORA customer authentication */
+.account-button{border:1px solid var(--rose-dark);background:transparent;color:var(--ink);padding:10px 13px;font-size:10px;letter-spacing:.06em;cursor:pointer;white-space:nowrap}
+.account-button:hover{background:var(--rose-dark);color:#fff}
+.auth-backdrop{position:fixed;inset:0;background:#17141185;z-index:80;display:none;align-items:center;justify-content:center;padding:18px}
+.auth-backdrop.show{display:flex}
+.auth-panel{position:relative;width:min(440px,100%);max-height:90vh;overflow:auto;background:var(--paper);padding:34px;box-shadow:0 20px 70px #17141135}
+.auth-panel h2{font:500 32px var(--serif);margin:0 0 8px}
+.auth-subtitle{font-size:11px;line-height:1.7;color:var(--muted);margin:0 0 22px}
+.auth-close{position:absolute;right:15px;top:10px}
+.auth-panel label{display:block;font-size:10px;color:var(--muted);margin:13px 0 6px}
+.auth-panel input{width:100%;padding:12px;border:1px solid var(--line);background:#fff;font:12px var(--sans);color:var(--ink)}
+.auth-actions{display:flex;gap:8px;margin:0 0 22px}
+.auth-tab{flex:1;padding:10px;border:1px solid var(--line);background:transparent;font-size:10px;cursor:pointer}
+.auth-tab.active{background:var(--ink);color:#fff;border-color:var(--ink)}
+.auth-message{font-size:11px;line-height:1.6;color:var(--rose-dark);min-height:18px;margin:12px 0}
+.auth-link{border:0;background:none;color:var(--rose-dark);text-decoration:underline;font-size:10px;padding:12px 0;cursor:pointer}
+.auth-user-email{font-size:12px;color:var(--muted);overflow-wrap:anywhere;margin:12px 0 22px}
+@media(max-width:680px){.account-button{padding:9px 10px;font-size:9px}.header-actions{gap:7px}.auth-panel{padding:28px 22px}}
