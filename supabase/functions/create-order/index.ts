@@ -7,7 +7,8 @@ try{
 const token=(req.headers.get("Authorization")||"").replace(/^Bearer\s+/i,"");if(!token)return out({error:"Please sign in."},401);
 const url=Deno.env.get("SUPABASE_URL"),anon=Deno.env.get("SUPABASE_ANON_KEY"),key=Deno.env.get("SUPABASE_SERVICE_ROLE_KEY");if(!url||!anon||!key)return out({error:"Checkout service is not configured."},500);
 const auth=createClient(url,anon,{global:{headers:{Authorization:"Bearer "+token}},auth:{persistSession:false,autoRefreshToken:false}}),{data:u,error:ae}=await auth.auth.getUser(token);if(ae||!u.user)return out({error:"Session invalid. Please log in again."},401);
-const body=await req.json(),c=body.customer||{},items=body.items,paymentMethod=cleanPayment(body.payment_method),clean=(v:unknown,n:number)=>String(v??"").trim().slice(0,n);
+const body=await req.json(),c=body.customer||{},items=body.items,clean=(v:unknown,n:number)=>String(v??"").trim().slice(0,n),paymentMethod=clean(body.payment_method||"cod",20).toLowerCase();
+if(paymentMethod!=="cod")return out({error:"Online payments are not active yet. Please use Cash on Delivery."},400);
 const customer={name:clean(c.name,80),phone:clean(c.phone,25),country:clean(c.country,60),city:clean(c.city,60),address:clean(c.address,400),order_type:clean(c.order_type,80),notes:clean(c.notes,300)};
 if(Object.values(customer).slice(0,6).some(x=>!x))return out({error:"Complete all required delivery details."},400);
 if(!Array.isArray(items)||!items.length||items.length>30)return out({error:"Invalid order items."},400);
