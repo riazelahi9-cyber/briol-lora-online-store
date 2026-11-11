@@ -46,7 +46,7 @@
     $("ordersList").innerHTML='<p class="auth-subtitle">Loading your orders…</p>';
     const [{data:profile,error:profileError},{data:orders,error:ordersError}]=await Promise.all([
       client.from("profiles").select("full_name,phone").eq("id",user.id).maybeSingle(),
-      client.from("orders").select("id,order_number,total_amount,status,courier,tracking_number,created_at").eq("customer_id",user.id).order("created_at",{ascending:false}).limit(50)
+      client.from("orders").select("id,order_number,total_amount,status,payment_method,payment_status,courier,tracking_number,created_at").eq("customer_id",user.id).order("created_at",{ascending:false}).limit(50)
     ]);
     if(!user)return;
     if(profileError)$("profileMessage").textContent="Could not load profile: "+profileError.message;
@@ -54,7 +54,7 @@
     $("profilePhone").value=profile?.phone||"";
     if(ordersError){$("ordersList").innerHTML='<p class="auth-message">Could not load orders. Please refresh and try again.</p>';return;}
     if(!orders?.length){$("ordersList").innerHTML='<p class="auth-subtitle">You have no orders yet. Your placed orders will appear here.</p>';return;}
-    $("ordersList").innerHTML=orders.map(o=>`<article class="account-order"><div class="account-order-top"><strong>Order #${esc(o.order_number||o.id.slice(0,8))}</strong><span class="order-status">${esc(o.status)}</span></div><p>Rs. ${Number(o.total_amount||0).toLocaleString("en-PK")} · ${new Date(o.created_at).toLocaleDateString("en-PK")}</p>${o.courier?'<p>Courier: '+esc(o.courier)+'</p>':''}${o.tracking_number?'<p>Tracking: <strong>'+esc(o.tracking_number)+'</strong></p>':''}<div class="order-items" id="items-${esc(o.id)}">Loading items…</div></article>`).join("");
+    $("ordersList").innerHTML=orders.map(o=>`<article class="account-order"><div class="account-order-top"><strong>Order #${esc(o.order_number||o.id.slice(0,8))}</strong><span class="order-status">${esc(o.status)}</span></div><p>Rs. ${Number(o.total_amount||0).toLocaleString("en-PK")} · ${new Date(o.created_at).toLocaleDateString("en-PK")}</p><p>Payment: ${esc((o.payment_method||"cod").toUpperCase())} · ${esc(o.payment_status||"unpaid")}</p>${o.courier?'<p>Courier: '+esc(o.courier)+'</p>':''}${o.tracking_number?'<p>Tracking: <strong>'+esc(o.tracking_number)+'</strong></p>':''}<div class="order-items" id="items-${esc(o.id)}">Loading items…</div></article>`).join("");
     for(const o of orders){const {data:items,error}=await client.from("order_items").select("product_name,quantity,unit_price").eq("order_id",o.id);const el=$("items-"+o.id);if(el)el.innerHTML=error?"":(items||[]).map(i=>'<p>'+esc(i.product_name)+' × '+esc(i.quantity)+' — Rs. '+Number(i.unit_price||0).toLocaleString("en-PK")+'</p>').join("")}
   }
   button.addEventListener("click",async()=>{const {data}=await client.auth.getUser();render(data.user);modal.classList.add("show");msg("");});
