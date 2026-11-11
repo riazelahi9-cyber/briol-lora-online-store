@@ -17,7 +17,20 @@ function renderCart(){$("cartCount").textContent=cart.reduce((n,x)=>n+x.qty,0);$
 function openCart(){$("cartDrawer").classList.add("open");$("drawerBackdrop").classList.add("show")}
 function closeCart(){$("cartDrawer").classList.remove("open");$("drawerBackdrop").classList.remove("show")}
 function checkout(){if(!cart.length){alert("Your bag is empty. Please add a product first.");return}closeCart();$("orderModalBackdrop").classList.add("show")}
-function sendOrder(e){e.preventDefault();if(!cart.length){alert("Your bag is empty. Please add a product first.");return}let number=(window.BRIOLLORA_CONFIG?.WHATSAPP_NUMBER||"").replace(/\D/g,"");if(!number){alert("Order form is ready, but WhatsApp is not activated. Add your confirmed WhatsApp number in assets/config.js before publishing.");return}let fd=new FormData(e.target);let total=cart.reduce((n,x)=>n+x.price*x.qty,0);let lines=cart.map(x=>`- ${x.name} | ${x.variant} | Qty ${x.qty} | ${money(x.price*x.qty)}`);let msg=`NEW BRIOLLORA ORDER\n\nCustomer: ${fd.get("name")}\nWhatsApp: ${fd.get("phone")}\nCountry: ${fd.get("country")}\nCity: ${fd.get("city")}\nAddress: ${fd.get("address")}\nOrder type: ${fd.get("orderType")}\n\nITEMS\n${lines.join("\n")}\n\nEstimated product subtotal: ${money(total)}\nAdditional notes: ${fd.get("notes")||"None"}\n\nPlease confirm stock, shipping charges and final payable amount.`;window.open(`https://wa.me/${number}?text=${encodeURIComponent(msg)}`,"_blank","noopener");}
+async function sendOrder(e){
+e.preventDefault();if(!cart.length){alert("Your bag is empty.");return}
+const cfg=window.BRIOLLORA_CONFIG||{};if(!window.supabase||!cfg.SUPABASE_URL||!cfg.SUPABASE_PUBLISHABLE_KEY){alert("Checkout is not configured.");return}
+const client=window.supabase.createClient(cfg.SUPABASE_URL,cfg.SUPABASE_PUBLISHABLE_KEY),{data:s}=await client.auth.getSession(),session=s?.session;
+if(!session){alert("Please log in or create a BRIOLLORA account before placing your order. Your form details will remain here.");document.querySelector(".account-button")?.click();return}
+const form=e.target,fd=new FormData(form),btn=form.querySelector('button[type="submit"]'),number=(cfg.WHATSAPP_NUMBER||"").replace(/\D/g,"");if(!number){alert("WhatsApp is not configured.");return}
+const tab=window.open("about:blank","_blank");if(btn)btn.disabled=true;
+const customer={name:String(fd.get("name")||"").trim(),phone:String(fd.get("phone")||"").trim(),country:String(fd.get("country")||"").trim(),city:String(fd.get("city")||"").trim(),address:String(fd.get("address")||"").trim(),order_type:String(fd.get("orderType")||"").trim(),notes:String(fd.get("notes")||"").trim()};
+try{const r=await fetch(cfg.SUPABASE_URL+"/functions/v1/create-order",{method:"POST",headers:{"Content-Type":"application/json","apikey":cfg.SUPABASE_PUBLISHABLE_KEY,"Authorization":"Bearer "+session.access_token},body:JSON.stringify({customer,items:cart.map(x=>({product_id:String(x.id),variant_label:String(x.variant),quantity:Number(x.qty)}))})});const data=await r.json().catch(()=>({}));if(!r.ok)throw Error(data.error||"Could not save your order.");
+const o=data.order,lines=(data.items||[]).map(x=>"- "+x.product_name+" | Qty "+x.quantity+" | "+money(x.unit_price*x.quantity));
+const msg="NEW BRIOLLORA ORDER\nOrder #"+o.order_number+"\n\nCustomer: "+customer.name+"\nWhatsApp: "+customer.phone+"\nCountry: "+customer.country+"\nCity: "+customer.city+"\nAddress: "+customer.address+"\nOrder type: "+customer.order_type+"\n\nITEMS\n"+lines.join("\n")+"\n\nVerified product subtotal: "+money(o.total_amount)+"\nNotes: "+(customer.notes||"None")+"\n\nPlease confirm stock, shipping and final payable amount.";
+const wa="https://wa.me/"+number+"?text="+encodeURIComponent(msg);$("orderModalBackdrop").classList.remove("show");cart=[];renderCart();if(tab)tab.location.href=wa;else location.href=wa;alert("Order #"+o.order_number+" saved successfully.");
+}catch(err){if(tab)tab.close();alert(err.message||"Checkout failed.");}finally{if(btn)btn.disabled=false}
+}
 
 function setupSearch(){
   const toggle = $("searchToggle");
