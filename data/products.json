@@ -10,14 +10,14 @@
     ],
     "description": "Enhance your hairstyle with this   Elegant Pearl Bow Hair Clip  , designed to add a touch of luxury and charm to any look. Crafted with high-quality faux pearls, this   Korean-style hair bow barrette   is perfect for daily wear, parties, weddings, and special occasions. The strong grip ensures a secure hold while remaining gentle on your hair.",
     "highlights": "nan",
-    "minPrice": 249.0,
-    "maxPrice": 249.0,
-    "minRegular": 499.0,
+    "minPrice": 249,
+    "maxPrice": 249,
+    "minRegular": 499,
     "variants": [
       {
         "label": "White,Int: One size",
-        "price": 249.0,
-        "regular": 499.0,
+        "price": 249,
+        "regular": 499,
         "stock": 99,
         "sku": "E0001"
       }
@@ -36,28 +36,28 @@
     ],
     "description": "Add a delicate and stylish touch to your outfit with this   Elegant Bow Pendant Necklace  . Designed with a minimal yet charming ribbon bow pendant, this   Korean-style necklace   is perfect for everyday wear or special occasions. Its lightweight design and smooth finish make it comfortable to wear all day, while the trendy bow shape adds a feminine and classy look.",
     "highlights": "nan",
-    "minPrice": 349.0,
-    "maxPrice": 349.0,
-    "minRegular": 399.0,
+    "minPrice": 349,
+    "maxPrice": 349,
+    "minRegular": 399,
     "variants": [
       {
         "label": "Black,One Size",
-        "price": 349.0,
-        "regular": 399.0,
+        "price": 349,
+        "regular": 399,
         "stock": 100,
         "sku": "E0002"
       },
       {
         "label": "Pink,One Size",
-        "price": 349.0,
-        "regular": 399.0,
+        "price": 349,
+        "regular": 399,
         "stock": 100,
         "sku": "E0003"
       },
       {
         "label": "White,One Size",
-        "price": 349.0,
-        "regular": 399.0,
+        "price": 349,
+        "regular": 399,
         "stock": 100,
         "sku": "E0004"
       }
@@ -76,14 +76,14 @@
     ],
     "description": "Enhance your look with this   elegant pearl necklace set  , featuring a stylish   silver-tone chain choker   with delicate pearl and crystal accents, paired with   matching drop earrings  . Perfect for   parties, weddings, dinners, and everyday elegance  , this   trendy women’s jewelry set   adds a classy, modern touch to any outfit.",
     "highlights": "nan",
-    "minPrice": 1499.0,
-    "maxPrice": 1499.0,
-    "minRegular": 1999.0,
+    "minPrice": 1499,
+    "maxPrice": 1499,
+    "minRegular": 1999,
     "variants": [
       {
         "label": "Not Specified",
-        "price": 1499.0,
-        "regular": 1999.0,
+        "price": 1499,
+        "regular": 1999,
         "stock": 100,
         "sku": "E0009"
       }
@@ -93,7 +93,7 @@
   {
     "id": "944314663",
     "name": "Luxury Pearl Bow Phone Charm with Hand Strap | Ribbon Bow Mobile Hanging Accessory | Fashion Phone Pendant",
-    "category": "Hair Accessories",
+    "category": "Accessories",
     "image": "https://static-01.daraz.pk/p/f6815016a10393cc8a888c37d8137130.jpg",
     "images": [
       "https://static-01.daraz.pk/p/467d189acaabf8fb389309f7279d6f0d.jpg",
@@ -101,21 +101,21 @@
     ],
     "description": "Add elegance to your phone with this   Luxury Pearl Bow Phone Accessory  . Designed as a stylish   mobile hanging charm  , it features a beautiful ribbon bow decorated with faux pearls and a matching   pearl hand strap  . This accessory easily attaches to your phone, phone case, or key holder, adding both beauty and convenience without covering your phone.",
     "highlights": "nan",
-    "minPrice": 649.0,
-    "maxPrice": 649.0,
-    "minRegular": 999.0,
+    "minPrice": 649,
+    "maxPrice": 649,
+    "minRegular": 999,
     "variants": [
       {
         "label": "Black",
-        "price": 649.0,
-        "regular": 999.0,
+        "price": 649,
+        "regular": 999,
         "stock": 77,
         "sku": "E0005-Black"
       },
       {
         "label": "Pink",
-        "price": 649.0,
-        "regular": 999.0,
+        "price": 649,
+        "regular": 999,
         "stock": 92,
         "sku": "E0007-Pink"
       }
@@ -134,14 +134,14 @@
     ],
     "description": "Upgrade your style with this   elegant layered pearl necklace  , featuring a   gold-plated multi-layer chain   with classic pearls. Perfect for   daily wear, parties, weddings, and gifting  , this   trendy women’s necklace   adds a soft, luxurious touch to any outfit. Lightweight, stylish, and designed for long-lasting shine.",
     "highlights": "nan",
-    "minPrice": 699.0,
-    "maxPrice": 699.0,
-    "minRegular": 900.0,
+    "minPrice": 699,
+    "maxPrice": 699,
+    "minRegular": 900,
     "variants": [
       {
         "label": "White,One Size",
-        "price": 699.0,
-        "regular": 900.0,
+        "price": 699,
+        "regular": 900,
         "stock": 100,
         "sku": "E0008"
       }
@@ -160,14 +160,14 @@
     ],
     "description": "Elevate your elegance with this   luxury pearl necklace set  , designed with   premium white pearls   and a   gold-plated adjustable chain  . Comes with   matching pearl earrings  , making it perfect for   bridal wear, weddings, parties, and formal events  . A timeless   women’s jewelry set   that adds grace to every look.",
     "highlights": "nan",
-    "minPrice": 1899.0,
-    "maxPrice": 1899.0,
-    "minRegular": 1999.0,
+    "minPrice": 1899,
+    "maxPrice": 1899,
+    "minRegular": 1999,
     "variants": [
       {
         "label": "Not Specified",
-        "price": 1899.0,
-        "regular": 1999.0,
+        "price": 1899,
+        "regular": 1999,
         "stock": 100,
         "sku": "E00010"
       }
@@ -186,14 +186,14 @@
     ],
     "description": "Add timeless elegance to your jewelry collection with this   beautiful pearl necklace for women  , designed to elevate both traditional and modern outfits. Featuring   lustrous white pearls delicately arranged on a gold-tone chain  , this necklace offers a graceful and feminine look perfect for   bridal wear, parties, weddings, and everyday use  .    The balanced drop-pearl design enhances the neckline, making it an ideal choice for sarees, dresses, kurtis, and formal wear. Lightweight, comfortable, and...",
     "highlights": "nan",
-    "minPrice": 699.0,
-    "maxPrice": 699.0,
-    "minRegular": 899.0,
+    "minPrice": 699,
+    "maxPrice": 699,
+    "minRegular": 899,
     "variants": [
       {
         "label": "White,One Size",
-        "price": 699.0,
-        "regular": 899.0,
+        "price": 699,
+        "regular": 899,
         "stock": 100,
         "sku": "E00013"
       }
@@ -211,14 +211,14 @@
     ],
     "description": "Upgrade your style with this elegant pearl drop necklace featuring a delicate gold-tone chain and premium pearls. Perfect for daily wear, parties, weddings, and gifting. Lightweight, trendy, and timeless design for women & girls. Ideal choice for modern fashion jewelry lovers.",
     "highlights": "nan",
-    "minPrice": 899.0,
-    "maxPrice": 899.0,
-    "minRegular": 999.0,
+    "minPrice": 899,
+    "maxPrice": 899,
+    "minRegular": 999,
     "variants": [
       {
         "label": "White,One Size",
-        "price": 899.0,
-        "regular": 999.0,
+        "price": 899,
+        "regular": 999,
         "stock": 100,
         "sku": "E00011"
       }
@@ -239,28 +239,28 @@
     ],
     "description": "Upgrade your everyday style with this   elegant black beaded choker necklace set  , designed for women who love   minimal yet trendy jewelry  . The choker features finely cut   black beads with a delicate gold heart pendant  , paired with   matching black bead drop earrings   for a complete, stylish look.    Perfect for   casual wear, parties, dinners, and modern outfits  , this lightweight necklace set enhances your neckline effortlessly. Whether styled with dresses, tops, or western wear, this choker set adds...",
     "highlights": "nan",
-    "minPrice": 999.0,
-    "maxPrice": 999.0,
-    "minRegular": 1299.0,
+    "minPrice": 999,
+    "maxPrice": 999,
+    "minRegular": 1299,
     "variants": [
       {
         "label": "Brown,One Size",
-        "price": 999.0,
-        "regular": 1299.0,
+        "price": 999,
+        "regular": 1299,
         "stock": 100,
         "sku": "E00014-Brown-One Size"
       },
       {
         "label": "White,One Size",
-        "price": 999.0,
-        "regular": 1299.0,
+        "price": 999,
+        "regular": 1299,
         "stock": 100,
         "sku": "E00014-White-One Size"
       },
       {
         "label": "Black,One Size",
-        "price": 999.0,
-        "regular": 1299.0,
+        "price": 999,
+        "regular": 1299,
         "stock": 100,
         "sku": "E00014-Black-One Size"
       }
@@ -280,14 +280,14 @@
     ],
     "description": "Enhance your elegance with this   luxury pearl jewelry set for women  , featuring a beautifully crafted   multi-layer pearl necklace  , matching   drop earrings  , a   pearl cluster ring  , and a   pearl bracelet/bangle  . Designed to give a rich and graceful look, this complete set is perfect for   bridal wear, weddings, parties, engagements, and formal occasions  .    The lustrous white pearls create a timeless charm that pairs perfectly with sarees, lehengas, maxi dresses, and traditional outfits....",
     "highlights": "nan",
-    "minPrice": 2999.0,
-    "maxPrice": 2999.0,
-    "minRegular": 3499.0,
+    "minPrice": 2999,
+    "maxPrice": 2999,
+    "minRegular": 3499,
     "variants": [
       {
         "label": "Adjustable",
-        "price": 2999.0,
-        "regular": 3499.0,
+        "price": 2999,
+        "regular": 3499,
         "stock": 100,
         "sku": "E00014"
       }
@@ -307,35 +307,35 @@
     ],
     "description": "Add a touch of elegance and love to your style with this   handmade personalized pearl name bracelet  . Crafted with   high-quality pearl beads   and customized letter beads, this bracelet is perfect for daily wear or gifting to someone special. The cute   heart charm   in the center adds a soft, meaningful touch, making it ideal for birthdays, friendships, and special occasions.    Designed with a   comfortable elastic band  , it fits easily on most wrists and is lightweight for all-day wear. You can customize...",
     "highlights": "nan",
-    "minPrice": 399.0,
-    "maxPrice": 399.0,
-    "minRegular": 500.0,
+    "minPrice": 399,
+    "maxPrice": 399,
+    "minRegular": 500,
     "variants": [
       {
         "label": "Blue",
-        "price": 399.0,
-        "regular": 500.0,
+        "price": 399,
+        "regular": 500,
         "stock": 100,
         "sku": "E00015-Blue"
       },
       {
         "label": "Black",
-        "price": 399.0,
-        "regular": 500.0,
+        "price": 399,
+        "regular": 500,
         "stock": 100,
         "sku": "E00015-Black"
       },
       {
         "label": "Pink",
-        "price": 399.0,
-        "regular": 500.0,
+        "price": 399,
+        "regular": 500,
         "stock": 100,
         "sku": "E00015-Pink"
       },
       {
         "label": "Multicolor",
-        "price": 399.0,
-        "regular": 500.0,
+        "price": 399,
+        "regular": 500,
         "stock": 100,
         "sku": "E00015-Multicolor"
       }
@@ -354,35 +354,35 @@
     ],
     "description": "Enhance your elegance with this   premium moonstone beaded bracelet  , beautifully designed with glossy crystal beads and delicate silver-tone spacers. The bracelet features a charming   butterfly accent   and a stylish   adjustable chain  , giving it a graceful and luxurious look.    The soft glow of the moonstone beads reflects light beautifully, making this bracelet perfect for   casual wear, parties, weddings, and special occasions  . Designed for comfort and durability, it makes a thoughtful gift for women...",
     "highlights": "nan",
-    "minPrice": 490.0,
-    "maxPrice": 599.0,
-    "minRegular": 550.0,
+    "minPrice": 490,
+    "maxPrice": 599,
+    "minRegular": 550,
     "variants": [
       {
         "label": "Pink",
-        "price": 599.0,
-        "regular": 699.0,
+        "price": 599,
+        "regular": 699,
         "stock": 100,
         "sku": "E00016-Pink"
       },
       {
         "label": "White",
-        "price": 490.0,
-        "regular": 550.0,
+        "price": 490,
+        "regular": 550,
         "stock": 100,
         "sku": "E00016-White"
       },
       {
         "label": "Blue",
-        "price": 490.0,
-        "regular": 550.0,
+        "price": 490,
+        "regular": 550,
         "stock": 98,
         "sku": "E00016-Blue"
       },
       {
         "label": "Black",
-        "price": 490.0,
-        "regular": 550.0,
+        "price": 490,
+        "regular": 550,
         "stock": 100,
         "sku": "E00016-Black"
       }
@@ -392,7 +392,7 @@
   {
     "id": "944910939",
     "name": "10 pcs Mobile Phone Lanyard Strap | Universal Wrist Strap Keychain | Anti-Drop Phone Holder String",
-    "category": "Jewellery",
+    "category": "Accessories",
     "image": "https://static-01.daraz.pk/p/b3d3c8d67f09ae4ba489ade9b3f30be9.jpg",
     "images": [
       "https://static-01.daraz.pk/p/0d26791102dcd255e5b3beb771efe20f.jpg",
@@ -401,35 +401,35 @@
     ],
     "description": "Keep your phone safe and always within reach with this   universal mobile phone lanyard strap  . Designed for daily convenience, this lightweight yet durable wrist strap helps prevent accidental drops while adding a clean, minimal look to your phone or keys.    Made with   strong nylon cord and metal hook  , it is compatible with most smartphones, phone cases, USB drives, ID cards, and keychains. Easy to attach and comfortable to wear, this strap is perfect for everyday use, travel, office, or outdoor...",
     "highlights": "nan",
-    "minPrice": 319.0,
-    "maxPrice": 319.0,
-    "minRegular": 399.0,
+    "minPrice": 319,
+    "maxPrice": 319,
+    "minRegular": 399,
     "variants": [
       {
         "label": "Brown",
-        "price": 319.0,
-        "regular": 399.0,
+        "price": 319,
+        "regular": 399,
         "stock": 1000,
         "sku": "E00018-Brown"
       },
       {
         "label": "Multicolor",
-        "price": 319.0,
-        "regular": 399.0,
+        "price": 319,
+        "regular": 399,
         "stock": 998,
         "sku": "E00018-Multicolor"
       },
       {
         "label": "Black",
-        "price": 319.0,
-        "regular": 399.0,
+        "price": 319,
+        "regular": 399,
         "stock": 999,
         "sku": "E00018-Black"
       },
       {
         "label": "Blue",
-        "price": 319.0,
-        "regular": 399.0,
+        "price": 319,
+        "regular": 399,
         "stock": 999,
         "sku": "E00018-Blue"
       }
@@ -439,7 +439,7 @@
   {
     "id": "944938179",
     "name": "Metal Lobster Clasp Hook | Jewelry Making Findings | Keychain & Bracelet Clasp (Gold & Silver)",
-    "category": "Jewellery",
+    "category": "DIY Supplies",
     "image": "https://static-01.daraz.pk/p/247fe0471e6461fda44ab53178dd6364.jpg",
     "images": [
       "https://static-01.daraz.pk/p/233a0911e2907b5c8c7f46812aa838d4.jpg",
@@ -447,63 +447,63 @@
     ],
     "description": "Upgrade your jewelry and accessory projects with these   high-quality metal lobster clasp hooks  . Designed for durability and smooth locking, these clasps are perfect for   bracelets, necklaces, keychains, lanyards, DIY crafts, and bag charms  .    Made from   strong alloy metal with a polished finish  , they offer secure fastening while maintaining a stylish look. Available in   gold and silver colors  , these lobster clasps are easy to attach and suitable for both professional jewelers and DIY hobbyists.   ...",
     "highlights": "nan",
-    "minPrice": 99.0,
-    "maxPrice": 999.0,
-    "minRegular": 150.0,
+    "minPrice": 99,
+    "maxPrice": 999,
+    "minRegular": 150,
     "variants": [
       {
         "label": "20 Gold pcs",
-        "price": 199.0,
-        "regular": 250.0,
+        "price": 199,
+        "regular": 250,
         "stock": 1000,
         "sku": "E00019-20 Gold pcs"
       },
       {
         "label": "50 Gold pcs",
-        "price": 499.0,
-        "regular": 559.0,
+        "price": 499,
+        "regular": 559,
         "stock": 1000,
         "sku": "E00019-50 Gold pcs"
       },
       {
         "label": "10 Gold pcs",
-        "price": 99.0,
-        "regular": 150.0,
+        "price": 99,
+        "regular": 150,
         "stock": 1000,
         "sku": "E00019-10 Gold pcs"
       },
       {
         "label": "10  Silver pcs",
-        "price": 99.0,
-        "regular": 150.0,
+        "price": 99,
+        "regular": 150,
         "stock": 1000,
         "sku": "E00019-10  Silver pcs"
       },
       {
         "label": "50  Silver pcs",
-        "price": 499.0,
-        "regular": 559.0,
+        "price": 499,
+        "regular": 559,
         "stock": 1000,
         "sku": "E00019-50  Silver pcs"
       },
       {
         "label": "100  Silver pcs",
-        "price": 999.0,
-        "regular": 1049.0,
+        "price": 999,
+        "regular": 1049,
         "stock": 1000,
         "sku": "E00019-100  Silver pcs"
       },
       {
         "label": "100 Gold pcs",
-        "price": 999.0,
-        "regular": 1049.0,
+        "price": 999,
+        "regular": 1049,
         "stock": 1000,
         "sku": "E00019-100 Gold pcs"
       },
       {
         "label": "20  Silver pcs",
-        "price": 199.0,
-        "regular": 250.0,
+        "price": 199,
+        "regular": 250,
         "stock": 1000,
         "sku": "E00019-20  Silver pcs"
       }
@@ -513,7 +513,7 @@
   {
     "id": "944974001",
     "name": "Stainless Steel Fish Hook Earring Hooks | Earring Holder Findings for Jewelry Making | Silver & Gold Ear Wire Set",
-    "category": "Jewellery",
+    "category": "DIY Supplies",
     "image": "https://static-01.daraz.pk/p/ef5e6d95bb90bf928f56b44e9e5d72fd.jpg",
     "images": [
       "https://static-01.daraz.pk/p/1e4756fd13df1fd42bca888775caee7f.jpg",
@@ -521,63 +521,63 @@
     ],
     "description": "Create beautiful earrings with these   high-quality stainless steel fish hook earring holders  . Designed for durability and comfort, these ear wires are perfect for   DIY jewelry making, repairs, and custom earring designs  .    The smooth finish and lightweight structure make them comfortable for daily wear. Suitable for beads, charms, pearls, and crystal earrings, these hooks are a must-have accessory for jewelry makers and crafters.",
     "highlights": "nan",
-    "minPrice": 149.0,
-    "maxPrice": 1599.0,
-    "minRegular": 299.0,
+    "minPrice": 149,
+    "maxPrice": 1599,
+    "minRegular": 299,
     "variants": [
       {
         "label": "50 gold pair pcs",
-        "price": 799.0,
-        "regular": 1099.0,
+        "price": 799,
+        "regular": 1099,
         "stock": 999,
         "sku": "E00017-50 gold pair pcs"
       },
       {
         "label": "100 gold pair pcs",
-        "price": 1599.0,
-        "regular": 1799.0,
+        "price": 1599,
+        "regular": 1799,
         "stock": 100,
         "sku": "E00017-100 gold pair pcs"
       },
       {
         "label": "10 gold pair pcs",
-        "price": 149.0,
-        "regular": 299.0,
+        "price": 149,
+        "regular": 299,
         "stock": 100,
         "sku": "E00017-10 gold pair pcs"
       },
       {
         "label": "20 gold pair pcs",
-        "price": 299.0,
-        "regular": 499.0,
+        "price": 299,
+        "regular": 499,
         "stock": 98,
         "sku": "E00017-20 gold pair pcs"
       },
       {
         "label": "50 silver pair pcs",
-        "price": 799.0,
-        "regular": 1000.0,
+        "price": 799,
+        "regular": 1000,
         "stock": 100,
         "sku": "E00017-50 silver pair pcs"
       },
       {
         "label": "100 silver pair pcs",
-        "price": 1599.0,
-        "regular": 1700.0,
+        "price": 1599,
+        "regular": 1700,
         "stock": 100,
         "sku": "E00017-100 silver pair pcs"
       },
       {
         "label": "10 silver pair pcs",
-        "price": 149.0,
-        "regular": 299.0,
+        "price": 149,
+        "regular": 299,
         "stock": 100,
         "sku": "E00017-10 silver pair pcs"
       },
       {
         "label": "20 silver pair pcs",
-        "price": 299.0,
-        "regular": 499.0,
+        "price": 299,
+        "regular": 499,
         "stock": 99,
         "sku": "E00017-20 silver pair pcs"
       }
@@ -595,21 +595,21 @@
     ],
     "description": "Make birthdays extra special with this   handmade Birthday Surprise Gift Box  , beautifully decorated with   warm fairy lights, chocolates, and personalized photo memories  . This unique gift box is perfect for expressing love and creating unforgettable moments for your loved ones.    Designed with a   “Happy Birthday” theme  , the box includes delicious assorted chocolates, aesthetic photo prints, and decorative lights that glow beautifully, especially at night. It’s an ideal choice for gifting your   best...",
     "highlights": "nan",
-    "minPrice": 2299.0,
-    "maxPrice": 2999.0,
-    "minRegular": 2999.0,
+    "minPrice": 2299,
+    "maxPrice": 2999,
+    "minRegular": 2999,
     "variants": [
       {
         "label": "polaroid pics",
-        "price": 2999.0,
-        "regular": 3500.0,
+        "price": 2999,
+        "regular": 3500,
         "stock": 100,
         "sku": "E00018-polaroid pics"
       },
       {
         "label": "not included polaroi",
-        "price": 2299.0,
-        "regular": 2999.0,
+        "price": 2299,
+        "regular": 2999,
         "stock": 100,
         "sku": "E00018-not included polaroi"
       }
@@ -619,7 +619,7 @@
   {
     "id": "945404492",
     "name": "Women Woven Clutch Bag with Chain Strap | Stylish Mini Shoulder Handbag | Party & Casual Purse",
-    "category": "Jewellery",
+    "category": "Bags & Accessories",
     "image": "https://static-01.daraz.pk/p/0dd4bcac3636b3c47fe85be1fe378f5d.jpg",
     "images": [
       "https://static-01.daraz.pk/p/85c182752ea2cdf78e09c66397e45fd6.jpg",
@@ -629,49 +629,49 @@
     ],
     "description": "Upgrade your style with this   elegant woven clutch bag for women  , designed to add charm to both casual and party outfits. Made with a   soft textured woven fabric  , this mini handbag features a   gold chain strap   and a   cute decorative charm  , giving it a premium and trendy look.    Perfect for   parties, weddings, dinners, shopping, and daily use  , this lightweight clutch is easy to carry and stylish to match with dresses, jeans, or traditional outfits.",
     "highlights": "nan",
-    "minPrice": 3199.0,
-    "maxPrice": 3199.0,
-    "minRegular": 3499.0,
+    "minPrice": 3199,
+    "maxPrice": 3199,
+    "minRegular": 3499,
     "variants": [
       {
         "label": "Multicolor",
-        "price": 3199.0,
-        "regular": 3499.0,
+        "price": 3199,
+        "regular": 3499,
         "stock": 100,
         "sku": "E00019-Multicolor"
       },
       {
         "label": "Pink",
-        "price": 3199.0,
-        "regular": 3499.0,
+        "price": 3199,
+        "regular": 3499,
         "stock": 100,
         "sku": "E00019-Pink"
       },
       {
         "label": "Purple",
-        "price": 3199.0,
-        "regular": 3499.0,
+        "price": 3199,
+        "regular": 3499,
         "stock": 100,
         "sku": "E00019-Purple"
       },
       {
         "label": "White",
-        "price": 3199.0,
-        "regular": 3499.0,
+        "price": 3199,
+        "regular": 3499,
         "stock": 100,
         "sku": "E00019-White"
       },
       {
         "label": "Brown",
-        "price": 3199.0,
-        "regular": 3499.0,
+        "price": 3199,
+        "regular": 3499,
         "stock": 100,
         "sku": "E00019-Brown"
       },
       {
         "label": "Grey",
-        "price": 3199.0,
-        "regular": 3499.0,
+        "price": 3199,
+        "regular": 3499,
         "stock": 100,
         "sku": "E00019-Grey"
       }
@@ -681,7 +681,7 @@
   {
     "id": "945409657",
     "name": "Women Velvet Fur Clutch Bag with Chain Strap | Luxury Party Handbag | Mini Shoulder Purse",
-    "category": "Jewellery",
+    "category": "Bags & Accessories",
     "image": "https://static-01.daraz.pk/p/a4397e57e78cf06d8fe389c0095b2503.jpg",
     "images": [
       "https://static-01.daraz.pk/p/86d19de237ea0d192394095887e0c471.jpg",
@@ -690,42 +690,42 @@
     ],
     "description": "Add a touch of   luxury and elegance   to your outfit with this   women’s velvet clutch bag  , beautifully designed with   soft fur detailing   and a   stylish gold chain strap  . The premium   maroon velvet fabric   combined with a   unique deer charm lock   gives this mini handbag a classy and trendy look.    Perfect for   parties, weddings, dinners, winter events, and special occasions  , this clutch is lightweight yet spacious enough to carry your essentials like phone, wallet, keys, and makeup.",
     "highlights": "nan",
-    "minPrice": 3499.0,
-    "maxPrice": 3499.0,
-    "minRegular": 3999.0,
+    "minPrice": 3499,
+    "maxPrice": 3499,
+    "minRegular": 3999,
     "variants": [
       {
         "label": "Brown",
-        "price": 3499.0,
-        "regular": 3999.0,
+        "price": 3499,
+        "regular": 3999,
         "stock": 100,
         "sku": "E00020-Brown"
       },
       {
         "label": "Maroon",
-        "price": 3499.0,
-        "regular": 3999.0,
+        "price": 3499,
+        "regular": 3999,
         "stock": 100,
         "sku": "E00020-Maroon"
       },
       {
         "label": "Multicolor",
-        "price": 3499.0,
-        "regular": 3999.0,
+        "price": 3499,
+        "regular": 3999,
         "stock": 100,
         "sku": "E00020-Multicolor"
       },
       {
         "label": "White",
-        "price": 3499.0,
-        "regular": 3999.0,
+        "price": 3499,
+        "regular": 3999,
         "stock": 100,
         "sku": "E00020-White"
       },
       {
         "label": "Black",
-        "price": 3499.0,
-        "regular": 3999.0,
+        "price": 3499,
+        "regular": 3999,
         "stock": 100,
         "sku": "E00020-Black"
       }
@@ -735,7 +735,7 @@
   {
     "id": "945536746",
     "name": "Pearl Beaded Mini Wallet for Women | Card Holder Coin Purse with Strap | Stylish Small Pouch",
-    "category": "DIY Supplies",
+    "category": "Bags & Accessories",
     "image": "https://static-01.daraz.pk/p/7db6864f2f03caf71ec4a1bbc76caf9e.jpg",
     "images": [
       "https://static-01.daraz.pk/p/c6e9a63ed4c1571810cc0fbaee31ae88.jpg",
@@ -743,21 +743,21 @@
     ],
     "description": "This   pearl beaded mini wallet for women   is a perfect blend of   elegance and functionality  . Designed with   premium-quality faux pearls  , this stylish small pouch is ideal for carrying   ATM cards, cash, coins, and small essentials   while adding a classy touch to your look.    The wallet features a   secure button closure   to keep your items safe and a   matching pearl wrist strap   for comfortable carrying. Its   compact and lightweight design   makes it perfect for   daily use, parties, weddings,...",
     "highlights": "nan",
-    "minPrice": 1999.0,
-    "maxPrice": 1999.0,
-    "minRegular": 2399.0,
+    "minPrice": 1999,
+    "maxPrice": 1999,
+    "minRegular": 2399,
     "variants": [
       {
         "label": "Black",
-        "price": 1999.0,
-        "regular": 2399.0,
+        "price": 1999,
+        "regular": 2399,
         "stock": 100,
         "sku": "E00021-Black"
       },
       {
         "label": "White",
-        "price": 1999.0,
-        "regular": 2999.0,
+        "price": 1999,
+        "regular": 2999,
         "stock": 100,
         "sku": "E00021-White"
       }
@@ -776,91 +776,91 @@
     ],
     "description": "Enhance your hairstyle with these   elegant pearl hair bands for women  , beautifully designed with   soft faux pearls and stylish black ribbon bows  . These trendy hair accessories add a   classic and feminine touch   to both casual and formal looks.    Made with   comfortable elastic bands  , they provide a secure yet gentle hold without pulling or damaging hair. Perfect for   daily wear, parties, weddings, school, office, and special occasions  , these pearl hair ties are lightweight and easy to wear all...",
     "highlights": "nan",
-    "minPrice": 599.0,
-    "maxPrice": 599.0,
-    "minRegular": 799.0,
+    "minPrice": 599,
+    "maxPrice": 599,
+    "minRegular": 799,
     "variants": [
       {
         "label": "Black,Other: 5-9 yrs",
-        "price": 599.0,
-        "regular": 799.0,
+        "price": 599,
+        "regular": 799,
         "stock": 98,
         "sku": "E00022-Black-Other: 5-9 yrs"
       },
       {
         "label": "Black,Other: 10-14 yrs",
-        "price": 599.0,
-        "regular": 799.0,
+        "price": 599,
+        "regular": 799,
         "stock": 100,
         "sku": "E00022-Black-Other: 10-14 yrs"
       },
       {
         "label": "White,20-21 yrs",
-        "price": 599.0,
-        "regular": 799.0,
+        "price": 599,
+        "regular": 799,
         "stock": 100,
         "sku": "E00022-White-20-21 yrs"
       },
       {
         "label": "Black,Other: 1-4 yrs",
-        "price": 599.0,
-        "regular": 799.0,
+        "price": 599,
+        "regular": 799,
         "stock": 98,
         "sku": "E00022-Black-Other: 1-4 yrs"
       },
       {
         "label": "White,Other: 10-14 yrs",
-        "price": 599.0,
-        "regular": 799.0,
+        "price": 599,
+        "regular": 799,
         "stock": 100,
         "sku": "E00022-White-Other: 10-14 yrs"
       },
       {
         "label": "White,Other: 15-19 yrs",
-        "price": 599.0,
-        "regular": 799.0,
+        "price": 599,
+        "regular": 799,
         "stock": 100,
         "sku": "E00022-White-Other: 15-19 yrs"
       },
       {
         "label": "White,Other: 1-4 yrs",
-        "price": 599.0,
-        "regular": 799.0,
+        "price": 599,
+        "regular": 799,
         "stock": 100,
         "sku": "E00022-White-Other: 1-4 yrs"
       },
       {
         "label": "White,Other: 5-9 yrs",
-        "price": 599.0,
-        "regular": 799.0,
+        "price": 599,
+        "regular": 799,
         "stock": 100,
         "sku": "E00022-White-Other: 5-9 yrs"
       },
       {
         "label": "White,24-25 yrs",
-        "price": 599.0,
-        "regular": 799.0,
+        "price": 599,
+        "regular": 799,
         "stock": 100,
         "sku": "E00022-White-24-25 yrs"
       },
       {
         "label": "Black,24-25 yrs",
-        "price": 599.0,
-        "regular": 799.0,
+        "price": 599,
+        "regular": 799,
         "stock": 100,
         "sku": "E00022-Black-24-25 yrs"
       },
       {
         "label": "Black,Other: 15-19 yrs",
-        "price": 599.0,
-        "regular": 799.0,
+        "price": 599,
+        "regular": 799,
         "stock": 99,
         "sku": "E00022-Black-Other: 15-19 yrs"
       },
       {
         "label": "Black,20-21 yrs",
-        "price": 599.0,
-        "regular": 799.0,
+        "price": 599,
+        "regular": 799,
         "stock": 100,
         "sku": "E00022-Black-20-21 yrs"
       }
@@ -878,147 +878,147 @@
     ],
     "description": "Elevate your outfit with this   women’s pearl waist chain belt  , designed to add a touch of   elegance and glamour   to dresses, skirts, and trousers. Crafted with   high-quality faux pearls and delicate metal chains  , this stylish body chain features   beautiful hanging pearl drops and a trendy snowflake pendant   for a luxurious, eye-catching look.    Lightweight and comfortable to wear, this waist chain belt is perfect for   parties, weddings, evening events, photoshoots, and fashion styling  . The...",
     "highlights": "nan",
-    "minPrice": 2000.0,
-    "maxPrice": 2000.0,
-    "minRegular": 2500.0,
+    "minPrice": 2000,
+    "maxPrice": 2000,
+    "minRegular": 2500,
     "variants": [
       {
         "label": "belt 1,Int: waist 30 inches",
-        "price": 2000.0,
-        "regular": 2500.0,
+        "price": 2000,
+        "regular": 2500,
         "stock": 10,
         "sku": "F0002-belt 1-Int: waist 30 inches"
       },
       {
         "label": "belt 1,Int: waist 28 inches",
-        "price": 2000.0,
-        "regular": 2500.0,
+        "price": 2000,
+        "regular": 2500,
         "stock": 10,
         "sku": "F0002-belt 1-Int: waist 28 inches"
       },
       {
         "label": "belt 1,Int: waist 26 inches",
-        "price": 2000.0,
-        "regular": 2500.0,
+        "price": 2000,
+        "regular": 2500,
         "stock": 10,
         "sku": "F0002-belt 1-Int: waist 26 inches"
       },
       {
         "label": "belt 1,Int: waist 24 inches",
-        "price": 2000.0,
-        "regular": 2500.0,
+        "price": 2000,
+        "regular": 2500,
         "stock": 10,
         "sku": "F0002-belt 1-Int: waist 24 inches"
       },
       {
         "label": "belt 4,Int: waist 24 inches",
-        "price": 2000.0,
-        "regular": 2500.0,
+        "price": 2000,
+        "regular": 2500,
         "stock": 10,
         "sku": "F0002-belt 4-Int: waist 24 inches"
       },
       {
         "label": "belt 4,Int: waist 22 inches",
-        "price": 2000.0,
-        "regular": 2500.0,
+        "price": 2000,
+        "regular": 2500,
         "stock": 10,
         "sku": "F0002-belt 4-Int: waist 22 inches"
       },
       {
         "label": "belt 3,Int: waist 30 inches",
-        "price": 2000.0,
-        "regular": 2500.0,
+        "price": 2000,
+        "regular": 2500,
         "stock": 10,
         "sku": "F0002-belt 3-Int: waist 30 inches"
       },
       {
         "label": "belt 2,Int: waist 22 inches",
-        "price": 2000.0,
-        "regular": 2500.0,
+        "price": 2000,
+        "regular": 2500,
         "stock": 10,
         "sku": "F0002-belt 2-Int: waist 22 inches"
       },
       {
         "label": "belt 3,Int: waist 28 inches",
-        "price": 2000.0,
-        "regular": 2500.0,
+        "price": 2000,
+        "regular": 2500,
         "stock": 10,
         "sku": "F0002-belt 3-Int: waist 28 inches"
       },
       {
         "label": "belt 1,Int: waist 22 inches",
-        "price": 2000.0,
-        "regular": 2500.0,
+        "price": 2000,
+        "regular": 2500,
         "stock": 10,
         "sku": "F0002-belt 1-Int: waist 22 inches"
       },
       {
         "label": "belt 4,Int: waist 30 inches",
-        "price": 2000.0,
-        "regular": 2500.0,
+        "price": 2000,
+        "regular": 2500,
         "stock": 10,
         "sku": "F0002-belt 4-Int: waist 30 inches"
       },
       {
         "label": "belt 4,Int: waist 28 inches",
-        "price": 2000.0,
-        "regular": 2500.0,
+        "price": 2000,
+        "regular": 2500,
         "stock": 10,
         "sku": "F0002-belt 4-Int: waist 28 inches"
       },
       {
         "label": "belt 4,Int: waist 26 inches",
-        "price": 2000.0,
-        "regular": 2500.0,
+        "price": 2000,
+        "regular": 2500,
         "stock": 10,
         "sku": "F0002-belt 4-Int: waist 26 inches"
       },
       {
         "label": "belt 2,Int: waist 28 inches",
-        "price": 2000.0,
-        "regular": 2500.0,
+        "price": 2000,
+        "regular": 2500,
         "stock": 10,
         "sku": "F0002-belt 2-Int: waist 28 inches"
       },
       {
         "label": "belt 2,Int: waist 26 inches",
-        "price": 2000.0,
-        "regular": 2500.0,
+        "price": 2000,
+        "regular": 2500,
         "stock": 10,
         "sku": "F0002-belt 2-Int: waist 26 inches"
       },
       {
         "label": "belt 2,Int: waist 24 inches",
-        "price": 2000.0,
-        "regular": 2500.0,
+        "price": 2000,
+        "regular": 2500,
         "stock": 10,
         "sku": "F0002-belt 2-Int: waist 24 inches"
       },
       {
         "label": "belt 3,Int: waist 26 inches",
-        "price": 2000.0,
-        "regular": 2500.0,
+        "price": 2000,
+        "regular": 2500,
         "stock": 10,
         "sku": "F0002-belt 3-Int: waist 26 inches"
       },
       {
         "label": "belt 3,Int: waist 24 inches",
-        "price": 2000.0,
-        "regular": 2500.0,
+        "price": 2000,
+        "regular": 2500,
         "stock": 10,
         "sku": "F0002-belt 3-Int: waist 24 inches"
       },
       {
         "label": "belt 3,Int: waist 22 inches",
-        "price": 2000.0,
-        "regular": 2500.0,
+        "price": 2000,
+        "regular": 2500,
         "stock": 10,
         "sku": "F0002-belt 3-Int: waist 22 inches"
       },
       {
         "label": "belt 2,Int: waist 30 inches",
-        "price": 2000.0,
-        "regular": 2500.0,
+        "price": 2000,
+        "regular": 2500,
         "stock": 10,
         "sku": "F0002-belt 2-Int: waist 30 inches"
       }
@@ -1028,7 +1028,7 @@
   {
     "id": "945542748",
     "name": "Luxury Birthday Gift Box for Him | Watch, Wallet, Perfume, Chocolates & Polo T-Shirt Combo with LED Banner",
-    "category": "Gifts & Accessories",
+    "category": "Accessories",
     "image": "https://static-01.daraz.pk/p/aec2d6636507732e2d3d5b82a33b9914.jpg",
     "images": [
       "https://static-01.daraz.pk/p/77e69179ce9bcd734962c425ecd4487a.jpg",
@@ -1036,21 +1036,21 @@
     ],
     "description": "Surprise your loved one with this   luxury birthday gift box for him  , thoughtfully curated to create a memorable gifting experience. This premium gift hamper comes beautifully arranged with   warm LED fairy lights   and a   “I Love You Forever” birthday banner  , making it perfect for birthdays and special occasions.    The box includes a   stylish wrist watch  ,   premium perfume  ,   classic wallet  ,   polo T-shirt  ,   delicious chocolates  , and a   greeting note  , all neatly packed in an elegant...",
     "highlights": "nan",
-    "minPrice": 5299.0,
-    "maxPrice": 6299.0,
-    "minRegular": 6999.0,
+    "minPrice": 5299,
+    "maxPrice": 6299,
+    "minRegular": 6999,
     "variants": [
       {
         "label": "Add polaroid pics",
-        "price": 6299.0,
-        "regular": 7499.0,
+        "price": 6299,
+        "regular": 7499,
         "stock": 100,
         "sku": "E00024-Add polaroid pics"
       },
       {
         "label": "same",
-        "price": 5299.0,
-        "regular": 6999.0,
+        "price": 5299,
+        "regular": 6999,
         "stock": 100,
         "sku": "E00024-same"
       }
@@ -1068,49 +1068,49 @@
     ],
     "description": "Express your love with this   luxury purple artificial rose bouquet  , beautifully crafted to create a   romantic and elegant gifting experience  . Made with   premium-quality artificial/soap flowers  , this bouquet offers a realistic rose look that lasts forever without fading.    Wrapped in stylish packaging and finished with a   decorative ribbon  , this bouquet is perfect for   Valentine’s Day, birthdays, anniversaries, weddings, proposals, and surprise gifts  . Unlike fresh flowers, it requires   no...",
     "highlights": "nan",
-    "minPrice": 2999.0,
-    "maxPrice": 2999.0,
-    "minRegular": 3499.0,
+    "minPrice": 2999,
+    "maxPrice": 2999,
+    "minRegular": 3499,
     "variants": [
       {
         "label": "Maroon",
-        "price": 2999.0,
-        "regular": 3499.0,
+        "price": 2999,
+        "regular": 3499,
         "stock": 100,
         "sku": "E00026-Maroon"
       },
       {
         "label": "Black",
-        "price": 2999.0,
-        "regular": 3499.0,
+        "price": 2999,
+        "regular": 3499,
         "stock": 100,
         "sku": "E00026-Black"
       },
       {
         "label": "Red",
-        "price": 2999.0,
-        "regular": 3499.0,
+        "price": 2999,
+        "regular": 3499,
         "stock": 100,
         "sku": "E00026-Red"
       },
       {
         "label": "Pink",
-        "price": 2999.0,
-        "regular": 3499.0,
+        "price": 2999,
+        "regular": 3499,
         "stock": 100,
         "sku": "E00026-Pink"
       },
       {
         "label": "Blue",
-        "price": 2999.0,
-        "regular": 3499.0,
+        "price": 2999,
+        "regular": 3499,
         "stock": 100,
         "sku": "E00026-Blue"
       },
       {
         "label": "White",
-        "price": 2999.0,
-        "regular": 3499.0,
+        "price": 2999,
+        "regular": 3499,
         "stock": 100,
         "sku": "E00026-White"
       }
@@ -1130,28 +1130,28 @@
     ],
     "description": "Upgrade your jewelry collection with this   Elegant White Pearl Jewelry Set  , featuring a beautifully crafted   pearl necklace and matching drop earrings  . Designed for timeless elegance, this set is perfect for   bridal wear, weddings, parties, formal events, and festive occasions  .    The classic white pearls give a   luxurious and graceful look  , making it an ideal choice for women who love traditional yet modern fashion. Lightweight and comfortable, this pearl set enhances any outfit effortlessly.",
     "highlights": "nan",
-    "minPrice": 1999.0,
-    "maxPrice": 1999.0,
-    "minRegular": 2299.0,
+    "minPrice": 1999,
+    "maxPrice": 1999,
+    "minRegular": 2299,
     "variants": [
       {
         "label": "M",
-        "price": 1999.0,
-        "regular": 2299.0,
+        "price": 1999,
+        "regular": 2299,
         "stock": 100,
         "sku": "E00027-M"
       },
       {
         "label": "L",
-        "price": 1999.0,
-        "regular": 2299.0,
+        "price": 1999,
+        "regular": 2299,
         "stock": 99,
         "sku": "E00027-L"
       },
       {
         "label": "S",
-        "price": 1999.0,
-        "regular": 2299.0,
+        "price": 1999,
+        "regular": 2299,
         "stock": 100,
         "sku": "E00027-S"
       }
@@ -1171,21 +1171,21 @@
     ],
     "description": "Enhance your style with this   Elegant Green Stone Pendant Necklace  , crafted with a delicate   gold-tone chain   and a beautiful   round green stone pendant  . Its minimalist and classy design makes it perfect for   daily wear, office wear, parties, and special occasions  .    This necklace adds a soft, graceful touch to both   eastern and western outfits  . Lightweight and comfortable, it is ideal for women who love   simple, modern, and elegant jewelry  .",
     "highlights": "nan",
-    "minPrice": 260.0,
-    "maxPrice": 260.0,
-    "minRegular": 399.0,
+    "minPrice": 260,
+    "maxPrice": 260,
+    "minRegular": 399,
     "variants": [
       {
         "label": "Silver Chain,One Size",
-        "price": 260.0,
-        "regular": 399.0,
+        "price": 260,
+        "regular": 399,
         "stock": 100,
         "sku": "E00029-Silver Chain-One Size"
       },
       {
         "label": "Gold chain,One Size",
-        "price": 260.0,
-        "regular": 399.0,
+        "price": 260,
+        "regular": 399,
         "stock": 100,
         "sku": "E00029-Gold chain-One Size"
       }
@@ -1204,14 +1204,14 @@
     ],
     "description": "Add a touch of elegance to your look with this   Stylish Green Beads Necklace  , designed for women who love   simple yet classy jewelry  . Featuring beautifully polished green beads linked with a delicate golden chain, this necklace is perfect for   casual wear, office wear, parties, and everyday styling  .    Its lightweight and minimalist design makes it comfortable for all-day wear while enhancing both eastern and western outfits. A perfect choice for women and girls who prefer elegant, modern accessories.",
     "highlights": "nan",
-    "minPrice": 599.0,
-    "maxPrice": 599.0,
-    "minRegular": 699.0,
+    "minPrice": 599,
+    "maxPrice": 599,
+    "minRegular": 699,
     "variants": [
       {
         "label": "Multicolor,One Size",
-        "price": 599.0,
-        "regular": 699.0,
+        "price": 599,
+        "regular": 699,
         "stock": 95,
         "sku": "E00028"
       }
@@ -1221,7 +1221,7 @@
   {
     "id": "946178487",
     "name": "Luxury Gold Beaded Mini Bag Keychain | Stylish Handbag Shape Key Ring for Girls & Women",
-    "category": "Jewellery",
+    "category": "Accessories",
     "image": "https://static-01.daraz.pk/p/2e54294831f57a10390d44e8e54c744a.jpg",
     "images": [
       "https://static-01.daraz.pk/p/c959c8a8480ef27dbe345db1cc3812fe.jpg",
@@ -1229,35 +1229,35 @@
     ],
     "description": "Add a touch of elegance to your everyday essentials with this   luxury gold beaded mini bag keychain  . Designed in a stylish handbag shape, this premium key ring is perfect for   girls and women   who love fashionable accessories. Crafted with shiny metallic beads, it gives a classy and trendy look to your   keys, handbags, backpacks, or wallets  .    This mini bag keychain is lightweight yet durable, making it ideal for daily use or as a   gift for birthdays, anniversaries, Valentine’s Day, or special...",
     "highlights": "nan",
-    "minPrice": 370.0,
-    "maxPrice": 370.0,
-    "minRegular": 699.0,
+    "minPrice": 370,
+    "maxPrice": 370,
+    "minRegular": 699,
     "variants": [
       {
         "label": "Multicolor",
-        "price": 370.0,
-        "regular": 699.0,
+        "price": 370,
+        "regular": 699,
         "stock": 100,
         "sku": "E00027-Multicolor"
       },
       {
         "label": "Pink",
-        "price": 370.0,
-        "regular": 699.0,
+        "price": 370,
+        "regular": 699,
         "stock": 99,
         "sku": "E00027-Pink"
       },
       {
         "label": "Red",
-        "price": 370.0,
-        "regular": 699.0,
+        "price": 370,
+        "regular": 699,
         "stock": 100,
         "sku": "E00027-Red"
       },
       {
         "label": "Black",
-        "price": 370.0,
-        "regular": 699.0,
+        "price": 370,
+        "regular": 699,
         "stock": 100,
         "sku": "E00027-Black"
       }
@@ -1275,14 +1275,14 @@
     ],
     "description": "Enhance your hairstyle with this   elegant pearl hair chain headpiece  , designed to add a graceful and luxurious touch to your look. Featuring long, flowing pearl strands, this beautiful hair accessory is perfect for   weddings, parties, bridal events, formal occasions, and photoshoots  .    Made with high-quality faux pearls, it sits comfortably on the head and blends beautifully with open hair, braids, or ponytails. Whether you’re a bride, bridesmaid, or fashion lover, this   stylish pearl hair accessory  ...",
     "highlights": "nan",
-    "minPrice": 2000.0,
-    "maxPrice": 2000.0,
-    "minRegular": 3000.0,
+    "minPrice": 2000,
+    "maxPrice": 2000,
+    "minRegular": 3000,
     "variants": [
       {
         "label": "White,Int: One size",
-        "price": 2000.0,
-        "regular": 3000.0,
+        "price": 2000,
+        "regular": 3000,
         "stock": 99,
         "sku": "E00030"
       }
@@ -1304,168 +1304,168 @@
     ],
     "description": "Add elegance to your jewelry collection with this   beautiful green beaded bracelet  , crafted with sparkling crystal-style beads and a premium gold-tone chain. The crescent design gives a unique and classy look, making it perfect for   party wear, weddings, festive occasions, and daily styling  .    This   handmade bracelet for girls and women   is lightweight, comfortable, and adjustable, ensuring a perfect fit for every wrist. Whether worn alone or paired with other jewelry, it adds a graceful charm to any...",
     "highlights": "nan",
-    "minPrice": 850.0,
-    "maxPrice": 1050.0,
-    "minRegular": 1000.0,
+    "minPrice": 850,
+    "maxPrice": 1050,
+    "minRegular": 1000,
     "variants": [
       {
         "label": "Dark blue,S",
-        "price": 850.0,
-        "regular": 1000.0,
+        "price": 850,
+        "regular": 1000,
         "stock": 99,
         "sku": "E00032-Dark blue-S"
       },
       {
         "label": "Green,S",
-        "price": 850.0,
-        "regular": 1000.0,
+        "price": 850,
+        "regular": 1000,
         "stock": 100,
         "sku": "E00032-Green-S"
       },
       {
         "label": "Multicolor,S",
-        "price": 850.0,
-        "regular": 1000.0,
+        "price": 850,
+        "regular": 1000,
         "stock": 100,
         "sku": "E00032-Multicolor-S"
       },
       {
         "label": "dark green,S",
-        "price": 850.0,
-        "regular": 1000.0,
+        "price": 850,
+        "regular": 1000,
         "stock": 100,
         "sku": "E00032-dark green-S"
       },
       {
         "label": "Blue,S",
-        "price": 850.0,
-        "regular": 1000.0,
+        "price": 850,
+        "regular": 1000,
         "stock": 98,
         "sku": "E00032-Blue-S"
       },
       {
         "label": "Black,S",
-        "price": 850.0,
-        "regular": 1000.0,
+        "price": 850,
+        "regular": 1000,
         "stock": 99,
         "sku": "E00032-Black-S"
       },
       {
         "label": "White,S",
-        "price": 850.0,
-        "regular": 1000.0,
+        "price": 850,
+        "regular": 1000,
         "stock": 98,
         "sku": "E00032-White-S"
       },
       {
         "label": "Red,S",
-        "price": 850.0,
-        "regular": 1000.0,
+        "price": 850,
+        "regular": 1000,
         "stock": 100,
         "sku": "E00032-Red-S"
       },
       {
         "label": "Dark blue,M",
-        "price": 950.0,
-        "regular": 1000.0,
+        "price": 950,
+        "regular": 1000,
         "stock": 98,
         "sku": "E00032-Dark blue-M"
       },
       {
         "label": "Multicolor,M",
-        "price": 950.0,
-        "regular": 1000.0,
+        "price": 950,
+        "regular": 1000,
         "stock": 100,
         "sku": "E00032-Multicolor-M"
       },
       {
         "label": "dark green,M",
-        "price": 950.0,
-        "regular": 1000.0,
+        "price": 950,
+        "regular": 1000,
         "stock": 99,
         "sku": "E00032-dark green-M"
       },
       {
         "label": "Blue,M",
-        "price": 950.0,
-        "regular": 1000.0,
+        "price": 950,
+        "regular": 1000,
         "stock": 99,
         "sku": "E00032-Blue-M"
       },
       {
         "label": "Black,M",
-        "price": 950.0,
-        "regular": 1000.0,
+        "price": 950,
+        "regular": 1000,
         "stock": 94,
         "sku": "E00032-Black-M"
       },
       {
         "label": "White,M",
-        "price": 950.0,
-        "regular": 1000.0,
+        "price": 950,
+        "regular": 1000,
         "stock": 100,
         "sku": "E00032-White-M"
       },
       {
         "label": "Red,M",
-        "price": 950.0,
-        "regular": 1000.0,
+        "price": 950,
+        "regular": 1000,
         "stock": 100,
         "sku": "E00032-Red-M"
       },
       {
         "label": "Dark blue,L",
-        "price": 1050.0,
-        "regular": 1200.0,
+        "price": 1050,
+        "regular": 1200,
         "stock": 100,
         "sku": "E00032-Dark blue-L"
       },
       {
         "label": "Green,L",
-        "price": 1050.0,
-        "regular": 1200.0,
+        "price": 1050,
+        "regular": 1200,
         "stock": 100,
         "sku": "E00032-Green-L"
       },
       {
         "label": "Multicolor,L",
-        "price": 1050.0,
-        "regular": 1200.0,
+        "price": 1050,
+        "regular": 1200,
         "stock": 100,
         "sku": "E00032-Multicolor-L"
       },
       {
         "label": "dark green,L",
-        "price": 1050.0,
-        "regular": 1200.0,
+        "price": 1050,
+        "regular": 1200,
         "stock": 100,
         "sku": "E00032-dark green-L"
       },
       {
         "label": "Blue,L",
-        "price": 1050.0,
-        "regular": 1200.0,
+        "price": 1050,
+        "regular": 1200,
         "stock": 100,
         "sku": "E00032-Blue-L"
       },
       {
         "label": "Black,L",
-        "price": 1050.0,
-        "regular": 1200.0,
+        "price": 1050,
+        "regular": 1200,
         "stock": 100,
         "sku": "E00032-Black-L"
       },
       {
         "label": "White,L",
-        "price": 1050.0,
-        "regular": 1200.0,
+        "price": 1050,
+        "regular": 1200,
         "stock": 100,
         "sku": "E00032-White-L"
       },
       {
         "label": "Red,L",
-        "price": 1050.0,
-        "regular": 1200.0,
+        "price": 1050,
+        "regular": 1200,
         "stock": 100,
         "sku": "E00032-Red-L"
       }
@@ -1483,14 +1483,14 @@
     ],
     "description": "Create a royal and elegant look with this   luxury bridal pearl hair net headpiece  . Designed with a delicate lattice of shimmering pearls, this stunning hair accessory drapes beautifully over the head, making it perfect for   brides, bridesmaids, engagement ceremonies, weddings, receptions, and photoshoots  .    The lightweight and comfortable design ensures secure wear without pulling or discomfort. This   premium pearl hair jewelry   adds timeless beauty and sophistication to open hairstyles, soft waves, or...",
     "highlights": "nan",
-    "minPrice": 2900.0,
-    "maxPrice": 2900.0,
-    "minRegular": 2999.0,
+    "minPrice": 2900,
+    "maxPrice": 2900,
+    "minRegular": 2999,
     "variants": [
       {
         "label": "White,Int: One size",
-        "price": 2900.0,
-        "regular": 2999.0,
+        "price": 2900,
+        "regular": 2999,
         "stock": 96,
         "sku": "E00031"
       }
@@ -1511,14 +1511,14 @@
     ],
     "description": "Upgrade your everyday style with the   DAEAZ Denim Tote Bag  , designed for comfort, durability, and modern fashion. Made from high-quality denim fabric, this reusable tote bag is perfect for daily use, shopping, travel, work, or casual outings.    Featuring a   large capacity interior  , this shoulder bag easily fits books, groceries, laptops, and daily essentials. The   strong double-stitched handles   provide long-lasting support, while the minimalist design makes it suitable for both men and women.   ...",
     "highlights": "nan",
-    "minPrice": 999.0,
-    "maxPrice": 999.0,
-    "minRegular": 1500.0,
+    "minPrice": 999,
+    "maxPrice": 999,
+    "minRegular": 1500,
     "variants": [
       {
         "label": "Blue,Int: One size",
-        "price": 999.0,
-        "regular": 1500.0,
+        "price": 999,
+        "regular": 1500,
         "stock": 100,
         "sku": "E00039-One size-Blue"
       }
@@ -1528,7 +1528,7 @@
   {
     "id": "946940672",
     "name": "White Pearl Beads String for Jewelry Making | Round Faux Pearl Strands for Necklace & Bracelet",
-    "category": "Jewellery",
+    "category": "DIY Supplies",
     "image": "https://static-01.daraz.pk/p/e6adf6eefe79cc4172553fbdb182871c.jpg",
     "images": [
       "https://static-01.daraz.pk/p/22017af8d4ef9f212aa8b792f7402af3.jpg",
@@ -1537,49 +1537,49 @@
     ],
     "description": "Create beautiful handmade jewelry with these   premium white pearl beads strings  . Featuring smooth, round faux pearls with a glossy finish, these beads are perfect for   necklace making, bracelets, earrings, bridal accessories, hair jewelry, and DIY craft projects  .    Ideal for both beginners and professional designers, these   high-quality pearl bead strands   offer durability, elegance, and timeless beauty. Use them for wedding jewelry, party wear accessories, or creative fashion designs.    ✨   Elegant |...",
     "highlights": "nan",
-    "minPrice": 100.0,
-    "maxPrice": 1800.0,
-    "minRegular": 100.0,
+    "minPrice": 100,
+    "maxPrice": 1800,
+    "minRegular": 100,
     "variants": [
       {
         "label": "ik lari",
-        "price": 100.0,
-        "regular": 100.0,
+        "price": 100,
+        "regular": 100,
         "stock": 1,
         "sku": "946940672-1790708400800-5"
       },
       {
         "label": "10mm 10 lari",
-        "price": 1800.0,
-        "regular": 2000.0,
+        "price": 1800,
+        "regular": 2000,
         "stock": 1400,
         "sku": "946940672-1783173762339-4"
       },
       {
         "label": "8mm 10 lari",
-        "price": 1600.0,
-        "regular": 1800.0,
+        "price": 1600,
+        "regular": 1800,
         "stock": 1200,
         "sku": "946940672-1783173762339-3"
       },
       {
         "label": "3mm 10 lari",
-        "price": 1000.0,
-        "regular": 1300.0,
+        "price": 1000,
+        "regular": 1300,
         "stock": 600,
         "sku": "946940672-1783173762339-0"
       },
       {
         "label": "6mm 10 lari",
-        "price": 1400.0,
-        "regular": 1500.0,
+        "price": 1400,
+        "regular": 1500,
         "stock": 999,
         "sku": "946940672-1783173762339-2"
       },
       {
         "label": "4mm 10 lari",
-        "price": 1200.0,
-        "regular": 1400.0,
+        "price": 1200,
+        "regular": 1400,
         "stock": 800,
         "sku": "946940672-1783173762339-1"
       }
@@ -1589,7 +1589,7 @@
   {
     "id": "946972723",
     "name": "Jewelry Making Kit for Beginners | Earring Hooks, Jump Rings, Head Pins & Tools Set | DIY Jewelry Supplies",
-    "category": "Jewellery",
+    "category": "DIY Supplies",
     "image": "https://static-01.daraz.pk/p/a3339959268dacc1022ee1ba7a54aa8f.jpg",
     "images": [
       "https://static-01.daraz.pk/p/713280bd27755deaa4c2a09cfda568b1.jpg",
@@ -1599,84 +1599,84 @@
     ],
     "description": "Create beautiful handmade jewelry with this   complete jewelry making kit  , perfect for   beginners and professionals  . This   DIY jewelry supplies set   includes   earring hooks, jump rings, head pins, eye pins, silicone backs, and essential tools  , making it ideal for   earrings, necklaces, bracelets, and crafts  .",
     "highlights": "nan",
-    "minPrice": 259.0,
-    "maxPrice": 2399.0,
-    "minRegular": 299.0,
+    "minPrice": 259,
+    "maxPrice": 2399,
+    "minRegular": 299,
     "variants": [
       {
         "label": "silver hook 100pcs",
-        "price": 1599.0,
-        "regular": 1699.0,
+        "price": 1599,
+        "regular": 1699,
         "stock": 1000,
         "sku": "E00044-silver hook 100pcs"
       },
       {
         "label": "gold hook 100pcs",
-        "price": 1599.0,
-        "regular": 1699.0,
+        "price": 1599,
+        "regular": 1699,
         "stock": 1000,
         "sku": "E00044-gold hook 100pcs"
       },
       {
         "label": "earing backs 800pcs",
-        "price": 2399.0,
-        "regular": 2499.0,
+        "price": 2399,
+        "regular": 2499,
         "stock": 1000,
         "sku": "E00044-earing backs 800pcs"
       },
       {
         "label": "150pcs4mm jumps ring",
-        "price": 798.0,
-        "regular": 900.0,
+        "price": 798,
+        "regular": 900,
         "stock": 1000,
         "sku": "E00044-150pcs4mm jumps ring"
       },
       {
         "label": "150pcs4mm jumps gold",
-        "price": 798.0,
-        "regular": 900.0,
+        "price": 798,
+        "regular": 900,
         "stock": 1000,
         "sku": "E00044-150pcs4mm jumps gold"
       },
       {
         "label": "150pcs6mm jumps ring",
-        "price": 999.0,
-        "regular": 1200.0,
+        "price": 999,
+        "regular": 1200,
         "stock": 1000,
         "sku": "E00044-150pcs6mm jumps ring"
       },
       {
         "label": "150pcs6mm jumps gold",
-        "price": 999.0,
-        "regular": 1199.0,
+        "price": 999,
+        "regular": 1199,
         "stock": 1000,
         "sku": "E00044-150pcs6mm jumps gold"
       },
       {
         "label": "100pcs 3cm head pins",
-        "price": 259.0,
-        "regular": 299.0,
+        "price": 259,
+        "regular": 299,
         "stock": 1000,
         "sku": "E00044-100pcs 3cm head pins"
       },
       {
         "label": "100pcs 3cm head gold",
-        "price": 259.0,
-        "regular": 299.0,
+        "price": 259,
+        "regular": 299,
         "stock": 1000,
         "sku": "E00044-100pcs 3cm head gold"
       },
       {
         "label": "100pcs 3cm eye pins",
-        "price": 299.0,
-        "regular": 320.0,
+        "price": 299,
+        "regular": 320,
         "stock": 1000,
         "sku": "E00044-100pcs 3cm eye pins"
       },
       {
         "label": "100pcs 3cm pins gold",
-        "price": 299.0,
-        "regular": 320.0,
+        "price": 299,
+        "regular": 320,
         "stock": 1000,
         "sku": "E00044-100pcs 3cm pins gold"
       }
@@ -1697,63 +1697,63 @@
     ],
     "description": "Upgrade your everyday style with this   minimal gold plated beaded chain necklace  , designed with delicate   ball bead detailing   for a clean, elegant look. Perfect for   daily wear, office, layering, and casual outfits  , this   dainty women’s necklace   adds subtle shine and modern charm.",
     "highlights": "nan",
-    "minPrice": 199.0,
-    "maxPrice": 1999.0,
-    "minRegular": 299.0,
+    "minPrice": 199,
+    "maxPrice": 1999,
+    "minRegular": 299,
     "variants": [
       {
         "label": "Gold,50 CM",
-        "price": 199.0,
-        "regular": 299.0,
+        "price": 199,
+        "regular": 299,
         "stock": 100,
         "sku": "E00044-Gold-50 CM"
       },
       {
         "label": "Silver,100 cm",
-        "price": 399.0,
-        "regular": 499.0,
+        "price": 399,
+        "regular": 499,
         "stock": 100,
         "sku": "E00044-Silver-100 cm"
       },
       {
         "label": "Gold,100 cm",
-        "price": 399.0,
-        "regular": 499.0,
+        "price": 399,
+        "regular": 499,
         "stock": 100,
         "sku": "E00044-Gold-100 cm"
       },
       {
         "label": "Silver,200 cm",
-        "price": 799.0,
-        "regular": 899.0,
+        "price": 799,
+        "regular": 899,
         "stock": 100,
         "sku": "E00044-Silver-200 cm"
       },
       {
         "label": "Gold,200 cm",
-        "price": 799.0,
-        "regular": 899.0,
+        "price": 799,
+        "regular": 899,
         "stock": 100,
         "sku": "E00044-Gold-200 cm"
       },
       {
         "label": "Silver,500 cm",
-        "price": 1999.0,
-        "regular": 2200.0,
+        "price": 1999,
+        "regular": 2200,
         "stock": 100,
         "sku": "E00044-Silver-500 cm"
       },
       {
         "label": "Gold,500 cm",
-        "price": 1999.0,
-        "regular": 2200.0,
+        "price": 1999,
+        "regular": 2200,
         "stock": 100,
         "sku": "E00044-Gold-500 cm"
       },
       {
         "label": "Silver,50 CM",
-        "price": 199.0,
-        "regular": 299.0,
+        "price": 199,
+        "regular": 299,
         "stock": 100,
         "sku": "E00044-Silver-50 CM"
       }
@@ -1773,14 +1773,14 @@
     ],
     "description": "Upgrade your everyday style with this   Premium Denim Tote Bag  , designed for both   fashion and functionality  . Made from   high-quality durable denim fabric  , this tote bag is perfect for shopping, office, college, travel, or daily use.",
     "highlights": "nan",
-    "minPrice": 999.0,
-    "maxPrice": 999.0,
-    "minRegular": 1299.0,
+    "minPrice": 999,
+    "maxPrice": 999,
+    "minRegular": 1299,
     "variants": [
       {
         "label": "Blue",
-        "price": 999.0,
-        "regular": 1299.0,
+        "price": 999,
+        "regular": 1299,
         "stock": 100,
         "sku": "E00056"
       }
@@ -1803,28 +1803,28 @@
     ],
     "description": "Create stunning handmade jewelry and crafts with our   premium quality golden craft wire set  , specially designed for   DIY jewelry making, handbags, wire wrapping, and creative crafts  .    This set includes   three popular thickness sizes – 0.64mm, 0.81mm, and 1.02mm  , making it perfect for beginners and professional crafters alike.    Made with   strong yet flexible material  , this wire is easy to bend, twist, and shape without breaking. Its   smooth golden finish   adds a luxurious look to earrings,...",
     "highlights": "nan",
-    "minPrice": 999.0,
-    "maxPrice": 1499.0,
-    "minRegular": 1199.0,
+    "minPrice": 999,
+    "maxPrice": 1499,
+    "minRegular": 1199,
     "variants": [
       {
         "label": "medium 10  meter",
-        "price": 1199.0,
-        "regular": 1399.0,
+        "price": 1199,
+        "regular": 1399,
         "stock": 93,
         "sku": "E00058-medium 10  meter"
       },
       {
         "label": "small 10  meter",
-        "price": 999.0,
-        "regular": 1199.0,
+        "price": 999,
+        "regular": 1199,
         "stock": 96,
         "sku": "E00058-small 10  meter"
       },
       {
         "label": "large 10  meter",
-        "price": 1499.0,
-        "regular": 1999.0,
+        "price": 1499,
+        "regular": 1999,
         "stock": 92,
         "sku": "E00058-large 10  meter"
       }
@@ -1834,7 +1834,7 @@
   {
     "id": "947797314",
     "name": "Multicolor Jewelry Making Beads Kit 4mm (40g) with Memory Wire, Jump Rings, Lobster Clasp & Chain – DIY Necklace & Bracelet Craft Supplies",
-    "category": "Jewellery",
+    "category": "DIY Supplies",
     "image": "https://static-01.daraz.pk/p/57037499d8a0b9cf515c1411e2f0ca34.jpg",
     "images": [
       "https://static-01.daraz.pk/p/41157231eae49c733e327417b1a8f80d.jpg",
@@ -1845,112 +1845,112 @@
     ],
     "description": "Create beautiful handmade jewelry with this   Multicolor Jewelry Making Beads Kit  , specially designed for DIY lovers, beginners, and professional crafters. This complete craft set includes   4mm multicolor crystal-style beads (40 grams)   along with essential jewelry-making accessories, making it perfect for creating   necklaces, bracelets, anklets, and fashion jewelry  .           The kit comes with   memory wire  ,   jump rings  ,   lobster clasp  , and a   5-inch chain  , allowing you to easily assemble...",
     "highlights": "nan",
-    "minPrice": 599.0,
-    "maxPrice": 599.0,
-    "minRegular": 999.0,
+    "minPrice": 599,
+    "maxPrice": 599,
+    "minRegular": 999,
     "variants": [
       {
         "label": "Maroon",
-        "price": 599.0,
-        "regular": 999.0,
+        "price": 599,
+        "regular": 999,
         "stock": 10,
         "sku": "E00060-Maroon"
       },
       {
         "label": "Yellow",
-        "price": 599.0,
-        "regular": 999.0,
+        "price": 599,
+        "regular": 999,
         "stock": 10,
         "sku": "E00060-Yellow"
       },
       {
         "label": "Hotpink",
-        "price": 599.0,
-        "regular": 999.0,
+        "price": 599,
+        "regular": 999,
         "stock": 9,
         "sku": "E00060-Hotpink"
       },
       {
         "label": "Orange",
-        "price": 599.0,
-        "regular": 999.0,
+        "price": 599,
+        "regular": 999,
         "stock": 10,
         "sku": "E00060-Orange"
       },
       {
         "label": "pearls",
-        "price": 599.0,
-        "regular": 999.0,
+        "price": 599,
+        "regular": 999,
         "stock": 10,
         "sku": "E00060-pearls"
       },
       {
         "label": "Dark blue",
-        "price": 599.0,
-        "regular": 999.0,
+        "price": 599,
+        "regular": 999,
         "stock": 10,
         "sku": "E00060-Dark blue"
       },
       {
         "label": "Gold",
-        "price": 599.0,
-        "regular": 999.0,
+        "price": 599,
+        "regular": 999,
         "stock": 10,
         "sku": "E00060-Gold"
       },
       {
         "label": "Black",
-        "price": 599.0,
-        "regular": 999.0,
+        "price": 599,
+        "regular": 999,
         "stock": 10,
         "sku": "E00060-Black"
       },
       {
         "label": "baby pink",
-        "price": 599.0,
-        "regular": 999.0,
+        "price": 599,
+        "regular": 999,
         "stock": 10,
         "sku": "E00060-baby pink"
       },
       {
         "label": "Multicolor",
-        "price": 599.0,
-        "regular": 999.0,
+        "price": 599,
+        "regular": 999,
         "stock": 10,
         "sku": "E00060-Multicolor"
       },
       {
         "label": "Red",
-        "price": 599.0,
-        "regular": 999.0,
+        "price": 599,
+        "regular": 999,
         "stock": 10,
         "sku": "E00060-Red"
       },
       {
         "label": "Light green",
-        "price": 599.0,
-        "regular": 999.0,
+        "price": 599,
+        "regular": 999,
         "stock": 10,
         "sku": "E00060-Light green"
       },
       {
         "label": "Dark green",
-        "price": 599.0,
-        "regular": 999.0,
+        "price": 599,
+        "regular": 999,
         "stock": 10,
         "sku": "E00060-Dark green"
       },
       {
         "label": "Light blue",
-        "price": 599.0,
-        "regular": 999.0,
+        "price": 599,
+        "regular": 999,
         "stock": 10,
         "sku": "E00060-Light blue"
       },
       {
         "label": "Clear",
-        "price": 599.0,
-        "regular": 999.0,
+        "price": 599,
+        "regular": 999,
         "stock": 10,
         "sku": "E00060-Clear"
       }
@@ -1969,28 +1969,28 @@
     ],
     "description": "Add a touch of elegance to your hairstyle with this premium satin hair bow ribbon. Designed in a soft beige shade with a graceful long-tail finish, this hair accessory is perfect for daily wear, parties, weddings, gifting, and aesthetic looks. Lightweight, smooth, and gentle on hair, it complements both casual and formal outfits effortlessly.",
     "highlights": "nan",
-    "minPrice": 399.0,
-    "maxPrice": 399.0,
-    "minRegular": 599.0,
+    "minPrice": 399,
+    "maxPrice": 399,
+    "minRegular": 599,
     "variants": [
       {
         "label": "Wine Red,Adjustable",
-        "price": 399.0,
-        "regular": 599.0,
+        "price": 399,
+        "regular": 599,
         "stock": 100,
         "sku": "E00061-Wine Red"
       },
       {
         "label": "Black,Adjustable",
-        "price": 399.0,
-        "regular": 599.0,
+        "price": 399,
+        "regular": 599,
         "stock": 100,
         "sku": "E00061-Black"
       },
       {
         "label": "Gold,Adjustable",
-        "price": 399.0,
-        "regular": 599.0,
+        "price": 399,
+        "regular": 599,
         "stock": 99,
         "sku": "E00061-Gold"
       }
@@ -2000,7 +2000,7 @@
   {
     "id": "947992759",
     "name": "Luxury Gift Box with Premium Ribbon | Elegant Packing Box for Gifts, Hampers, Jewelry & Special Occasions",
-    "category": "Gifts & Accessories",
+    "category": "Accessories",
     "image": "https://static-01.daraz.pk/p/ce6ad785a99d066154099afdc90e2f9d.jpg",
     "images": [
       "https://static-01.daraz.pk/p/bbfc539dd1fd6fcb11b2f0c255558721.jpg",
@@ -2013,42 +2013,42 @@
     ],
     "description": "Make your gifts unforgettable with this   luxury blue gift box  , designed to add a   premium and elegant touch   to any occasion. Crafted with   high-quality sturdy material  , this gift box comes with a   beautiful matching ribbon bow  , making it perfect for   handmade gifts, jewelry, chocolates, hampers, DIY crafts, and special surprises  .    Ideal for   birthdays, weddings, anniversaries, Eid, Valentine’s Day, Mother’s Day, corporate gifting, and celebrations  , this box enhances the value of your gift...",
     "highlights": "nan",
-    "minPrice": 3999.0,
-    "maxPrice": 3999.0,
-    "minRegular": 5999.0,
+    "minPrice": 3999,
+    "maxPrice": 3999,
+    "minRegular": 5999,
     "variants": [
       {
         "label": "Black",
-        "price": 3999.0,
-        "regular": 5999.0,
+        "price": 3999,
+        "regular": 5999,
         "stock": 100,
         "sku": "E00065-Black"
       },
       {
         "label": "Pink",
-        "price": 3999.0,
-        "regular": 5999.0,
+        "price": 3999,
+        "regular": 5999,
         "stock": 100,
         "sku": "E00065-Pink"
       },
       {
         "label": "Green",
-        "price": 3999.0,
-        "regular": 5999.0,
+        "price": 3999,
+        "regular": 5999,
         "stock": 100,
         "sku": "E00065-Green"
       },
       {
         "label": "Red",
-        "price": 3999.0,
-        "regular": 5999.0,
+        "price": 3999,
+        "regular": 5999,
         "stock": 100,
         "sku": "E00065-Red"
       },
       {
         "label": "Blue",
-        "price": 3999.0,
-        "regular": 5999.0,
+        "price": 3999,
+        "regular": 5999,
         "stock": 100,
         "sku": "E00065-Blue"
       }
@@ -2058,7 +2058,7 @@
   {
     "id": "948438751",
     "name": "Premium Fabric & DIY Fashion Store | Denim, Craft & Tailoring Essentials",
-    "category": "Jewellery",
+    "category": "DIY Supplies",
     "image": "https://static-01.daraz.pk/p/6ef6abeb70da3c52f744483f27fd724a.jpg",
     "images": [
       "https://static-01.daraz.pk/p/62dbf7e7dc488c3553b2ad8fbd0b7533.jpg",
@@ -2071,28 +2071,28 @@
     ],
     "description": "Discover Quality. Create Style. Sell with Confidence.    Welcome to your one-stop   Premium Fabric & DIY Fashion Store   on Daraz! We specialize in   high-quality denim fabric, tailoring materials, and DIY essentials   designed for fashion lovers, tailors, and creative minds.",
     "highlights": "nan",
-    "minPrice": 1999.0,
-    "maxPrice": 1999.0,
-    "minRegular": 2500.0,
+    "minPrice": 1999,
+    "maxPrice": 1999,
+    "minRegular": 2500,
     "variants": [
       {
         "label": "Dark Blue 1 meter",
-        "price": 1999.0,
-        "regular": 2500.0,
+        "price": 1999,
+        "regular": 2500,
         "stock": 98,
         "sku": "E00067-Dark Blue 1 meter"
       },
       {
         "label": "Blue 1 meter",
-        "price": 1999.0,
-        "regular": 2500.0,
+        "price": 1999,
+        "regular": 2500,
         "stock": 100,
         "sku": "E00067-Blue 1 meter"
       },
       {
         "label": "Black 1 meter",
-        "price": 1999.0,
-        "regular": 2500.0,
+        "price": 1999,
+        "regular": 2500,
         "stock": 100,
         "sku": "E00067-Black 1 meter"
       }
@@ -2102,7 +2102,7 @@
   {
     "id": "948555925",
     "name": "Elegant Pearl Beaded Mini Handbag for Women | Luxury Handmade Pearl Purse with Chain Strap | Party, Wedding & Evening Bag",
-    "category": "Jewellery",
+    "category": "Bags & Accessories",
     "image": "https://static-01.daraz.pk/p/44b809a63116e890096940f554bb6d2e.jpg",
     "images": [
       "https://static-01.daraz.pk/p/7324ec3ff7cd69a33683e80e32f97f2f.jpg",
@@ -2111,14 +2111,14 @@
     ],
     "description": "Add a touch of timeless elegance to your outfit with this   luxury pearl beaded mini handbag  . Carefully   handcrafted with high-quality faux pearls  , this stylish purse is perfect for   weddings, parties, formal events, and evening outings  .    The   strong pearl handle   and   gold chain strap   offer versatile carrying options—use it as a   handbag, shoulder bag, or crossbody purse  .    Designed for women who love   classy, trendy, and aesthetic accessories  , this pearl bag is lightweight yet...",
     "highlights": "nan",
-    "minPrice": 2499.0,
-    "maxPrice": 2499.0,
-    "minRegular": 3200.0,
+    "minPrice": 2499,
+    "maxPrice": 2499,
+    "minRegular": 3200,
     "variants": [
       {
         "label": "Int: One size",
-        "price": 2499.0,
-        "regular": 3200.0,
+        "price": 2499,
+        "regular": 3200,
         "stock": 100,
         "sku": "E00069"
       }
@@ -2128,7 +2128,7 @@
   {
     "id": "948564877",
     "name": "Mini Beaded Handbag for Girls | Crystal Beads Purse | Stylish Party & Gift Bag",
-    "category": "DIY Supplies",
+    "category": "Bags & Accessories",
     "image": "https://static-01.daraz.pk/p/6998b6200a4636f24191050960cd13ab.jpg",
     "images": [
       "https://static-01.daraz.pk/p/fd329e04f7174763224b0e672bf22fb3.jpg",
@@ -2137,63 +2137,63 @@
     ],
     "description": "Add sparkle to your look with this   mini pink beaded handbag   made from shiny crystal beads. Lightweight, trendy, and perfect for   parties, events, gifts, and daily styling  . Ideal for girls who love cute, aesthetic accessories. Durable handle, premium finish, and eye-catching design. 💖",
     "highlights": "nan",
-    "minPrice": 2999.0,
-    "maxPrice": 3999.0,
-    "minRegular": 2999.0,
+    "minPrice": 2999,
+    "maxPrice": 3999,
+    "minRegular": 2999,
     "variants": [
       {
         "label": "Beige,Small",
-        "price": 2999.0,
-        "regular": 2999.0,
+        "price": 2999,
+        "regular": 2999,
         "stock": 100,
         "sku": "E00072-Beige-Small"
       },
       {
         "label": "Light Pink,Medium",
-        "price": 3999.0,
-        "regular": 3999.0,
+        "price": 3999,
+        "regular": 3999,
         "stock": 100,
         "sku": "E00072-Light Pink-Medium"
       },
       {
         "label": "Beige,Medium",
-        "price": 3999.0,
-        "regular": 3999.0,
+        "price": 3999,
+        "regular": 3999,
         "stock": 100,
         "sku": "E00072-Beige-Medium"
       },
       {
         "label": "Dark Pink,Small",
-        "price": 2999.0,
-        "regular": 2999.0,
+        "price": 2999,
+        "regular": 2999,
         "stock": 100,
         "sku": "E00072-Dark Pink-Small"
       },
       {
         "label": "Black,Medium",
-        "price": 3999.0,
-        "regular": 3999.0,
+        "price": 3999,
+        "regular": 3999,
         "stock": 100,
         "sku": "E00072-Black-Medium"
       },
       {
         "label": "Light Pink,Small",
-        "price": 2999.0,
-        "regular": 2999.0,
+        "price": 2999,
+        "regular": 2999,
         "stock": 100,
         "sku": "E00072-Light Pink-Small"
       },
       {
         "label": "Dark Pink,Medium",
-        "price": 3999.0,
-        "regular": 3999.0,
+        "price": 3999,
+        "regular": 3999,
         "stock": 100,
         "sku": "E00072-Dark Pink-Medium"
       },
       {
         "label": "Black,Small",
-        "price": 2999.0,
-        "regular": 2999.0,
+        "price": 2999,
+        "regular": 2999,
         "stock": 100,
         "sku": "E00072-Black-Small"
       }
@@ -2212,14 +2212,14 @@
     ],
     "description": "Create unforgettable memories with this   handmade gift box  , designed to surprise your loved ones the moment it opens. When the lid is removed, the box   into beautifully layered photo panels  , message cards, and decorative elements—making it a   perfect emotional gift   for special occasions.    Ideal for   couples, husband & wife, boyfriend, girlfriend, and best friends  , this memory box is perfect for   birthdays, anniversaries, Valentine’s Day, engagements, and weddings  . Crafted with   premium-quality...",
     "highlights": "nan",
-    "minPrice": 2599.0,
-    "maxPrice": 2599.0,
-    "minRegular": 2999.0,
+    "minPrice": 2599,
+    "maxPrice": 2599,
+    "minRegular": 2999,
     "variants": [
       {
         "label": "Black",
-        "price": 2599.0,
-        "regular": 2999.0,
+        "price": 2599,
+        "regular": 2999,
         "stock": 100,
         "sku": "Eooo71"
       }
@@ -2229,7 +2229,7 @@
   {
     "id": "948604469",
     "name": "Luxury Black Pearl Beaded Handbag for Women | Elegant Mini Purse with Golden Handle & Chain | Party, Wedding & Evening Bag",
-    "category": "Jewellery",
+    "category": "Bags & Accessories",
     "image": "https://static-01.daraz.pk/p/c169da7f43cbd0eb483ffa5f787b1f9e.jpg",
     "images": [
       "https://static-01.daraz.pk/p/2e0c6ccfc10cbcf800b3d21d45ea0deb.jpg",
@@ -2238,14 +2238,14 @@
     ],
     "description": "Upgrade your style with this   luxury black pearl beaded handbag  , beautifully handcrafted for women who love   elegant and classy accessories  . Designed with   premium black faux pearls  , a   stylish golden metal handle  , and a   durable gold chain strap  , this mini purse is perfect for   parties, weddings, dinners, and formal events  .    The compact yet spacious design makes it ideal for carrying essentials like   mobile phone, wallet, keys, and makeup  . Whether styled as a   handheld bag, shoulder...",
     "highlights": "nan",
-    "minPrice": 4999.0,
-    "maxPrice": 4999.0,
-    "minRegular": 6999.0,
+    "minPrice": 4999,
+    "maxPrice": 4999,
+    "minRegular": 6999,
     "variants": [
       {
         "label": "Standard",
-        "price": 4999.0,
-        "regular": 6999.0,
+        "price": 4999,
+        "regular": 6999,
         "stock": 100,
         "sku": "E00070"
       }
@@ -2255,7 +2255,7 @@
   {
     "id": "948666239",
     "name": "DIY Surprise Gift Box with Photo Frames | Memory Scrapbook Box | Romantic Handmade Gift for valentine and many occasions",
-    "category": "Gifts & Accessories",
+    "category": "Accessories",
     "image": "https://static-01.daraz.pk/p/4d8b3988da5b0b763cbd904a709f8421.jpg",
     "images": [
       "https://static-01.daraz.pk/p/c8ab7f99053943ff9e409ca71f60792c.jpg",
@@ -2265,28 +2265,28 @@
     ],
     "description": "Make your moments special with this   DIY surprise gift box   that opens into multiple   photo frames and memory layers  . Perfect for saving memories and gifting your loved ones on **Valentine’s Day, anniversaries",
     "highlights": "nan",
-    "minPrice": 3799.0,
-    "maxPrice": 3799.0,
-    "minRegular": 3999.0,
+    "minPrice": 3799,
+    "maxPrice": 3799,
+    "minRegular": 3999,
     "variants": [
       {
         "label": "Blue",
-        "price": 3799.0,
-        "regular": 3999.0,
+        "price": 3799,
+        "regular": 3999,
         "stock": 100,
         "sku": "E00075-Blue"
       },
       {
         "label": "Red",
-        "price": 3799.0,
-        "regular": 3999.0,
+        "price": 3799,
+        "regular": 3999,
         "stock": 100,
         "sku": "E00075-Red"
       },
       {
         "label": "Pink",
-        "price": 3799.0,
-        "regular": 3999.0,
+        "price": 3799,
+        "regular": 3999,
         "stock": 100,
         "sku": "E00075-Pink"
       }
@@ -2296,7 +2296,7 @@
   {
     "id": "948762568",
     "name": "Pearl Beaded Phone Charm Wrist Strap | Cute Mobile Phone Lanyard with Bow | Stylish Hand Strap for Smartphones",
-    "category": "Hair Accessories",
+    "category": "Accessories",
     "image": "https://static-01.daraz.pk/p/87ebdd71dee500b7f7d386c9f4d855f7.jpg",
     "images": [
       "https://static-01.daraz.pk/p/4608b920025ce76595af9ad7260ec1d3.jpg",
@@ -2305,49 +2305,49 @@
     ],
     "description": "Add a cute and elegant touch to your phone with this   pearl beaded phone charm wrist strap  . Designed with   premium faux pearls, soft pink beads, and decorative bows  , this stylish phone lanyard doubles as a   secure hand strap   and a   fashion accessory  .    Perfect for   daily use, selfies, traveling, and gifting  , it helps prevent accidental drops while enhancing your phone’s look. The   strong metal clasp   easily attaches to phone cases, key rings, or bags, making it a versatile and trendy accessory...",
     "highlights": "nan",
-    "minPrice": 399.0,
-    "maxPrice": 649.0,
-    "minRegular": 599.0,
+    "minPrice": 399,
+    "maxPrice": 649,
+    "minRegular": 599,
     "variants": [
       {
         "label": "Pink",
-        "price": 649.0,
-        "regular": 750.0,
+        "price": 649,
+        "regular": 750,
         "stock": 98,
         "sku": "E00079-Pink"
       },
       {
         "label": "Black",
-        "price": 649.0,
-        "regular": 750.0,
+        "price": 649,
+        "regular": 750,
         "stock": 100,
         "sku": "E00079-Black"
       },
       {
         "label": "Red",
-        "price": 649.0,
-        "regular": 750.0,
+        "price": 649,
+        "regular": 750,
         "stock": 99,
         "sku": "E00079-Red"
       },
       {
         "label": "Off White",
-        "price": 649.0,
-        "regular": 750.0,
+        "price": 649,
+        "regular": 750,
         "stock": 100,
         "sku": "E00079-Off White"
       },
       {
         "label": "Brown",
-        "price": 399.0,
-        "regular": 599.0,
+        "price": 399,
+        "regular": 599,
         "stock": 100,
         "sku": "E00079"
       },
       {
         "label": "Blue",
-        "price": 649.0,
-        "regular": 750.0,
+        "price": 649,
+        "regular": 750,
         "stock": 100,
         "sku": "E00079-Blue"
       }
@@ -2367,49 +2367,49 @@
     ],
     "description": "Enhance your style with this   Beautiful Butterfly Crystal Beaded Bracelet  . Designed with glossy crystal beads, soft pastel tones, and a delicate butterfly charm, this bracelet is perfect for girls who love cute and trendy accessories.",
     "highlights": "nan",
-    "minPrice": 349.0,
-    "maxPrice": 349.0,
-    "minRegular": 450.0,
+    "minPrice": 349,
+    "maxPrice": 349,
+    "minRegular": 450,
     "variants": [
       {
         "label": "Red",
-        "price": 349.0,
-        "regular": 450.0,
+        "price": 349,
+        "regular": 450,
         "stock": 100,
         "sku": "E00072-Red"
       },
       {
         "label": "White",
-        "price": 349.0,
-        "regular": 450.0,
+        "price": 349,
+        "regular": 450,
         "stock": 100,
         "sku": "E00072-White"
       },
       {
         "label": "Green",
-        "price": 349.0,
-        "regular": 450.0,
+        "price": 349,
+        "regular": 450,
         "stock": 100,
         "sku": "E00072-Green"
       },
       {
         "label": "Purple",
-        "price": 349.0,
-        "regular": 450.0,
+        "price": 349,
+        "regular": 450,
         "stock": 100,
         "sku": "E00072-Purple"
       },
       {
         "label": "Blue",
-        "price": 349.0,
-        "regular": 450.0,
+        "price": 349,
+        "regular": 450,
         "stock": 100,
         "sku": "E00072-Blue"
       },
       {
         "label": "Pink",
-        "price": 349.0,
-        "regular": 450.0,
+        "price": 349,
+        "regular": 450,
         "stock": 100,
         "sku": "E00072-Pink"
       }
@@ -2427,49 +2427,49 @@
     ],
     "description": "Add a touch of elegance and cuteness to your look with this   Colorful Crystal Beaded Flower Bracelet  . Designed with high-quality transparent crystal beads and adorable daisy flower charms, this elastic bracelet is perfect for girls and teens who love stylish accessories.",
     "highlights": "nan",
-    "minPrice": 349.0,
-    "maxPrice": 349.0,
-    "minRegular": 400.0,
+    "minPrice": 349,
+    "maxPrice": 349,
+    "minRegular": 400,
     "variants": [
       {
         "label": "White",
-        "price": 349.0,
-        "regular": 400.0,
+        "price": 349,
+        "regular": 400,
         "stock": 100,
         "sku": "E00073-White"
       },
       {
         "label": "Multicolor",
-        "price": 349.0,
-        "regular": 400.0,
+        "price": 349,
+        "regular": 400,
         "stock": 99,
         "sku": "E00073-Multicolor"
       },
       {
         "label": "Purple",
-        "price": 349.0,
-        "regular": 400.0,
+        "price": 349,
+        "regular": 400,
         "stock": 100,
         "sku": "E00073-Purple"
       },
       {
         "label": "Pink",
-        "price": 349.0,
-        "regular": 400.0,
+        "price": 349,
+        "regular": 400,
         "stock": 100,
         "sku": "E00073-Pink"
       },
       {
         "label": "Blue",
-        "price": 349.0,
-        "regular": 400.0,
+        "price": 349,
+        "regular": 400,
         "stock": 100,
         "sku": "E00073-Blue"
       },
       {
         "label": "Green",
-        "price": 349.0,
-        "regular": 400.0,
+        "price": 349,
+        "regular": 400,
         "stock": 100,
         "sku": "E00073-Green"
       }
@@ -2490,56 +2490,56 @@
     ],
     "description": "Transform your space instantly with these stunning artificial tulip flower bouquets, designed to bring everlasting beauty without any maintenance. Crafted with a real-touch finish, these tulips look and feel just like fresh flowers, adding elegance and charm to any setting.    Perfect for home décor, weddings, events, or DIY floral arrangements, these vibrant tulips come in multiple eye-catching colors to match every mood and theme. The flexible long stems make them easy to arrange in vases, centerpieces, or...",
     "highlights": "nan",
-    "minPrice": 2499.0,
-    "maxPrice": 2499.0,
-    "minRegular": 2999.0,
+    "minPrice": 2499,
+    "maxPrice": 2499,
+    "minRegular": 2999,
     "variants": [
       {
         "label": "pink happy",
-        "price": 2499.0,
-        "regular": 2999.0,
+        "price": 2499,
+        "regular": 2999,
         "stock": 50,
         "sku": "E00091-pink happy"
       },
       {
         "label": "orange sunflower",
-        "price": 2499.0,
-        "regular": 2999.0,
+        "price": 2499,
+        "regular": 2999,
         "stock": 50,
         "sku": "E00091-orange sunflower"
       },
       {
         "label": "pink cosmos",
-        "price": 2499.0,
-        "regular": 2999.0,
+        "price": 2499,
+        "regular": 2999,
         "stock": 50,
         "sku": "E00091-pink cosmos"
       },
       {
         "label": "purple tulip",
-        "price": 2499.0,
-        "regular": 2999.0,
+        "price": 2499,
+        "regular": 2999,
         "stock": 50,
         "sku": "E00091-purple tulip"
       },
       {
         "label": "light Purple tulip",
-        "price": 2499.0,
-        "regular": 2999.0,
+        "price": 2499,
+        "regular": 2999,
         "stock": 50,
         "sku": "E00091-light Purple tulip"
       },
       {
         "label": "dark red tulip",
-        "price": 2499.0,
-        "regular": 2999.0,
+        "price": 2499,
+        "regular": 2999,
         "stock": 50,
         "sku": "E00091-dark red tulip"
       },
       {
         "label": "Pink tulip",
-        "price": 2499.0,
-        "regular": 2999.0,
+        "price": 2499,
+        "regular": 2999,
         "stock": 50,
         "sku": "E00091-Pink tulip"
       }
@@ -2559,35 +2559,35 @@
     ],
     "description": "Transform your space with this   beautiful handmade tulip flower lamp  , crafted with soft   pipe cleaners and warm LED lights   to create a cozy, aesthetic vibe. 🌷✨    This unique piece is not just a decoration — it's a   mood-setting night light   perfect for bedrooms, study tables, or gifting. The flexible design and glowing petals make it a   trending aesthetic decor item   loved by girls and decor enthusiasts.    Whether you're decorating your room or looking for a   thoughtful gift  , this tulip lamp is a...",
     "highlights": "nan",
-    "minPrice": 2350.0,
-    "maxPrice": 2350.0,
-    "minRegular": 2500.0,
+    "minPrice": 2350,
+    "maxPrice": 2350,
+    "minRegular": 2500,
     "variants": [
       {
         "label": "Yellow",
-        "price": 2350.0,
-        "regular": 2500.0,
+        "price": 2350,
+        "regular": 2500,
         "stock": 49,
         "sku": "E00092-Yellow"
       },
       {
         "label": "Pink",
-        "price": 2350.0,
-        "regular": 2500.0,
+        "price": 2350,
+        "regular": 2500,
         "stock": 47,
         "sku": "E00092-Pink"
       },
       {
         "label": "White",
-        "price": 2350.0,
-        "regular": 2500.0,
+        "price": 2350,
+        "regular": 2500,
         "stock": 50,
         "sku": "E00092-White"
       },
       {
         "label": "Red",
-        "price": 2350.0,
-        "regular": 2500.0,
+        "price": 2350,
+        "regular": 2500,
         "stock": 47,
         "sku": "E00092-Red"
       }
@@ -2597,7 +2597,7 @@
   {
     "id": "1954095175",
     "name": "Kashmiri Traditional Gold-Plated Churi Set for Women – Handmade Ethnic Bangles with Hanging Charms | Bridal Jewelry | Elegant & Trendy",
-    "category": "Accessories",
+    "category": "Jewellery",
     "image": "https://static-01.daraz.pk/p/432283c1ea8485fee40166c39e4e918a.jpg",
     "images": [
       "https://static-01.daraz.pk/p/fd69ff660028fa52de83cfe131f59dcf.jpg",
@@ -2606,91 +2606,91 @@
     ],
     "description": "Add a touch of timeless elegance to your jewelry collection with these stunning Kashmiri traditional churi bangles. Crafted with intricate detailing and a luxurious gold-plated finish, these bangles feature delicate hanging charms that create a graceful, eye-catching look with every movement.    Perfect for weddings, festive occasions, or everyday ethnic wear, these handcrafted bangles beautifully reflect Kashmiri heritage and artistry. Lightweight yet durable, they ensure all-day comfort while enhancing your...",
     "highlights": "nan",
-    "minPrice": 1499.0,
-    "maxPrice": 2499.0,
-    "minRegular": 1999.0,
+    "minPrice": 1499,
+    "maxPrice": 2499,
+    "minRegular": 1999,
     "variants": [
       {
         "label": "silver  pink,One Size",
-        "price": 2499.0,
-        "regular": 2999.0,
+        "price": 2499,
+        "regular": 2999,
         "stock": 50,
         "sku": "E00090-silver  pink-One Size"
       },
       {
         "label": "silver orange,One Size",
-        "price": 2499.0,
-        "regular": 2999.0,
+        "price": 2499,
+        "regular": 2999,
         "stock": 50,
         "sku": "E00090-silver orange-One Size"
       },
       {
         "label": "gold purple,One Size",
-        "price": 2499.0,
-        "regular": 2999.0,
+        "price": 2499,
+        "regular": 2999,
         "stock": 50,
         "sku": "E00090-gold purple-One Size"
       },
       {
         "label": "silver blue,One Size",
-        "price": 2499.0,
-        "regular": 2999.0,
+        "price": 2499,
+        "regular": 2999,
         "stock": 50,
         "sku": "E00090-silver blue-One Size"
       },
       {
         "label": "Gold orange,One Size",
-        "price": 2499.0,
-        "regular": 2999.0,
+        "price": 2499,
+        "regular": 2999,
         "stock": 50,
         "sku": "E00090-Gold orange-One Size"
       },
       {
         "label": "gold yellow,One Size",
-        "price": 2499.0,
-        "regular": 2999.0,
+        "price": 2499,
+        "regular": 2999,
         "stock": 50,
         "sku": "E00090-gold yellow-One Size"
       },
       {
         "label": "gold blue,One Size",
-        "price": 2499.0,
-        "regular": 2999.0,
+        "price": 2499,
+        "regular": 2999,
         "stock": 50,
         "sku": "E00090-gold blue-One Size"
       },
       {
         "label": "gold pink,One Size",
-        "price": 2499.0,
-        "regular": 2999.0,
+        "price": 2499,
+        "regular": 2999,
         "stock": 50,
         "sku": "E00090-gold pink-One Size"
       },
       {
         "label": "Silver,One Size",
-        "price": 1499.0,
-        "regular": 1999.0,
+        "price": 1499,
+        "regular": 1999,
         "stock": 50,
         "sku": "E00090-Silver-One Size"
       },
       {
         "label": "Gold,One Size",
-        "price": 1499.0,
-        "regular": 1999.0,
+        "price": 1499,
+        "regular": 1999,
         "stock": 50,
         "sku": "E00090-Gold-One Size"
       },
       {
         "label": "silver  yellow,One Size",
-        "price": 2499.0,
-        "regular": 2999.0,
+        "price": 2499,
+        "regular": 2999,
         "stock": 50,
         "sku": "E00090-silver  yellow-One Size"
       },
       {
         "label": "silver  purple,One Size",
-        "price": 2499.0,
-        "regular": 2999.0,
+        "price": 2499,
+        "regular": 2999,
         "stock": 50,
         "sku": "E00090-silver  purple-One Size"
       }
@@ -2700,7 +2700,7 @@
   {
     "id": "1965756356",
     "name": "Luxury Handmade Pearl Cup Holder Bag for Women | Beaded Coffee Cup Carrier with Golden Chain | Reusable Crossbody Tumbler Holder | Stylish Gift for Coffee Lovers",
-    "category": "Jewellery",
+    "category": "Bags & Accessories",
     "image": "https://static-01.daraz.pk/p/d6fa15c8f7cba9596a3ceb928835ff19.jpg",
     "images": [
       "https://static-01.daraz.pk/p/a840b01d9371982607cbe258703aadc1.jpg",
@@ -2709,14 +2709,14 @@
     ],
     "description": "Carry your favorite coffee in style with this   Luxury Handmade Pearl Cup Holder Bag  . Designed with elegant white pearls and a premium golden chain, this fashionable cup carrier combines beauty with functionality. Perfect for coffee lovers who want to keep their hands free while adding a touch of luxury to their everyday look.    Whether you're heading to work, university, shopping, or enjoying a casual outing, this reusable cup holder is the perfect accessory for your favorite tumbler or takeaway coffee cup.",
     "highlights": "nan",
-    "minPrice": 2499.0,
-    "maxPrice": 2499.0,
-    "minRegular": 3499.0,
+    "minPrice": 2499,
+    "maxPrice": 2499,
+    "minRegular": 3499,
     "variants": [
       {
         "label": "Standard",
-        "price": 2499.0,
-        "regular": 3499.0,
+        "price": 2499,
+        "regular": 3499,
         "stock": 50,
         "sku": "F0001Carry your favorite coffee in style with this Luxury Handmade Pearl Cup Holder Bag. Designed with elegant white pearls and a premium golden chain, this fashionable cup carrier combines beauty wit"
       }
@@ -2726,7 +2726,7 @@
   {
     "id": "1965914816",
     "name": "Silver Bow Side Drop Chain for Women | Korean Y2K Jeans Chain | Cute Pants Pocket Chain Accessory",
-    "category": "Hair Accessories",
+    "category": "Jewellery",
     "image": "https://static-01.daraz.pk/p/35ce7787a765e0ea1fad23c1325dfccc.jpg",
     "images": [
       "https://static-01.daraz.pk/p/0f73092a2ae6025a5213e39c8beb7fef.jpg",
@@ -2735,35 +2735,35 @@
     ],
     "description": "✨   Add a trendy Y2K touch to your outfit with this elegant Silver Bow Side Drop Chain!    Designed with delicate bow charms and a stylish layered silver chain, this   side drop chain   easily clips onto your jeans or trousers to create a fashionable streetwear look. Perfect for pairing with denim, cargo pants, skirts, and shorts, it's the ideal accessory for casual outings, concerts, parties, and everyday fashion.    Its lightweight design and secure lobster clasps make it easy to attach and remove while...",
     "highlights": "nan",
-    "minPrice": 800.0,
-    "maxPrice": 2000.0,
-    "minRegular": 1500.0,
+    "minPrice": 800,
+    "maxPrice": 2000,
+    "minRegular": 1500,
     "variants": [
       {
         "label": "4,One Size",
-        "price": 2000.0,
-        "regular": 3000.0,
+        "price": 2000,
+        "regular": 3000,
         "stock": 10,
         "sku": "F0005-4-One Size"
       },
       {
         "label": "3,One Size",
-        "price": 1200.0,
-        "regular": 1500.0,
+        "price": 1200,
+        "regular": 1500,
         "stock": 10,
         "sku": "F0005-3-One Size"
       },
       {
         "label": "1,One Size",
-        "price": 2000.0,
-        "regular": 2700.0,
+        "price": 2000,
+        "regular": 2700,
         "stock": 10,
         "sku": "F0005-2-One Size"
       },
       {
         "label": "2,One Size",
-        "price": 800.0,
-        "regular": 1500.0,
+        "price": 800,
+        "regular": 1500,
         "stock": 10,
         "sku": "F0005-1-One Size"
       }
@@ -2773,7 +2773,7 @@
   {
     "id": "1965922410",
     "name": "Premium Pearl & Star Shoe Charm Chain for Sneakers | Elegant Shoe Jewelry Decoration | Fashion Shoe Accessories for Women & Girls | Easy Clip-On Sneaker Chain",
-    "category": "Hair Accessories",
+    "category": "Accessories",
     "image": "https://static-01.daraz.pk/p/3337513f4038b566372f03627ab661f5.jpg",
     "images": [
       "https://static-01.daraz.pk/p/a56851071562f02afcfc611dcafcc9cd.jpg",
@@ -2782,35 +2782,35 @@
     ],
     "description": "✨   Transform your sneakers into a fashion statement!    Add elegance and charm to your favorite shoes with this   Premium Pearl & Star Shoe Charm Chain  . Designed with beautiful pearls and sparkling star charms, this stylish sneaker accessory instantly upgrades plain shoes into trendy fashion footwear. Perfect for women and girls who love unique and aesthetic accessories.    Whether you're dressing up for a casual day out, party, travel, or photoshoot, this lightweight shoe chain adds a luxurious touch to...",
     "highlights": "nan",
-    "minPrice": 600.0,
-    "maxPrice": 600.0,
-    "minRegular": 700.0,
+    "minPrice": 600,
+    "maxPrice": 600,
+    "minRegular": 700,
     "variants": [
       {
         "label": "4,Int: One size",
-        "price": 600.0,
-        "regular": 700.0,
+        "price": 600,
+        "regular": 700,
         "stock": 10,
         "sku": "F0003-4-One size"
       },
       {
         "label": "3,Int: One size",
-        "price": 600.0,
-        "regular": 700.0,
+        "price": 600,
+        "regular": 700,
         "stock": 10,
         "sku": "F0003-3-One size"
       },
       {
         "label": "2,Int: One size",
-        "price": 600.0,
-        "regular": 700.0,
+        "price": 600,
+        "regular": 700,
         "stock": 9,
         "sku": "F0003-2-One size"
       },
       {
         "label": "1,Int: One size",
-        "price": 600.0,
-        "regular": 700.0,
+        "price": 600,
+        "regular": 700,
         "stock": 10,
         "sku": "F0003-1-One size"
       }
@@ -2820,7 +2820,7 @@
   {
     "id": "1965934200",
     "name": "Luxury Crystal Heart Keychain for Women | Handmade Beaded Heart Bag Charm | Sparkling Rhinestone Key Ring | Cute Purse Charm | Car Key Holder Gift",
-    "category": "Jewellery",
+    "category": "Accessories",
     "image": "https://static-01.daraz.pk/p/89e5b5075e0d6c734e56cfddbb815551.jpg",
     "images": [
       "https://static-01.daraz.pk/p/2586cb46e2e8d5fef8405f77899fe97b.jpg",
@@ -2828,28 +2828,28 @@
     ],
     "description": "✨   Add a touch of elegance to your everyday essentials!    This   Luxury Crystal Heart Keychain   is beautifully handcrafted with shimmering crystal beads in a stylish heart shape. Perfect as a keychain, bag charm, purse accessory, or car key holder, it adds a fashionable and luxurious look wherever you use it.    Designed for women and girls who love elegant accessories, this heart-shaped keychain also makes a thoughtful gift for birthdays, Valentine's Day, anniversaries, or any special occasion.",
     "highlights": "nan",
-    "minPrice": 800.0,
-    "maxPrice": 800.0,
-    "minRegular": 1000.0,
+    "minPrice": 800,
+    "maxPrice": 800,
+    "minRegular": 1000,
     "variants": [
       {
         "label": "Blue",
-        "price": 800.0,
-        "regular": 1000.0,
+        "price": 800,
+        "regular": 1000,
         "stock": 10,
         "sku": "F0004-Blue"
       },
       {
         "label": "Green",
-        "price": 800.0,
-        "regular": 1000.0,
+        "price": 800,
+        "regular": 1000,
         "stock": 10,
         "sku": "F0004-Green"
       },
       {
         "label": "Red",
-        "price": 800.0,
-        "regular": 1000.0,
+        "price": 800,
+        "regular": 1000,
         "stock": 10,
         "sku": "F0004-Red"
       }
