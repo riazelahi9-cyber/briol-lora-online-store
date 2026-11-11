@@ -3,7 +3,7 @@ const pageCategory=document.body.dataset.category||"all";
 const money=n=>"Rs. "+Number(n||0).toLocaleString("en-PK",{maximumFractionDigits:0});
 const $=id=>document.getElementById(id);
 function safeImage(url){return url||"https://placehold.co/600x700/f4f0eb/8d7770?text=BRIOLLORA"}
-function productPagePath(p){const slug=String(p.name||"product").toLowerCase().normalize("NFKD").replace(/[\\u0300-\\u036f]/g,"").replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"").slice(0,65);return "products/"+slug+"-"+p.id+".html"}
+function productPagePath(p){const slug=String(p.name||"product").toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"").slice(0,65);return "products/"+slug+"-"+p.id+".html"}
 function priceLabel(p){return p.minPrice===p.maxPrice?money(p.minPrice):money(p.minPrice)+" – "+money(p.maxPrice)}
 function categories(){return ["All",...new Set(products.map(p=>p.category))]}
 function renderFilters(){if(!$("categoryFilters"))return;$("categoryFilters").innerHTML=categories().map(c=>`<button class="filter-btn ${c===activeCategory?"active":""}" data-cat="${c}">${c}</button>`).join("");document.querySelectorAll(".filter-btn").forEach(b=>b.addEventListener("click",()=>{activeCategory=b.dataset.cat;renderFilters();renderProducts()}))}
