@@ -61,3 +61,5 @@
 .product-name a{color:inherit;text-decoration:none}
 .product-name a:hover{color:var(--rose-dark);text-decoration:underline;text-underline-offset:3px}
 @media(max-width:760px){.product-seo-page{padding:24px 5% 56px}.product-seo-layout{grid-template-columns:1fr;gap:28px}.product-seo-image{min-height:260px}.product-seo-image img{max-height:420px}.product-seo-copy h1{font-size:32px}}
+
+.product-image-link{display:block;width:100%;height:100%;cursor:pointer}.product-image-link img{display:block}.shipping-row{margin-top:10px;color:var(--muted)}.cart-grand-total{border-top:1px solid var(--line);padding-top:12px;margin-top:12px;font-weight:700}.cart-grand-total strong{font-size:17px;color:var(--ink)}
