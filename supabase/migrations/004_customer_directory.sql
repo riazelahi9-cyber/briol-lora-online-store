@@ -9,6 +9,13 @@ SET email = u.email,
 FROM auth.users u
 WHERE p.id = u.id;
 
+INSERT INTO public.profiles (id, email, full_name, created_at)
+SELECT u.id, u.email, NULLIF(u.raw_user_meta_data->>'full_name', ''), u.created_at
+FROM auth.users u
+ON CONFLICT (id) DO UPDATE
+SET email = EXCLUDED.email,
+    full_name = COALESCE(EXCLUDED.full_name, public.profiles.full_name);
+
 CREATE OR REPLACE FUNCTION public.sync_customer_profile()
 RETURNS trigger
 LANGUAGE plpgsql
