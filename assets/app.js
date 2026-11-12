@@ -1,3 +1,5 @@
+/* Load Umami analytics for storefront pages. */
+(() => { if (document.querySelector('script[data-website-id="b1444ebb-45d6-418f-bf66-2a98419a2422"]')) return; const s=document.createElement("script"); s.defer=true; s.src="https://cloud.umami.is/script.js"; s.dataset.websiteId="b1444ebb-45d6-418f-bf66-2a98419a2422"; document.head.appendChild(s); })();
 /* Load shared social icons after storefront config is available. */
 (() => { const s=document.createElement("script"); s.src="/assets/social.js"; s.defer=true; document.head.appendChild(s); })();
 let products=[],activeCategory="All",searchTerm="",cart=[],selectedProduct=null,directCheckout=false;
