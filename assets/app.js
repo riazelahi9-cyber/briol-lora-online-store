@@ -1,5 +1,5 @@
 /* Load shared social icons after storefront config is available. */
-(() => { const s=document.createElement("script"); s.src="assets/social.js"; s.defer=true; document.head.appendChild(s); })();
+(() => { const s=document.createElement("script"); s.src="/assets/social.js"; s.defer=true; document.head.appendChild(s); })();
 let products=[],activeCategory="All",searchTerm="",cart=[],selectedProduct=null,directCheckout=false;
 const pageCategory=document.body.dataset.category||"all";
 const money=n=>"Rs. "+Number(n||0).toLocaleString("en-PK",{maximumFractionDigits:0});
