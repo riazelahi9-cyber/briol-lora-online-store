@@ -13,7 +13,7 @@
   modal.innerHTML=`<section class="auth-panel account-panel" role="dialog" aria-modal="true" aria-labelledby="authTitle">
     <button class="close-button auth-close" type="button" aria-label="Close">×</button>
     <p class="eyebrow">Welcome to BRIOLLORA</p><h2 id="authTitle">Welcome back</h2>
-    <p class="auth-subtitle" id="authSubtitle">Create an account or sign in to keep your shopping connected.</p>
+    <p class="auth-subtitle" id="authSubtitle">Create an account or sign in to keep your shopping connected.</p><p class="account-coupon-promo"><strong>Member welcome offer</strong><br>Use <code>WELCOME100</code> for Rs. 100 off your first order. One-time use on your account.</p>
     <div class="auth-actions" id="authTabs"><button class="auth-tab active" type="button" data-mode="login">Log in</button><button class="auth-tab" type="button" data-mode="signup">Create account</button></div>
     <form id="authForm">
       <div id="authNameWrap" hidden><label for="authName">Full name</label><input id="authName" maxlength="80" autocomplete="name" placeholder="Your full name"></div>
@@ -24,7 +24,7 @@
     <button class="auth-link" id="forgotPassword" type="button">Forgot password?</button>
     <div id="authSignedIn" hidden>
       <p class="auth-user-email" id="authUserEmail"></p>
-      <div class="account-section"><h3>My Profile</h3>
+      <div class="account-section account-coupon-card"><h3>Your welcome coupon</h3><p>Use <strong>WELCOME100</strong> for Rs. 100 off your first order. Valid once per account; shipping charges are excluded.</p></div><div class="account-section"><h3>My Profile</h3>
         <label for="profileName">Full name</label><input id="profileName" maxlength="80" autocomplete="name">
         <label for="profilePhone">WhatsApp number</label><input id="profilePhone" maxlength="25" autocomplete="tel" placeholder="+92...">
         <button class="primary-button full-button account-save" id="saveProfile" type="button">Save profile</button>
@@ -54,7 +54,7 @@
     $("profilePhone").value=profile?.phone||"";
     if(ordersError){$("ordersList").innerHTML='<p class="auth-message">Could not load orders. Please refresh and try again.</p>';return;}
     if(!orders?.length){$("ordersList").innerHTML='<p class="auth-subtitle">You have no orders yet. Your placed orders will appear here.</p>';return;}
-    $("ordersList").innerHTML=orders.map(o=>`<article class="account-order"><div class="account-order-top"><strong>Order #${esc(o.order_number||o.id.slice(0,8))}</strong><span class="order-status">${esc(o.status)}</span></div><p>Rs. ${Number(o.total_amount||0).toLocaleString("en-PK")} · ${new Date(o.created_at).toLocaleDateString("en-PK")}</p><p>Payment: ${esc((o.payment_method||"cod").toUpperCase())} · ${esc(o.payment_status||"unpaid")}</p>${o.courier?'<p>Courier: '+esc(o.courier)+'</p>':''}${o.tracking_number?'<p>Tracking: <strong>'+esc(o.tracking_number)+'</strong></p>':''}<div class="order-items" id="items-${esc(o.id)}">Loading items…</div></article>`).join("");
+    $("ordersList").innerHTML=orders.map(o=>`<article class="account-order"><div class="account-order-top"><strong>Order #${esc(o.order_number||o.id.slice(0,8))}</strong><span class="order-status">${esc(o.status)}</span></div><p>Rs. ${Number(o.total_amount||0).toLocaleString("en-PK")} · ${new Date(o.created_at).toLocaleDateString("en-PK")}</p>${Number(o.discount_amount||0)>0?'<p>Coupon '+esc(o.coupon_code)+' · Saved Rs. '+Number(o.discount_amount).toLocaleString("en-PK")+'</p>':''}<p>Payment: ${esc((o.payment_method||"cod").toUpperCase())} · ${esc(o.payment_status||"unpaid")}</p>${o.courier?'<p>Courier: '+esc(o.courier)+'</p>':''}${o.tracking_number?'<p>Tracking: <strong>'+esc(o.tracking_number)+'</strong></p>':''}<div class="order-items" id="items-${esc(o.id)}">Loading items…</div></article>`).join("");
     for(const o of orders){const {data:items,error}=await client.from("order_items").select("product_name,quantity,unit_price").eq("order_id",o.id);const el=$("items-"+o.id);if(el)el.innerHTML=error?"":(items||[]).map(i=>'<p>'+esc(i.product_name)+' × '+esc(i.quantity)+' — Rs. '+Number(i.unit_price||0).toLocaleString("en-PK")+'</p>').join("")}
   }
   button.addEventListener("click",async()=>{const {data}=await client.auth.getUser();render(data.user);modal.classList.add("show");msg("");});
