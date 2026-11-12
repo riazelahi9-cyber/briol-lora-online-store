@@ -22,6 +22,19 @@ async function loadOrders(){
  <div class="admin-order-actions"><label>Status<select data-status="${esc(o.id)}">${statuses.map(s=>`<option ${o.status===s?"selected":""}>${s}</option>`).join("")}</select></label><label>Courier<input data-courier="${esc(o.id)}" value="${esc(o.courier||"")}" placeholder="Courier name"></label><label>Tracking number<input data-tracking="${esc(o.id)}" value="${esc(o.tracking_number||"")}" placeholder="Tracking number"></label><button class="admin-save" data-save="${esc(o.id)}">Save updates</button></div></article>`).join(""):"<p>No orders found yet.</p>";
  document.querySelectorAll("[data-save]").forEach(b=>b.addEventListener("click",()=>saveOrder(b.dataset.save,b)));
 }
+
+async function loadCustomers(){
+ const box=$("customerCards");box.innerHTML='<p class="admin-subtitle">Loading customers…</p>';$("customerState").textContent="Loading registered accounts…";
+ const [{data:customers,error:customerError},{data:orderRows,error:orderError}]=await Promise.all([
+  db.from("profiles").select("id,email,full_name,phone,created_at").order("created_at",{ascending:false}).limit(1000),
+  db.from("orders").select("customer_id").not("customer_id","is",null).limit(5000)
+ ]);
+ if(customerError){$("customerState").textContent="Could not load customers: "+customerError.message;box.innerHTML="";return;}
+ if(orderError){$("customerState").textContent="Customers loaded, but order counts could not be read: "+orderError.message;return;}
+ const counts={};(orderRows||[]).forEach(o=>{if(o.customer_id)counts[o.customer_id]=(counts[o.customer_id]||0)+1;});
+ $("customerState").textContent=(customers||[]).length+" registered accounts";
+ box.innerHTML=customers?.length?customers.map(c=>`<article class="customer-card"><div><h3>${esc(c.full_name||"Name not added")}</h3><p>${esc(c.email||"Email unavailable")}</p><p>WhatsApp: ${esc(c.phone||"Not provided")}</p><small>Joined: ${c.created_at?new Date(c.created_at).toLocaleDateString("en-PK"):"—"}</small></div><strong>${counts[c.id]||0} order${counts[c.id]===1?"":"s"}</strong></article>`).join(""):"<p>No registered customer profiles found yet.</p>";
+}
 async function saveOrder(id,button){
  const status=document.querySelector(`[data-status="${CSS.escape(id)}"]`).value,courier=document.querySelector(`[data-courier="${CSS.escape(id)}"]`).value.trim(),tracking_number=document.querySelector(`[data-tracking="${CSS.escape(id)}"]`).value.trim();
  button.disabled=true;button.textContent="Saving…";
@@ -30,6 +43,9 @@ async function saveOrder(id,button){
  $("adminState").textContent=error?"Update failed: "+error.message:"Order updated.";
 }
 $("adminLoginForm").addEventListener("submit",async e=>{e.preventDefault();$("adminLoginButton").disabled=true;$("adminState").textContent="Signing in…";const {error}=await db.auth.signInWithPassword({email:$("adminEmailInput").value.trim(),password:$("adminPasswordInput").value});$("adminLoginButton").disabled=false;if(error){$("adminState").textContent=error.message;return;}await guard();});
-$("adminRefresh").addEventListener("click",loadOrders);$("adminLogout").addEventListener("click",async()=>{await db.auth.signOut();login("You have logged out.");});
+$("adminRefresh").addEventListener("click",loadOrders);
+$("customerRefresh").addEventListener("click",loadCustomers);
+$("showOrders").addEventListener("click",()=>{$("ordersSection").hidden=false;$("customersSection").hidden=true;$("showOrders").classList.add("active");$("showCustomers").classList.remove("active");});
+$("showCustomers").addEventListener("click",()=>{$("ordersSection").hidden=true;$("customersSection").hidden=false;$("showCustomers").classList.add("active");$("showOrders").classList.remove("active");loadCustomers();});$("adminLogout").addEventListener("click",async()=>{await db.auth.signOut();login("You have logged out.");});
 db.auth.onAuthStateChange(()=>setTimeout(guard,0));guard();
 })();
