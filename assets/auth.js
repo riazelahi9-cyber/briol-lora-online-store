@@ -46,7 +46,7 @@
     $("ordersList").innerHTML='<p class="auth-subtitle">Loading your orders…</p>';
     const [{data:profile,error:profileError},{data:orders,error:ordersError}]=await Promise.all([
       client.from("profiles").select("full_name,phone").eq("id",user.id).maybeSingle(),
-      client.from("orders").select("id,order_number,total_amount,status,payment_method,payment_status,courier,tracking_number,created_at").eq("customer_id",user.id).order("created_at",{ascending:false}).limit(50)
+      client.from("orders").select("id,order_number,total_amount,discount_amount,coupon_code,status,payment_method,payment_status,courier,tracking_number,created_at").eq("customer_id",user.id).order("created_at",{ascending:false}).limit(50)
     ]);
     if(!user)return;
     if(profileError)$("profileMessage").textContent="Could not load profile: "+profileError.message;
