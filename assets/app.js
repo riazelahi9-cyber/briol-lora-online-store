@@ -18,7 +18,22 @@ function renderCart(){const subtotal=cart.reduce((n,x)=>n+x.price*x.qty,0),shipp
 function openCart(){$("cartDrawer").classList.add("open");$("drawerBackdrop").classList.add("show")}
 function closeCart(){$("cartDrawer").classList.remove("open");$("drawerBackdrop").classList.remove("show")}
 function setupPaymentOptions(){const form=$("orderForm");if(!form||form.querySelector("#paymentOptions"))return;const orderType=form.querySelector('[name="orderType"]')?.closest("label");if(!orderType)return;orderType.insertAdjacentHTML("afterend",`<fieldset class="payment-options full-field" id="paymentOptions"><legend>Payment method</legend><label class="payment-choice"><input type="radio" name="paymentMethod" value="cod" checked><span><strong>Cash on Delivery</strong><small>Available now · Order sent on WhatsApp</small></span></label><div class="payment-coming"><strong>Online payments — Coming Soon</strong><span>JazzCash · Easypaisa · Visa · Mastercard</span></div></fieldset><label class="full-field coupon-entry">Signup discount coupon <span class="coupon-offer">Create an account and get Rs. 100 off your first order.</span><input id="couponCode" name="couponCode" maxlength="30" autocomplete="off" placeholder="Enter WELCOME100"><small>WELCOME100 · Registered customers only · One-time use · Discount applies to products, not shipping.</small></label>`)}
-function checkout(){if(!cart.length){alert("Your bag is empty. Please add a product first.");return}setupPaymentOptions();closeCart();$("orderModalBackdrop").classList.add("show")}
+async function prefillCheckoutProfile(){
+try{
+const cfg=window.BRIOLLORA_CONFIG||{};
+if(!window.supabase||!cfg.SUPABASE_URL||!cfg.SUPABASE_PUBLISHABLE_KEY)return;
+const client=window.supabase.createClient(cfg.SUPABASE_URL,cfg.SUPABASE_PUBLISHABLE_KEY);
+const {data:sessionData}=await client.auth.getSession();
+const session=sessionData?.session;
+if(!session?.user?.id)return;
+const {data:profile,error}=await client.from("profiles").select("full_name,phone").eq("id",session.user.id).maybeSingle();
+if(error)throw error;
+const form=$("orderForm");
+if(profile?.full_name)form.elements.namedItem("name").value=profile.full_name;
+if(profile?.phone)form.elements.namedItem("phone").value=profile.phone;
+}catch(error){console.warn("Could not prefill saved checkout profile:",error.message||error)}
+}
+async function checkout(){if(!cart.length){alert("Your bag is empty. Please add a product first.");return}setupPaymentOptions();closeCart();await prefillCheckoutProfile();$("orderModalBackdrop").classList.add("show")}
 async function sendOrder(e){
 e.preventDefault();if(!cart.length){alert("Your bag is empty.");return}
 const cfg=window.BRIOLLORA_CONFIG||{};if(!window.supabase||!cfg.SUPABASE_URL||!cfg.SUPABASE_PUBLISHABLE_KEY){alert("Checkout is not configured.");return}
