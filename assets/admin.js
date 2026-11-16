@@ -45,7 +45,7 @@ async function saveOrder(id,button){
 $("adminLoginForm").addEventListener("submit",async e=>{e.preventDefault();$("adminLoginButton").disabled=true;$("adminState").textContent="Signing in…";const {error}=await db.auth.signInWithPassword({email:$("adminEmailInput").value.trim(),password:$("adminPasswordInput").value});$("adminLoginButton").disabled=false;if(error){$("adminState").textContent=error.message;return;}await guard();});
 $("adminRefresh").addEventListener("click",loadOrders);
 $("customerRefresh").addEventListener("click",loadCustomers);
-$("showOrders").addEventListener("click",()=>{$("ordersSection").hidden=false;$("customersSection").hidden=true;$("showOrders").classList.add("active");$("showCustomers").classList.remove("active");});
-$("showCustomers").addEventListener("click",()=>{$("ordersSection").hidden=true;$("customersSection").hidden=false;$("showCustomers").classList.add("active");$("showOrders").classList.remove("active");loadCustomers();});$("adminLogout").addEventListener("click",async()=>{await db.auth.signOut();login("You have logged out.");});
+$("showOrders").addEventListener("click",()=>{$("ordersSection").hidden=false;$("customersSection").hidden=true;$("productsSection").hidden=true;$("showOrders").classList.add("active");$("showCustomers").classList.remove("active");});
+$("showCustomers").addEventListener("click",()=>{$("ordersSection").hidden=true;$("customersSection").hidden=false;$("productsSection").hidden=true;$("showCustomers").classList.add("active");$("showOrders").classList.remove("active");loadCustomers();});$("adminLogout").addEventListener("click",async()=>{await db.auth.signOut();login("You have logged out.");});
 db.auth.onAuthStateChange(()=>setTimeout(guard,0));guard();
 })();
