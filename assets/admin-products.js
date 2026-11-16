@@ -48,8 +48,10 @@ async function saveProduct(e){
  e.preventDefault();if(!active)return;
  const id=$("pId").value||("br-"+crypto.randomUUID());
  let variants=[];try{variants=JSON.parse($("pVariants").value||"[]");if(!Array.isArray(variants))throw Error("Variants must be a JSON array.");}catch(err){state("Invalid variants JSON: "+err.message);return}
- const name=$("pName").value.trim(),price=Number($("pPrice").value),regular=$("pRegular").value===""?null:Number($("pRegular").value);
- if(!name||!Number.isFinite(price)||price<0){state("Enter a valid product name and price.");return}
+ const name=$("pName").value.trim(),price=Number($("pPrice").value),regular=$("pRegular").value===""?null:Number($("pRegular").value),stock=Number($("pStock").value||0);
+ if(!name||!Number.isFinite(price)||price<0||!Number.isFinite(stock)||stock<0){state("Enter a valid product name, price and stock quantity.");return}
+ if(!variants.length)variants=[{label:"Default",price,regular,stock,sku:id}];
+ if(variants.some(v=>!v||typeof v.label!=="string"||!v.label.trim()||!Number.isFinite(Number(v.price))||Number(v.price)<0||!Number.isFinite(Number(v.stock??0))||Number(v.stock??0)<0)){state("Each variant needs a label, valid price and valid stock quantity.");return}
  let images=$("pImages").value.split(/\r?\n/).map(x=>x.trim()).filter(Boolean),image=$("pImage").value.trim()||images[0]||null;
  const files=Array.from($("pUpload").files||[]);
  for(const file of files){
@@ -63,7 +65,7 @@ async function saveProduct(e){
  }
  const payload={id,name,slug:slugify($("pSlug").value||name)+"-"+id,category:$("pCategory").value.trim(),
  description:$("pDescription").value.trim(),highlights:$("pHighlights").value.trim(),image_url:image,images,
- min_price:price,max_price:price,min_regular:regular,stock_quantity:Number($("pStock").value||0),variants,
+ min_price:price,max_price:price,min_regular:regular,stock_quantity:stock,variants,
  seo_title:$("pSeoTitle").value.trim()||name,seo_description:$("pSeoDescription").value.trim()||$("pDescription").value.trim().slice(0,300),
  status:$("pStatus").value,updated_at:new Date().toISOString()};
  const btn=$("saveProductBtn");btn.disabled=true;btn.textContent="Saving…";state("Saving product…");
