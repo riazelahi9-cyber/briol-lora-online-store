@@ -2,12 +2,12 @@
 (() => { if (document.querySelector('script[data-website-id="b1444ebb-45d6-418f-bf66-2a98419a2422"]')) return; const s=document.createElement("script"); s.defer=true; s.src="https://cloud.umami.is/script.js"; s.dataset.websiteId="b1444ebb-45d6-418f-bf66-2a98419a2422"; document.head.appendChild(s); })();
 /* Load shared social icons after storefront config is available. */
 (() => { const s=document.createElement("script"); s.src="/assets/social.js"; s.defer=true; document.head.appendChild(s); })();
-let products=[],activeCategory="All",searchTerm="",cart=[],selectedProduct=null,directCheckout=false;
+let products=[],activeCategory="All",searchTerm="",cart=[],selectedProduct=null,directCheckout=false,legacyProducts=[];
 const pageCategory=document.body.dataset.category||"all";
 const money=n=>"Rs. "+Number(n||0).toLocaleString("en-PK",{maximumFractionDigits:0});
 const $=id=>document.getElementById(id);
 function safeImage(url){return url||"https://placehold.co/600x700/f4f0eb/8d7770?text=BRIOLLORA"}
-function productPagePath(p){const slug=String(p.name||"product").toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"").slice(0,65);return "products/"+slug+"-"+p.id+".html"}
+function productPagePath(p){return "index.html?product="+encodeURIComponent(p.id)}
 function priceLabel(p){return p.minPrice===p.maxPrice?money(p.minPrice):money(p.minPrice)+" – "+money(p.maxPrice)}
 function categories(){return ["All",...new Set(products.map(p=>p.category))]}
 function renderFilters(){if(!$("categoryFilters"))return;$("categoryFilters").innerHTML=categories().map(c=>`<button class="filter-btn ${c===activeCategory?"active":""}" data-cat="${c}">${c}</button>`).join("");document.querySelectorAll(".filter-btn").forEach(b=>b.addEventListener("click",()=>{activeCategory=b.dataset.cat;renderFilters();renderProducts()}))}
@@ -74,6 +74,21 @@ function setupSearch(){
     },1200);
   });
 }
-async function init(){setupSearch();try{let res=await fetch("data/products.json");products=await res.json();renderFilters();renderProducts();const params=new URLSearchParams(location.search);directCheckout=false;const requestedProduct=params.get("product");if(requestedProduct)openProduct(requestedProduct)}catch(e){$("resultsCount").textContent="Could not load product catalogue. Please run this website through a web host or local server."}}
+async function loadStoreProducts(){
+ const bundled=await fetch("data/products.json");
+ if(!bundled.ok)throw new Error("Could not load bundled product catalogue.");
+ legacyProducts=await bundled.json();
+ const cfg=window.BRIOLLORA_CONFIG||{};
+ if(window.supabase&&cfg.SUPABASE_URL&&cfg.SUPABASE_PUBLISHABLE_KEY){
+  try{
+   const client=window.supabase.createClient(cfg.SUPABASE_URL,cfg.SUPABASE_PUBLISHABLE_KEY);
+   const {data,error}=await client.from("products").select("id,name,slug,category,description,highlights,image_url,images,min_price,max_price,min_regular,stock_quantity,variants,seo_title,seo_description,status").eq("status","published").order("created_at",{ascending:false});
+   if(!error&&data?.length)return data.map(p=>({id:p.id,name:p.name,category:p.category||"Accessories",image:p.image_url||p.images?.[0]||"",images:p.images||[],description:p.description||"",highlights:p.highlights||"",minPrice:Number(p.min_price||0),maxPrice:Number(p.max_price??p.min_price??0),minRegular:p.min_regular==null?null:Number(p.min_regular),variants:Array.isArray(p.variants)?p.variants:[],darazUrl:""}));
+   if(error)console.warn("Live product catalogue unavailable; using bundled catalogue.",error);
+  }catch(err){console.warn("Live product catalogue unavailable; using bundled catalogue.",err)}
+ }
+ return legacyProducts;
+}
+async function init(){setupSearch();try{products=await loadStoreProducts();renderFilters();renderProducts();const params=new URLSearchParams(location.search);directCheckout=false;const requestedProduct=params.get("product");if(requestedProduct)openProduct(requestedProduct)}catch(e){$("resultsCount").textContent="Could not load product catalogue. Please run this website through a web host or local server."}}
 $("searchInput").addEventListener("input",e=>{searchTerm=e.target.value.toLowerCase().trim();renderProducts()});$("sortSelect").addEventListener("change",renderProducts);$("cartOpen").addEventListener("click",openCart);$("cartClose").addEventListener("click",closeCart);$("drawerBackdrop").addEventListener("click",closeCart);$("whatsappCheckout").addEventListener("click",checkout);$("variantSelect").addEventListener("change",updateModalPrice);$("addToBag").addEventListener("click",()=>{if(selectedProduct){let v=selectedProduct.variants[Number($("variantSelect").value)||0];if(v.stock>0)addCart(selectedProduct,v)}});$("modalClose").addEventListener("click",()=>$("productModalBackdrop").classList.remove("show"));$("productModalBackdrop").addEventListener("click",e=>{if(e.target===$("productModalBackdrop"))$("productModalBackdrop").classList.remove("show")});$("menuToggle").addEventListener("click",()=>{let nav=document.querySelector(".desktop-nav");nav.style.display=nav.style.display==="flex"?"none":"flex";nav.style.position="absolute";nav.style.top="68px";nav.style.left="0";nav.style.right="0";nav.style.padding="18px";nav.style.background="#fffdf9";nav.style.flexDirection="column";nav.style.gap="18px"});$("year").textContent=new Date().getFullYear();init();
 $("orderClose").addEventListener("click",()=>$("orderModalBackdrop").classList.remove("show"));$("orderModalBackdrop").addEventListener("click",e=>{if(e.target===$("orderModalBackdrop"))$("orderModalBackdrop").classList.remove("show")});$("orderForm").addEventListener("submit",sendOrder);
