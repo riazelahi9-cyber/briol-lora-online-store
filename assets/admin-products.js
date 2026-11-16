@@ -63,6 +63,7 @@ async function saveProduct(e){
   const {data:publicData}=db.storage.from("product-images").getPublicUrl(path);
   images.push(publicData.publicUrl);if(!image)image=publicData.publicUrl;
  }
+ if(!image){state("Add a main image URL or upload at least one product image.");return}
  const payload={id,name,slug:slugify($("pSlug").value||name)+"-"+id,category:$("pCategory").value.trim(),
  description:$("pDescription").value.trim(),highlights:$("pHighlights").value.trim(),image_url:image,images,
  min_price:price,max_price:price,min_regular:regular,stock_quantity:stock,variants,
