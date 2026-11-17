@@ -16,7 +16,7 @@ function collectVariantRows(basePrice,baseRegular,baseStock){
  return Array.from($("variantRows").querySelectorAll(".variant-row")).map(row=>{
   const val=name=>row.querySelector('[data-v="'+name+'"]').value.trim();
   const priceRaw=val("price"),regularRaw=val("regular"),stockRaw=val("stock");
-  return {label:val("label"),price:priceRaw===""?Number(basePrice):Number(priceRaw),regular:regularRaw===""?(baseRegular===""?null:Number(baseRegular)):Number(regularRaw),stock:stockRaw===""?Number(baseStock||0):Number(stockRaw),sku:val("sku")};
+  return {label:val("label"),price:priceRaw===""?Number(basePrice):Number(priceRaw),regular:regularRaw===""?(baseRegular===""?null:Number(baseRegular)):Number(regularRaw),stock:stockRaw===""?(row.parentElement.querySelectorAll(".variant-row").length===1?Number(baseStock||0):0):Number(stockRaw),sku:val("sku")};
  });
 }
 function productUrl(p){return "product.html?slug="+encodeURIComponent(p.slug||p.id)}
