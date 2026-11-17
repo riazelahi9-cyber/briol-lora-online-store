@@ -89,3 +89,5 @@
 .brand-logo{display:block;width:42px;height:42px;object-fit:contain;flex:0 0 42px;border-radius:50%;}
 .brand{text-decoration:none;color:inherit}
 .brand:focus-visible{outline:2px solid var(--rose-dark);outline-offset:4px}
+
+.site-credit{margin:8px 0 0;font-size:12px;color:inherit;opacity:.8;text-align:center}.site-credit a{color:inherit;text-decoration:underline;text-underline-offset:3px}.site-credit a:hover{opacity:1}
