@@ -84,3 +84,8 @@
 .footer .social-icon:hover{color:#292622!important;background:#f9f5ef!important;border-color:#f9f5ef!important}
 .footer .social-icon:hover svg{stroke:currentColor}
 .footer .social-icon:hover .social-fill{fill:currentColor}
+
+/* BRIOLLORA brand logo in clickable home header */
+.brand-logo{display:block;width:42px;height:42px;object-fit:contain;flex:0 0 42px;border-radius:50%;}
+.brand{text-decoration:none;color:inherit}
+.brand:focus-visible{outline:2px solid var(--rose-dark);outline-offset:4px}
