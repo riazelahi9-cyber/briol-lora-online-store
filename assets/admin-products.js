@@ -6,7 +6,7 @@ const db=window.supabase.createClient(cfg.SUPABASE_URL,cfg.SUPABASE_PUBLISHABLE_
 const $=id=>document.getElementById(id);
 const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const money=n=>"Rs. "+Number(n||0).toLocaleString("en-PK");
-let active=false,records=[];
+let active=false,records=[],autoSlugMode=false;
 function state(t){$("productState").textContent=t||""}
 function renderVariantRows(variants){
  const rows=Array.isArray(variants)&&variants.length?variants:[{label:"Default",price:"",regular:"",stock:"",sku:""}];
@@ -42,10 +42,10 @@ async function loadProducts(){
  document.querySelectorAll("[data-delete-product]").forEach(b=>b.addEventListener("click",()=>deleteProduct(b.dataset.deleteProduct)));
 }
 function clearForm(){
- $("productForm").reset();$("pId").value="";$("pStock").value="0";$("pStatus").value="draft";renderVariantRows([{label:"Default",price:"",regular:"",stock:"",sku:""}]);$("productEditorTitle").textContent="Add product";$("productEditor").hidden=false;
+ $("productForm").reset();$("pId").value="br-"+crypto.randomUUID();autoSlugMode=true;$("pSlug").value="";$("pStock").value="0";$("pStatus").value="draft";renderVariantRows([{label:"Default",price:"",regular:"",stock:"",sku:""}]);$("productEditorTitle").textContent="Add product";$("productEditor").hidden=false;
 }
 function editProduct(id){
- const p=records.find(x=>x.id===id);if(!p)return;
+ const p=records.find(x=>x.id===id);if(!p)return;autoSlugMode=false;
  $("pId").value=p.id;$("pName").value=p.name||"";$("pCategory").value=p.category||"";$("pSlug").value=p.slug||"";
  $("pPrice").value=p.min_price??0;$("pRegular").value=p.min_regular??"";
  $("pStock").value=p.stock_quantity??0;$("pImage").value=p.image_url||"";
@@ -76,7 +76,7 @@ async function saveProduct(e){
   images.push(publicData.publicUrl);if(!image)image=publicData.publicUrl;
  }
  if(!image){state("Add a main image URL or upload at least one product image.");return}
- const payload={id,name,slug:slugify($("pSlug").value||name)+"-"+id,category:$("pCategory").value.trim(),
+ const payload={id,name,slug:slugify($("pSlug").value||name),category:$("pCategory").value.trim(),
  description:$("pDescription").value.trim(),highlights:$("pHighlights").value.trim(),image_url:image,images,
  min_price:Math.min(...variants.map(v=>v.price)),max_price:Math.max(...variants.map(v=>v.price)),min_regular:variants.map(v=>v.regular).filter(v=>v!==null).length?Math.min(...variants.map(v=>v.regular).filter(v=>v!==null)):regular,stock_quantity:variants.reduce((sum,v)=>sum+v.stock,0),variants,
  seo_title:$("pSeoTitle").value.trim()||name,seo_description:$("pSeoDescription").value.trim()||$("pDescription").value.trim().slice(0,300),
