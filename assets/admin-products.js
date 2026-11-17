@@ -56,6 +56,8 @@ function editProduct(id){
  $("productEditor").scrollIntoView({behavior:"smooth",block:"start"});
 }
 function slugify(s){return String(s||"").toLowerCase().normalize("NFKD").replace(/[\u0300-\u036f]/g,"").replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"").slice(0,150)}
+$("pName").addEventListener("input",()=>{if(autoSlugMode){const nameSlug=slugify($("pName").value);$("pSlug").value=nameSlug?nameSlug+"-"+$("pId").value:"";}});
+$("pSlug").addEventListener("input",()=>{if(autoSlugMode&&$("pSlug").value!==slugify($("pName").value)+"-"+$("pId").value)autoSlugMode=false;});
 async function saveProduct(e){
  e.preventDefault();if(!active)return;
  const id=$("pId").value||("br-"+crypto.randomUUID());
