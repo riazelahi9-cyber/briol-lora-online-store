@@ -91,3 +91,10 @@
 .brand:focus-visible{outline:2px solid var(--rose-dark);outline-offset:4px}
 
 .site-credit{margin:8px 0 0;font-size:12px;color:inherit;opacity:.8;text-align:center}.site-credit a{color:inherit;text-decoration:underline;text-underline-offset:3px}.site-credit a:hover{opacity:1}
+
+/* Rotating BRIOLLORA announcement bar: one message every 2 seconds */
+.announcement{position:relative;display:flex;align-items:center;justify-content:center;min-height:34px;overflow:hidden;box-sizing:border-box}
+.announcement-slide{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:0 12px;text-align:center;opacity:0;transform:translateY(100%);animation:announcementSlide 8s infinite ease-in-out}
+.announcement-slide:nth-child(1){animation-delay:0s}.announcement-slide:nth-child(2){animation-delay:-2s}.announcement-slide:nth-child(3){animation-delay:-4s}.announcement-slide:nth-child(4){animation-delay:-6s}
+@keyframes announcementSlide{0%{opacity:0;transform:translateY(100%)}3%,22%{opacity:1;transform:translateY(0)}25%,100%{opacity:0;transform:translateY(-100%)}}
+@media(prefers-reduced-motion:reduce){.announcement-slide{animation:none;opacity:0;transform:none}.announcement-slide:first-child{opacity:1}}
