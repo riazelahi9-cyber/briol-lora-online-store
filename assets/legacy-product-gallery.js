@@ -1,6 +1,18 @@
 (() => {
   "use strict";
   const init = () => {
+    // Keep the supplied BRIOLLORA logo consistent on every legacy product page.
+    const brand = document.querySelector(".site-header .brand");
+    if (brand && !brand.querySelector(".brand-logo")) {
+      const mark = brand.querySelector(".brand-mark");
+      if (mark) {
+        const logo = document.createElement("img");
+        logo.className = "brand-logo";
+        logo.src = "https://user56977.na.imgto.link/public/20261117/6520cbeaf1c47ca3c4b9efff-briollora-logo.avif";
+        logo.alt = "BRIOLLORA logo";
+        mark.replaceWith(logo);
+      }
+    }
     const stage = document.querySelector(".product-seo-image");
     const main = stage?.querySelector("img");
     if (!stage || !main || stage.dataset.galleryReady) return;
@@ -22,8 +34,8 @@
       .legacy-gallery-stage{position:relative;background:var(--cream,#f4f0eb);display:grid;place-items:center;min-height:340px;overflow:hidden}
       .legacy-gallery-stage>button{display:block;border:0;padding:0;background:transparent;width:100%;cursor:zoom-in}
       .legacy-gallery-stage img{display:block;width:100%;max-height:650px;aspect-ratio:1/1;object-fit:contain}
-      .legacy-gallery-arrow{position:absolute;top:50%;transform:translateY(-50%);width:42px;height:42px;border:1px solid #d9cec3;border-radius:50%;background:#fffdf9;color:#292522;font-size:25px;font-weight:400;line-height:1;cursor:pointer;display:grid;place-items:center;z-index:2;box-shadow:0 2px 12px #21180f12;transition:background .2s,transform .2s}
-      .legacy-gallery-arrow:hover{background:#fff;transform:translateY(-50%) scale(1.06)}
+      .legacy-gallery-arrow{position:absolute;top:50%;transform:translateY(-50%);width:44px;height:44px;border:1px solid #d8cec4;border-radius:50%;background:#fff;color:#292522;font-family:Arial,sans-serif;font-size:25px;font-weight:400;line-height:1;cursor:pointer;display:grid;place-items:center;z-index:3;box-shadow:0 2px 10px rgba(35,25,18,.10);transition:background .18s,box-shadow .18s}
+      .legacy-gallery-arrow:hover{background:#f8f4ef;box-shadow:0 3px 13px rgba(35,25,18,.16)}
       .legacy-gallery-arrow.prev{left:14px}.legacy-gallery-arrow.next{right:14px}
       .legacy-zoom-arrow{position:absolute;top:50%;transform:translateY(-50%);width:44px;height:44px;border:1px solid #ffffff75;border-radius:50%;background:#fff;color:#292522;font-size:27px;line-height:1;cursor:pointer;display:grid;place-items:center;z-index:3;box-shadow:0 3px 16px #0003;transition:background .2s,transform .2s}
       .legacy-zoom-arrow:hover{background:#f4eee8;transform:translateY(-50%) scale(1.06)}
