@@ -42,14 +42,14 @@ async function loadProducts(){
  document.querySelectorAll("[data-delete-product]").forEach(b=>b.addEventListener("click",()=>deleteProduct(b.dataset.deleteProduct)));
 }
 function clearForm(){
- $("productForm").reset();$("pId").value="br-"+crypto.randomUUID();autoSlugMode=true;$("pSlug").value="";$("pStock").value="0";$("pStatus").value="draft";renderVariantRows([{label:"Default",price:"",regular:"",stock:"",sku:""}]);$("productEditorTitle").textContent="Add product";$("productEditor").hidden=false;
+ $("productForm").reset();$("pUploadNote").textContent="Select multiple photos together (Ctrl-click or Shift-click). JPG, PNG or WebP · max 6 MB each.";$("pId").value="br-"+crypto.randomUUID();autoSlugMode=true;$("pSlug").value="";$("pStock").value="0";$("pStatus").value="draft";renderVariantRows([{label:"Default",price:"",regular:"",stock:"",sku:""}]);$("productEditorTitle").textContent="Add product";$("productEditor").hidden=false;
 }
 function editProduct(id){
  const p=records.find(x=>x.id===id);if(!p)return;autoSlugMode=false;
  $("pId").value=p.id;$("pName").value=p.name||"";$("pCategory").value=p.category||"";$("pSlug").value=p.slug||"";
  $("pPrice").value=p.min_price??0;$("pRegular").value=p.min_regular??"";
  $("pStock").value=p.stock_quantity??0;$("pImage").value=p.image_url||"";
- $("pImages").value=(p.images||[]).join("\n");$("pDescription").value=p.description||"";
+ $("pImages").value=(p.images||[]).join("\n");$("pUploadNote").textContent=(1+(p.images||[]).length)+" saved image(s). Select more photos to add."; $("pDescription").value=p.description||"";
  $("pHighlights").value=p.highlights||"";$("pVariants").value=JSON.stringify(p.variants||[]);renderVariantRows(p.variants||[]);
  $("pSeoTitle").value=p.seo_title||"";$("pSeoDescription").value=p.seo_description||"";
  $("pStatus").value=p.status||"draft";$("productEditorTitle").textContent="Edit product";$("productEditor").hidden=false;
@@ -58,6 +58,7 @@ function editProduct(id){
 function slugify(s){return String(s||"").toLowerCase().normalize("NFKD").replace(/[\u0300-\u036f]/g,"").replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"").slice(0,150)}
 $("pName").addEventListener("input",()=>{if(autoSlugMode){const nameSlug=slugify($("pName").value);$("pSlug").value=nameSlug?nameSlug+"-"+$("pId").value:"";}});
 $("pSlug").addEventListener("input",()=>{if(autoSlugMode&&$("pSlug").value!==slugify($("pName").value)+"-"+$("pId").value)autoSlugMode=false;});
+$("pUpload").addEventListener("change",()=>{$("pUploadNote").textContent=$("pUpload").files.length+" new image(s) selected. They will be added to the product gallery when saved.";});
 async function saveProduct(e){
  e.preventDefault();if(!active)return;
  const id=$("pId").value||("br-"+crypto.randomUUID());
