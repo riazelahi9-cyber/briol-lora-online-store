@@ -7,7 +7,7 @@ const pageCategory=document.body.dataset.category||"all";
 const money=n=>"Rs. "+Number(n||0).toLocaleString("en-PK",{maximumFractionDigits:0});
 const $=id=>document.getElementById(id);
 function safeImage(url){return url||"https://placehold.co/600x700/f4f0eb/8d7770?text=BRIOLLORA"}
-function productPagePath(p){const legacy=legacyProducts.some(x=>String(x.id)===String(p.id));if(!legacy)return "product.html?slug="+encodeURIComponent(p.slug||p.id);const slug=String(p.name||"product").toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"").slice(0,65);return "products/"+slug+"-"+p.id+".html"}
+function productPagePath(p){const legacy=legacyProducts.some(x=>String(x.id)===String(p.id));if(!legacy)return p.slug?"product.html?slug="+encodeURIComponent(p.slug):"product.html?id="+encodeURIComponent(p.id);const slug=String(p.name||"product").toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"").slice(0,65);return "products/"+slug+"-"+p.id+".html"}
 function priceLabel(p){return p.minPrice===p.maxPrice?money(p.minPrice):money(p.minPrice)+" – "+money(p.maxPrice)}
 function categories(){return ["All",...new Set(products.map(p=>p.category))]}
 function renderFilters(){if(!$("categoryFilters"))return;$("categoryFilters").innerHTML=categories().map(c=>`<button class="filter-btn ${c===activeCategory?"active":""}" data-cat="${c}">${c}</button>`).join("");document.querySelectorAll(".filter-btn").forEach(b=>b.addEventListener("click",()=>{activeCategory=b.dataset.cat;renderFilters();renderProducts()}))}
@@ -83,7 +83,7 @@ async function loadStoreProducts(){
   try{
    const client=window.supabase.createClient(cfg.SUPABASE_URL,cfg.SUPABASE_PUBLISHABLE_KEY);
    const {data,error}=await client.from("products").select("id,name,slug,category,description,highlights,image_url,images,min_price,max_price,min_regular,stock_quantity,variants,seo_title,seo_description,status").eq("status","published").order("created_at",{ascending:false});
-   if(!error)return (data||[]).map(p=>({id:p.id,name:p.name,category:p.category||"Accessories",image:p.image_url||p.images?.[0]||"",images:p.images||[],description:p.description||"",highlights:p.highlights||"",minPrice:Number(p.min_price||0),maxPrice:Number(p.max_price??p.min_price??0),minRegular:p.min_regular==null?null:Number(p.min_regular),variants:Array.isArray(p.variants)?p.variants:[],darazUrl:""}));
+   if(!error)return (data||[]).map(p=>({id:p.id,slug:p.slug||"",name:p.name,category:p.category||"Accessories",image:p.image_url||p.images?.[0]||"",images:p.images||[],description:p.description||"",highlights:p.highlights||"",minPrice:Number(p.min_price||0),maxPrice:Number(p.max_price??p.min_price??0),minRegular:p.min_regular==null?null:Number(p.min_regular),variants:Array.isArray(p.variants)?p.variants:[],darazUrl:""}));
    console.warn("Live product catalogue unavailable; using bundled catalogue.",error);
   }catch(err){console.warn("Live product catalogue unavailable; using bundled catalogue.",err)}
  }
