@@ -9,3 +9,14 @@
 .product-cards{display:grid;gap:12px;margin-top:18px}.product-row{display:grid;grid-template-columns:76px minmax(0,1fr) auto;gap:15px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px}
 .product-row img{width:76px;height:82px;object-fit:cover;border-radius:8px;background:#f4f0eb}.product-row h3{font-size:15px;margin:0 0 5px}.product-row p{font-size:12px;color:var(--muted);margin:3px 0}.product-row-actions{display:flex;gap:8px;align-items:center}.product-row-actions button{border:1px solid var(--line);background:#fff;border-radius:7px;padding:8px 11px;cursor:pointer}.product-status{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em}
 @media(max-width:650px){.product-form-grid{grid-template-columns:1fr}.product-wide{grid-column:auto}.product-row{grid-template-columns:58px minmax(0,1fr)}.product-row img{width:58px;height:65px}.product-row-actions{grid-column:1/-1;justify-content:flex-end}}
+
+.variant-manager{border:1px solid var(--line);border-radius:10px;padding:15px;background:#fcfaf7}
+.variant-manager-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:14px}
+.variant-manager-head strong,.variant-manager-head small{display:block}
+.variant-manager-head small{font-size:11px;color:var(--muted);font-weight:400;margin-top:4px}
+.variant-rows{display:grid;gap:10px}
+.variant-row{display:grid;grid-template-columns:2fr 1fr 1fr 1fr 1.2fr auto;gap:9px;align-items:end;background:#fff;border:1px solid var(--line);border-radius:8px;padding:12px}
+.variant-row label{display:flex;flex-direction:column;gap:5px;font-size:11px;color:var(--muted);font-weight:600}
+.variant-row input{min-width:0;width:100%;padding:9px;border:1px solid var(--line);border-radius:6px;font:12px Arial,sans-serif}
+.variant-remove{border:1px solid #e7d5d1;background:#fff8f6;color:#8e4c43;border-radius:6px;padding:9px;cursor:pointer;font-size:11px}
+@media(max-width:850px){.variant-row{grid-template-columns:repeat(2,minmax(0,1fr))}.variant-remove{grid-column:1/-1}}
