@@ -8,6 +8,17 @@ const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&
 const money=n=>"Rs. "+Number(n||0).toLocaleString("en-PK");
 let active=false,records=[];
 function state(t){$("productState").textContent=t||""}
+function renderVariantRows(variants){
+ const rows=Array.isArray(variants)&&variants.length?variants:[{label:"Default",price:"",regular:"",stock:"",sku:""}];
+ $("variantRows").innerHTML=rows.map((v,i)=>'<div class="variant-row"><label>Option / variant name<input data-v="label" value="'+esc(v.label||"")+'" placeholder="Black, One Size" required></label><label>Price (PKR)<input data-v="price" type="number" min="0" step="1" value="'+(v.price??"")+'" placeholder="349" required></label><label>Regular price<input data-v="regular" type="number" min="0" step="1" value="'+(v.regular??"")+'" placeholder="Optional"></label><label>Stock<input data-v="stock" type="number" min="0" step="1" value="'+(v.stock??"")+'" placeholder="Use product stock"></label><label>SKU<input data-v="sku" value="'+esc(v.sku||"")+'" placeholder="Optional"></label><button type="button" class="variant-remove" aria-label="Remove variant" data-remove-variant>Remove</button></div>').join("");
+}
+function collectVariantRows(basePrice,baseRegular,baseStock){
+ return Array.from($("variantRows").querySelectorAll(".variant-row")).map(row=>{
+  const val=name=>row.querySelector('[data-v="'+name+'"]').value.trim();
+  const priceRaw=val("price"),regularRaw=val("regular"),stockRaw=val("stock");
+  return {label:val("label"),price:priceRaw===""?Number(basePrice):Number(priceRaw),regular:regularRaw===""?(baseRegular===""?null:Number(baseRegular)):Number(regularRaw),stock:stockRaw===""?Number(baseStock||0):Number(stockRaw),sku:val("sku")};
+ });
+}
 function productUrl(p){return "product.html?slug="+encodeURIComponent(p.slug||p.id)}
 async function verify(){
  const {data:{session}}=await db.auth.getSession();
@@ -31,7 +42,7 @@ async function loadProducts(){
  document.querySelectorAll("[data-delete-product]").forEach(b=>b.addEventListener("click",()=>deleteProduct(b.dataset.deleteProduct)));
 }
 function clearForm(){
- $("productForm").reset();$("pId").value="";$("pStock").value="0";$("pStatus").value="draft";$("productEditorTitle").textContent="Add product";$("productEditor").hidden=false;
+ $("productForm").reset();$("pId").value="";$("pStock").value="0";$("pStatus").value="draft";renderVariantRows([{label:"Default",price:"",regular:"",stock:"",sku:""}]);$("productEditorTitle").textContent="Add product";$("productEditor").hidden=false;
 }
 function editProduct(id){
  const p=records.find(x=>x.id===id);if(!p)return;
@@ -39,7 +50,7 @@ function editProduct(id){
  $("pPrice").value=p.min_price??0;$("pRegular").value=p.min_regular??"";
  $("pStock").value=p.stock_quantity??0;$("pImage").value=p.image_url||"";
  $("pImages").value=(p.images||[]).join("\n");$("pDescription").value=p.description||"";
- $("pHighlights").value=p.highlights||"";$("pVariants").value=JSON.stringify(p.variants||[],null,2);
+ $("pHighlights").value=p.highlights||"";$("pVariants").value=JSON.stringify(p.variants||[]);renderVariantRows(p.variants||[]);
  $("pSeoTitle").value=p.seo_title||"";$("pSeoDescription").value=p.seo_description||"";
  $("pStatus").value=p.status||"draft";$("productEditorTitle").textContent="Edit product";$("productEditor").hidden=false;
  $("productEditor").scrollIntoView({behavior:"smooth",block:"start"});
@@ -48,11 +59,11 @@ function slugify(s){return String(s||"").toLowerCase().normalize("NFKD").replace
 async function saveProduct(e){
  e.preventDefault();if(!active)return;
  const id=$("pId").value||("br-"+crypto.randomUUID());
- let variants=[];try{variants=JSON.parse($("pVariants").value||"[]");if(!Array.isArray(variants))throw Error("Variants must be a JSON array.");}catch(err){state("Invalid variants JSON: "+err.message);return}
  const name=$("pName").value.trim(),price=Number($("pPrice").value),regular=$("pRegular").value===""?null:Number($("pRegular").value),stock=Number($("pStock").value||0);
  if(!name||!Number.isFinite(price)||price<0||!Number.isFinite(stock)||stock<0){state("Enter a valid product name, price and stock quantity.");return}
- if(!variants.length)variants=[{label:"Default",price,regular,stock,sku:id}];
- if(variants.some(v=>!v||typeof v.label!=="string"||!v.label.trim()||!Number.isFinite(Number(v.price))||Number(v.price)<0||!Number.isFinite(Number(v.stock??0))||Number(v.stock??0)<0)){state("Each variant needs a label, valid price and valid stock quantity.");return}
+ const variants=collectVariantRows(price,regular,stock);
+ if(!variants.length||variants.some(v=>!v.label||!Number.isFinite(v.price)||v.price<0||!Number.isFinite(v.stock)||v.stock<0||(v.regular!==null&&(!Number.isFinite(v.regular)||v.regular<0)))){state("Each variant needs a name, valid price and valid stock. Regular price must also be valid.");return}
+ $("pVariants").value=JSON.stringify(variants);
  let images=$("pImages").value.split(/\r?\n/).map(x=>x.trim()).filter(Boolean),image=$("pImage").value.trim()||images[0]||null;
  const files=Array.from($("pUpload").files||[]);
  for(const file of files){
@@ -67,7 +78,7 @@ async function saveProduct(e){
  if(!image){state("Add a main image URL or upload at least one product image.");return}
  const payload={id,name,slug:slugify($("pSlug").value||name)+"-"+id,category:$("pCategory").value.trim(),
  description:$("pDescription").value.trim(),highlights:$("pHighlights").value.trim(),image_url:image,images,
- min_price:price,max_price:price,min_regular:regular,stock_quantity:stock,variants,
+ min_price:Math.min(...variants.map(v=>v.price)),max_price:Math.max(...variants.map(v=>v.price)),min_regular:variants.map(v=>v.regular).filter(v=>v!==null).length?Math.min(...variants.map(v=>v.regular).filter(v=>v!==null)):regular,stock_quantity:variants.reduce((sum,v)=>sum+v.stock,0),variants,
  seo_title:$("pSeoTitle").value.trim()||name,seo_description:$("pSeoDescription").value.trim()||$("pDescription").value.trim().slice(0,300),
  status:$("pStatus").value,updated_at:new Date().toISOString()};
  const btn=$("saveProductBtn");btn.disabled=true;btn.textContent="Saving…";state("Saving product…");
@@ -83,6 +94,8 @@ async function deleteProduct(id){
 }
 $("showProducts").addEventListener("click",setTab);
 $("newProductBtn").addEventListener("click",clearForm);
+$("addVariantBtn").addEventListener("click",()=>{const current=Array.from($("variantRows").querySelectorAll(".variant-row")).map(row=>{const get=n=>row.querySelector('[data-v="'+n+'"]').value;return {label:get("label"),price:get("price"),regular:get("regular"),stock:get("stock"),sku:get("sku")}});current.push({label:"",price:"",regular:"",stock:"",sku:""});renderVariantRows(current);});
+$("variantRows").addEventListener("click",e=>{const btn=e.target.closest("[data-remove-variant]");if(!btn)return;const row=btn.closest(".variant-row");row.remove();if(!$("variantRows").querySelector(".variant-row"))renderVariantRows([]);});
 $("cancelProductBtn").addEventListener("click",()=>$("productEditor").hidden=true);
 $("productForm").addEventListener("submit",saveProduct);
 db.auth.onAuthStateChange(()=>setTimeout(async()=>{await verify();if(!$("productsSection").hidden&&active)loadProducts()},0));
