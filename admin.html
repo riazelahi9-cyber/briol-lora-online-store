@@ -18,7 +18,11 @@
     <label class="product-wide">Additional image URLs (one per line)<textarea id="pImages" rows="3"></textarea></label>
     <label class="product-wide">Description<textarea id="pDescription" rows="5" required></textarea></label>
     <label class="product-wide">Highlights (one per line)<textarea id="pHighlights" rows="3"></textarea></label>
-    <label class="product-wide">Variants (JSON)<textarea id="pVariants" rows="5" placeholder='[{"label":"One size","price":500,"regular":600,"stock":10,"sku":"SKU-01"}]'></textarea></label>
+    <div class="product-wide variant-manager">
+     <div class="variant-manager-head"><div><strong>Product variants</strong><small>Add each available colour, size or combination with its own price and stock.</small></div><button class="admin-button admin-secondary" id="addVariantBtn" type="button">＋ Add variant</button></div>
+     <div id="variantRows" class="variant-rows"></div>
+     <textarea id="pVariants" hidden aria-hidden="true"></textarea>
+    </div>
     <label>SEO title<input id="pSeoTitle" maxlength="180"></label>
     <label>SEO description<textarea id="pSeoDescription" rows="2" maxlength="320"></textarea></label>
     <label>Status<select id="pStatus"><option value="draft">Draft</option><option value="published">Published</option></select></label>
