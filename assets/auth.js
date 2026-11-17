@@ -12,8 +12,8 @@
   const modal=document.createElement("div"); modal.className="auth-backdrop";
   modal.innerHTML=`<section class="auth-panel account-panel" role="dialog" aria-modal="true" aria-labelledby="authTitle">
     <button class="close-button auth-close" type="button" aria-label="Close">×</button>
-    <p class="eyebrow">Welcome to BRIOLLORA</p><h2 id="authTitle">Welcome back</h2>
-    <p class="auth-subtitle" id="authSubtitle">Create an account or sign in to keep your shopping connected.</p><p class="account-coupon-promo"><strong>Member welcome offer</strong><br>Use <code>WELCOME100</code> for Rs. 100 off your first order. One-time use on your account.</p>
+    <p class="eyebrow">A little welcome gift</p><h2 id="authTitle">Get Rs. 100 off</h2>
+    <p class="auth-subtitle" id="authSubtitle">Create your BRIOLLORA account and enjoy Rs. 100 off your first order.</p><p class="account-coupon-promo"><strong>Your first-order welcome offer</strong><br>Get <strong>Rs. 100 OFF</strong> with code <code>WELCOME100</code>. One-time use per account.</p>
     <div class="auth-actions" id="authTabs"><button class="auth-tab active" type="button" data-mode="login">Log in</button><button class="auth-tab" type="button" data-mode="signup">Create account</button></div>
     <form id="authForm">
       <div id="authNameWrap" hidden><label for="authName">Full name</label><input id="authName" maxlength="80" autocomplete="name" placeholder="Your full name"></div>
@@ -37,11 +37,14 @@
     </div>
   </section>`;
   document.body.appendChild(modal);
-  const $=id=>document.getElementById(id); let mode="login",user=null;
+  const $=id=>document.getElementById(id); let mode="signup",user=null;
+  const dismissedKey="briollora_welcome_popup_dismissed_until";
+  const completedKey="briollora_welcome_popup_completed";
+  function closeModal(){modal.classList.remove("show");if(!user){try{localStorage.setItem(dismissedKey,String(Date.now()+7*24*60*60*1000));}catch(_){}}}
   const msg=t=>$("authMessage").textContent=t||"";
   const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
-  function setMode(next){mode=next;document.querySelectorAll(".auth-tab").forEach(x=>x.classList.toggle("active",x.dataset.mode===mode));$("authNameWrap").hidden=mode!=="signup";$("authName").required=mode==="signup";$("authPassword").autocomplete=mode==="signup"?"new-password":"current-password";$("authSubmit").textContent=mode==="signup"?"Create account":"Log in";$("forgotPassword").hidden=mode==="signup"||!!user;$("authForm").hidden=!!user;$("authSignedIn").hidden=!user;$("authTabs").hidden=!!user;$("authTitle").textContent=user?"Your account":mode==="signup"?"Create your account":"Welcome back";$("authSubtitle").hidden=!!user;msg("");}
-  function render(u){user=u||null;button.textContent=user?"My Account ✓":"My Account";$("authForm").hidden=!!user;$("authSignedIn").hidden=!user;$("authTabs").hidden=!!user;$("forgotPassword").hidden=!!user||mode==="signup";$("authUserEmail").textContent=user?.email||"";$("authTitle").textContent=user?"Your account":mode==="signup"?"Create your account":"Welcome back";$("authSubtitle").hidden=!!user;if(user)loadAccount();}
+  function setMode(next){mode=next;document.querySelectorAll(".auth-tab").forEach(x=>x.classList.toggle("active",x.dataset.mode===mode));$("authNameWrap").hidden=true;$("authName").required=false;$("authPassword").autocomplete=mode==="signup"?"new-password":"current-password";$("authSubmit").textContent=mode==="signup"?"Create account":"Log in";$("forgotPassword").hidden=mode==="signup"||!!user;$("authForm").hidden=!!user;$("authSignedIn").hidden=!user;$("authTabs").hidden=!!user;$("authTitle").textContent=user?"Your account":mode==="signup"?"Get Rs. 100 off":"Welcome back";$("authSubtitle").hidden=!!user;$("authSubtitle").textContent=mode==="signup"?"Create your BRIOLLORA account and enjoy Rs. 100 off your first order.":"Sign in to view your BRIOLLORA account and orders.";msg("");}
+  function render(u){user=u||null;button.textContent=user?"My Account ✓":"My Account";$("authForm").hidden=!!user;$("authSignedIn").hidden=!user;$("authTabs").hidden=!!user;$("forgotPassword").hidden=!!user||mode==="signup";$("authUserEmail").textContent=user?.email||"";$("authTitle").textContent=user?"Your account":mode==="signup"?"Get Rs. 100 off":"Welcome back";$("authSubtitle").hidden=!!user;$("authSubtitle").textContent=mode==="signup"?"Create your BRIOLLORA account and enjoy Rs. 100 off your first order.":"Sign in to view your BRIOLLORA account and orders.";if(user)loadAccount();}
   async function loadAccount(){
     $("ordersList").innerHTML='<p class="auth-subtitle">Loading your orders…</p>';
     const [{data:profile,error:profileError},{data:orders,error:ordersError}]=await Promise.all([
@@ -58,11 +61,11 @@
     for(const o of orders){const {data:items,error}=await client.from("order_items").select("product_name,quantity,unit_price").eq("order_id",o.id);const el=$("items-"+o.id);if(el)el.innerHTML=error?"":(items||[]).map(i=>'<p>'+esc(i.product_name)+' × '+esc(i.quantity)+' — Rs. '+Number(i.unit_price||0).toLocaleString("en-PK")+'</p>').join("")}
   }
   button.addEventListener("click",async()=>{const {data}=await client.auth.getUser();render(data.user);modal.classList.add("show");msg("");});
-  modal.querySelector(".auth-close").addEventListener("click",()=>modal.classList.remove("show"));
-  modal.addEventListener("click",e=>{if(e.target===modal)modal.classList.remove("show");});
+  modal.querySelector(".auth-close").addEventListener("click",closeModal);
+  modal.addEventListener("click",e=>{if(e.target===modal)closeModal();});
   document.querySelectorAll(".auth-tab").forEach(x=>x.addEventListener("click",()=>setMode(x.dataset.mode)));
   $("authForm").addEventListener("submit",async e=>{e.preventDefault();$("authSubmit").disabled=true;msg(mode==="signup"?"Creating account…":"Signing in…");const email=$("authEmail").value.trim(),password=$("authPassword").value;let r;
-    if(mode==="signup"){r=await client.auth.signUp({email,password,options:{data:{full_name:$("authName").value.trim()},emailRedirectTo:"https://briollora.netlify.app/"}});if(!r.error){$("authForm").reset();msg(r.data.session?"Account created and signed in.":"Account created. Check your email and confirm your address before logging in.");}}
+    if(mode==="signup"){r=await client.auth.signUp({email,password,options:{data:{full_name:$("authName").value.trim()},emailRedirectTo:"https://briollora.netlify.app/"}});if(!r.error){try{localStorage.setItem(completedKey,"1");}catch(_){}$("authForm").reset();msg(r.data.session?"Account created and signed in.":"Account created. Check your email and confirm your address before logging in.");}}
     else{r=await client.auth.signInWithPassword({email,password});if(!r.error){msg("Signed in successfully.");render(r.data.user);setTimeout(()=>modal.classList.remove("show"),700);}}
     if(r?.error)msg(r.error.message);$("authSubmit").disabled=false;
   });
@@ -70,5 +73,13 @@
   $("saveProfile").addEventListener("click",async()=>{if(!user)return;$("saveProfile").disabled=true;$("profileMessage").textContent="Saving…";const {error}=await client.from("profiles").upsert({id:user.id,full_name:$("profileName").value.trim(),phone:$("profilePhone").value.trim()},{onConflict:"id"});$("profileMessage").textContent=error?"Could not save profile: "+error.message:"Profile saved successfully.";$("saveProfile").disabled=false;});
   $("refreshOrders").addEventListener("click",loadAccount);
   $("authLogout").addEventListener("click",async()=>{const {error}=await client.auth.signOut();if(error){$("profileMessage").textContent=error.message;return;}render(null);setMode("login");msg("You have logged out.");});
-  client.auth.onAuthStateChange((_event,session)=>render(session?.user||null));client.auth.getUser().then(({data})=>render(data.user));setMode("login");
+  client.auth.onAuthStateChange((_event,session)=>render(session?.user||null));
+  setMode("signup");
+  client.auth.getUser().then(({data})=>{
+    render(data.user);
+    if(data.user)return;
+    let dismissedUntil=0,completed=false;
+    try{dismissedUntil=Number(localStorage.getItem(dismissedKey)||0);completed=localStorage.getItem(completedKey)==="1";}catch(_){}
+    if(!completed&&Date.now()>dismissedUntil){setMode("signup");window.setTimeout(()=>{if(!user)modal.classList.add("show");},450);}
+  });
 })();
