@@ -37,17 +37,40 @@
     .dynamic-loading{min-height:55vh;display:grid;place-items:center;color:#625c56}
     .dynamic-notice{padding:24px;background:#f4f0eb;border-radius:4px}
     @media(max-width:760px){.dynamic-product{margin:30px auto}.dynamic-product-grid{grid-template-columns:1fr;gap:24px}}
-  </style>
+  
+    .dynamic-gallery-wrap{position:relative}
+    .dynamic-product-gallery{position:relative;overflow:hidden;background:#f4f0eb;border-radius:4px}
+    .dynamic-gallery-zoom{display:block;width:100%;padding:0;border:0;background:transparent;cursor:zoom-in}
+    .dynamic-gallery-zoom img{display:block;width:100%;aspect-ratio:1/1;object-fit:contain}
+    .dynamic-gallery-arrow,.dynamic-zoom-arrow{position:absolute;z-index:2;top:50%;transform:translateY(-50%);width:42px;height:42px;border:1px solid #d9cec3;border-radius:50%;background:#fffdf9eF;color:#292522;font-size:29px;line-height:1;cursor:pointer;display:grid;place-items:center}
+    .dynamic-gallery-arrow.prev,.dynamic-zoom-arrow.prev{left:14px}
+    .dynamic-gallery-arrow.next,.dynamic-zoom-arrow.next{right:14px}
+    .dynamic-gallery-count,.dynamic-zoom-count{position:absolute;z-index:2;right:14px;bottom:14px;padding:6px 10px;background:#fffdf0eF;color:#292522;font-size:12px;border-radius:20px}
+    .dynamic-gallery-thumbs{display:flex;gap:10px;overflow-x:auto;flex-wrap:nowrap;padding:2px 0 8px;scrollbar-width:thin}
+    .dynamic-gallery-thumbs button{flex:0 0 74px;width:74px;height:74px;border:1px solid #ddd4cb;background:#fff;padding:3px;cursor:pointer;border-radius:3px}
+    .dynamic-gallery-thumbs button.active{border:2px solid #a96e64}
+    .dynamic-gallery-thumbs img{display:block;width:100%;height:100%;object-fit:cover}
+    .dynamic-zoom-overlay[hidden]{display:none}
+    .dynamic-zoom-overlay{position:fixed;inset:0;z-index:9999;background:rgba(20,18,16,.94);display:flex;align-items:center;justify-content:center;padding:60px 72px}
+    .dynamic-zoom-overlay>img{max-width:min(90vw,1100px);max-height:82vh;width:auto;height:auto;object-fit:contain;user-select:none}
+    .dynamic-zoom-close{position:absolute;top:18px;right:24px;width:44px;height:44px;border:1px solid #ffffff66;border-radius:50%;background:#fff;color:#292522;font-size:28px;cursor:pointer}
+    .dynamic-zoom-arrow{position:fixed;background:#fff;color:#292522}
+    .dynamic-zoom-count{position:fixed;bottom:20px;right:50%;transform:translateX(50%)}
+    body.gallery-zoom-open{overflow:hidden}
+    @media(max-width:760px){.dynamic-zoom-overlay{padding:55px 12px}.dynamic-zoom-overlay>img{max-width:96vw;max-height:78vh}.dynamic-gallery-arrow{width:36px;height:36px}.dynamic-zoom-arrow{width:36px;height:36px}.dynamic-gallery-thumbs button{flex-basis:64px;width:64px;height:64px}}
+    @media(prefers-reduced-motion:no-preference){.dynamic-gallery-zoom img{transition:opacity .18s ease}.dynamic-gallery-thumbs button{transition:border-color .18s ease}}
+</style>
 </head>
 <body>
-  <div class="announcement">Thoughtful finds, creative details · Pakistan & international enquiries</div>
+  <div class="announcement" aria-label="BRIOLLORA announcements"><span class="announcement-slide" aria-hidden="false">Thoughtful finds, creative details · Pakistan & international enquiries</span><span class="announcement-slide" aria-hidden="true">Little details, lovely things · Discover your everyday favourites</span><span class="announcement-slide" aria-hidden="true">Curated accessories & creative essentials · Made to add your own touch</span><span class="announcement-slide" aria-hidden="true">Find a little something special · Shop BRIOLLORA</span></div>
   <header class="site-header">
     <a class="brand" href="index.html" aria-label="BRIOLLORA home"><img class="brand-logo" src="https://user56977.na.imgto.link/public/20261117/6520cbeaf1c47ca3c4b9efff-briollora-logo.avif" alt="BRIOLLORA logo"><span>BRIOLLORA<small>little details, lovely things</small></span></a>
     <nav class="desktop-nav"><a href="index.html">Home</a><a href="index.html#shop">Shop All</a><a href="bags.html">Bags</a><a href="jewellery.html">Jewellery</a><a href="hair-accessories.html">Hair Accessories</a><a href="diy-supplies.html">DIY Supplies</a><a href="gifts-accessories.html">Gifts</a></nav>
     <div class="header-actions"><a class="cart-button" href="index.html#shop">Shop all</a></div>
   </header>
   <main class="dynamic-product" id="productRoot"><div class="dynamic-loading">Loading product…</div></main>
-  <footer class="footer"><a href="index.html">BRIOLLORA</a> · <a href="index.html#shop">Shop all collections</a></footer>
+  <footer class="footer"><a href="index.html">BRIOLLORA</a> · <a href="index.html#shop">Shop all collections</a>    <p class="site-credit">Made with <a href="https://riazideas.netlify.app/" target="_blank" rel="noopener noreferrer">RIAZ IDEAS</a></p>
+  </footer>
   <script src="assets/config.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <script src="assets/product-detail.js"></script>

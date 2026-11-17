@@ -24,7 +24,7 @@
 <meta name="p:domain_verify" content="096505af631d944909a1f83b406e616c"/>
 </head>
 <body>
-  <div class="announcement">Thoughtful finds, creative details · Pakistan & international enquiries</div>
+  <div class="announcement" aria-label="BRIOLLORA announcements"><span class="announcement-slide" aria-hidden="false">Thoughtful finds, creative details · Pakistan & international enquiries</span><span class="announcement-slide" aria-hidden="true">Little details, lovely things · Discover your everyday favourites</span><span class="announcement-slide" aria-hidden="true">Curated accessories & creative essentials · Made to add your own touch</span><span class="announcement-slide" aria-hidden="true">Find a little something special · Shop BRIOLLORA</span></div>
   <header class="site-header">
     <a class="brand" href="index.html" aria-label="BRIOLLORA home"><img class="brand-logo" src="https://user56977.na.imgto.link/public/20261117/6520cbeaf1c47ca3c4b9efff-briollora-logo.avif" alt="BRIOLLORA logo"><span>BRIOLLORA<small>little details, lovely things</small></span></a>
     <nav class="desktop-nav">
@@ -44,13 +44,13 @@
         <h1>Make room for<br><em>lovely little things.</em></h1>
         <p class="hero-text">Shop jewellery, hair accessories, bags, gifts and DIY craft supplies at BRIOLLORA. Browse our collection from Pakistan, view prices in PKR and send your order enquiry through WhatsApp.</p>
         <a class="primary-button" href="#shop">Explore the collection <span>↗</span></a>
-        <div class="hero-note"><span class="note-dot"></span> 55 products currently listed</div>
+        <div class="hero-note"><span class="note-dot"></span> <span id="liveProductCount" aria-live="polite">Loading products…</span></div>
       </div>
       <div class="hero-art">
         <div class="hero-orbit orbit-one"></div><div class="hero-orbit orbit-two"></div>
-        <div class="hero-photo"><img src="https://static-01.daraz.pk/p/82851e8b39d9faa85bbc11871fcf6237.jpg" alt="Pearl necklace from the collection"></div>
-        <div class="floating-tag tag-top">Made for your moments</div>
-        <div class="floating-tag tag-bottom">Discover your detail ✦</div>
+        <a class="hero-photo" id="heroProductLink" href="#shop" aria-label="Explore a product from BRIOLLORA"><img id="heroProductImage" src="https://placehold.co/600x700/f4f0eb/8d7770?text=BRIOLLORA" alt="Featured BRIOLLORA product"></a>
+        <div class="floating-tag tag-top" id="heroProductName">Made for your moments</div>
+        <div class="floating-tag tag-bottom" id="heroProductCta">Discover your detail ✦</div>
       </div>
     </section>
 
@@ -85,7 +85,7 @@
     </section>
 
     <section class="story-section" id="about">
-      <div class="story-image"><img src="https://static-01.daraz.pk/p/6a06384258f3e8fc55f6b4e3f19080b8.jpg" alt="Pearl bow hair accessory"></div>
+      <a class="story-image" id="storyProductLink" href="#shop" aria-label="View a featured BRIOLLORA product"><img id="storyProductImage" src="https://placehold.co/900x700/f4f0eb/8d7770?text=BRIOLLORA" alt="Featured BRIOLLORA product"></a>
       <div class="story-copy"><p class="eyebrow">A note from us</p><h2>Small details.<br><em>Big personality.</em></h2><p>BRIOLLORA brings together accessories, jewellery and creative essentials for people who love adding their own touch. Browse the collection and message us with any questions about colours, variations or delivery.</p><a href="#shop" class="text-link">Shop the collection ↗</a></div>
     </section>
     <section class="shipping-note">
@@ -98,6 +98,7 @@
     <a class="brand footer-brand" href="#"><span class="brand-mark">B</span><span>BRIOLLORA<small>little details, lovely things</small></span></a>
     <p>© <span id="year"></span> BRIOLLORA. Product prices and availability may change.</p>
     
+      <p class="site-credit">Made with <a href="https://riazideas.netlify.app/" target="_blank" rel="noopener noreferrer">RIAZ IDEAS</a></p>
   </footer>
 
   <div class="drawer-backdrop" id="drawerBackdrop"></div>

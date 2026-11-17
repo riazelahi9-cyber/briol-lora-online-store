@@ -14,9 +14,9 @@
     <label>Default price (optional fallback)<input id="pPrice" type="number" min="0" step="1" placeholder="Use variant prices below"></label>
     <label>Regular price (PKR)<input id="pRegular" type="number" min="0" step="1"></label>
     <label>Stock quantity<input id="pStock" type="number" min="0" step="1" value="0" required></label>
-    <label class="product-wide">Main image URL<input id="pImage" type="url"></label>
-    <label class="product-wide">Upload product images<input id="pUpload" type="file" accept="image/jpeg,image/png,image/webp" multiple><small>JPG, PNG or WebP · max 6 MB each</small></label>
-    <label class="product-wide">Additional image URLs (one per line)<textarea id="pImages" rows="3"></textarea></label>
+    <label class="product-wide">Main / cover image URL<input id="pImage" type="url" placeholder="Paste the main product image URL"></label>
+    <label class="product-wide">Upload multiple product images<input id="pUpload" type="file" accept="image/jpeg,image/png,image/webp" multiple><small id="pUploadNote">Select multiple photos together (Ctrl-click or Shift-click). JPG, PNG or WebP · max 6 MB each.</small></label>
+    <label class="product-wide">Additional image URLs (one per line)<textarea id="pImages" rows="3" placeholder="Paste extra image URLs, one per line"></textarea><small>All uploaded files and URLs will appear in the product gallery.</small></label>
     <label class="product-wide">Description<textarea id="pDescription" rows="5" required></textarea></label>
     <label class="product-wide">Highlights (one per line)<textarea id="pHighlights" rows="3"></textarea></label>
     <div class="product-wide variant-manager">
