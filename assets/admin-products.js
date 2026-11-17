@@ -59,8 +59,8 @@ function slugify(s){return String(s||"").toLowerCase().normalize("NFKD").replace
 async function saveProduct(e){
  e.preventDefault();if(!active)return;
  const id=$("pId").value||("br-"+crypto.randomUUID());
- const name=$("pName").value.trim(),price=Number($("pPrice").value),regular=$("pRegular").value===""?null:Number($("pRegular").value),stock=Number($("pStock").value||0);
- if(!name||!Number.isFinite(price)||price<0||!Number.isFinite(stock)||stock<0){state("Enter a valid product name, price and stock quantity.");return}
+ const name=$("pName").value.trim(),price=$("pPrice").value===""?NaN:Number($("pPrice").value),regular=$("pRegular").value===""?null:Number($("pRegular").value),stock=Number($("pStock").value||0);
+ if(!name||(!Number.isNaN(price)&&(!Number.isFinite(price)||price<0))||!Number.isFinite(stock)||stock<0){state("Enter a valid product name and stock quantity. Any fallback price must be valid.");return}
  const variants=collectVariantRows(price,regular,stock);
  if(!variants.length||variants.some(v=>!v.label||!Number.isFinite(v.price)||v.price<0||!Number.isFinite(v.stock)||v.stock<0||(v.regular!==null&&(!Number.isFinite(v.regular)||v.regular<0)))){state("Each variant needs a name, valid price and valid stock. Regular price must also be valid.");return}
  $("pVariants").value=JSON.stringify(variants);
