@@ -8,6 +8,7 @@ const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&
 const money=n=>"Rs. "+Number(n||0).toLocaleString("en-PK");
 let active=false,records=[];
 function state(t){$("productState").textContent=t||""}
+function productUrl(p){return "product.html?slug="+encodeURIComponent(p.slug||p.id)}
 async function verify(){
  const {data:{session}}=await db.auth.getSession();
  if(!session){active=false;return}
@@ -25,7 +26,7 @@ async function loadProducts(){
  const {data,error}=await db.from("products").select("*").order("updated_at",{ascending:false});
  if(error){state("Could not load products: "+error.message);return}
  records=data||[];state(records.length+" products · Drafts are hidden from customers.");
- $("productCards").innerHTML=records.length?records.map(p=>'<article class="product-row"><img src="'+esc(p.image_url||"https://placehold.co/120x140?text=Product")+'" alt=""><div><h3>'+esc(p.name)+'</h3><p>'+esc(p.category||"Uncategorised")+' · '+money(p.min_price)+' · Stock '+Number(p.stock_quantity||0)+'</p><p class="product-status">'+esc(p.status||"draft")+'</p></div><div class="product-row-actions"><button type="button" data-edit-product="'+esc(p.id)+'">Edit</button><button type="button" data-delete-product="'+esc(p.id)+'">Delete</button></div></article>').join(""):"<p>No products in database yet. Add your first product above.</p>";
+ $("productCards").innerHTML=records.length?records.map(p=>'<article class="product-row"><img src="'+esc(p.image_url||"https://placehold.co/120x140?text=Product")+'" alt=""><div><h3>'+esc(p.name)+'</h3><p>'+esc(p.category||"Uncategorised")+' · '+money(p.min_price)+' · Stock '+Number(p.stock_quantity||0)+'</p><p class="product-status">'+esc(p.status||"draft")+'</p>'+(p.status==="published"?'<p><a href="'+esc(productUrl(p))+'" target="_blank" rel="noopener">View product page ↗</a></p>':'<p class="admin-note">Publish to make its product page public.</p>')+'</div><div class="product-row-actions"><button type="button" data-edit-product="'+esc(p.id)+'">Edit</button><button type="button" data-delete-product="'+esc(p.id)+'">Delete</button></div></article>').join(""):"<p>No products in database yet. Add your first product above.</p>";
  document.querySelectorAll("[data-edit-product]").forEach(b=>b.addEventListener("click",()=>editProduct(b.dataset.editProduct)));
  document.querySelectorAll("[data-delete-product]").forEach(b=>b.addEventListener("click",()=>deleteProduct(b.dataset.deleteProduct)));
 }
@@ -73,7 +74,7 @@ async function saveProduct(e){
  const {error}=await db.from("products").upsert(payload,{onConflict:"id"});
  btn.disabled=false;btn.textContent="Save product";
  if(error){state("Save failed: "+error.message);return}
- $("productEditor").hidden=true;state("Product saved successfully.");await loadProducts();
+ $("productEditor").hidden=true;await loadProducts();state("Product saved successfully. ");const saved=records.find(p=>String(p.id)===String(id));if(saved&&saved.status==="published"){const link=document.createElement("a");link.href=productUrl(saved);link.target="_blank";link.rel="noopener";link.textContent="Open product page ↗";$("productState").appendChild(link);}else{$("productState").append("Publish this product to make its detail page visible to customers.");}
 }
 async function deleteProduct(id){
  const p=records.find(x=>x.id===id);if(!p||!confirm('Delete "'+p.name+'"? This cannot be undone.'))return;
