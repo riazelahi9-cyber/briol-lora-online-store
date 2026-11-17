@@ -1,6 +1,18 @@
 (() => {
   "use strict";
   const init = () => {
+    // Keep the supplied BRIOLLORA logo consistent on every legacy product page.
+    const brand = document.querySelector(".site-header .brand");
+    if (brand && !brand.querySelector(".brand-logo")) {
+      const mark = brand.querySelector(".brand-mark");
+      if (mark) {
+        const logo = document.createElement("img");
+        logo.className = "brand-logo";
+        logo.src = "https://user56977.na.imgto.link/public/20261117/6520cbeaf1c47ca3c4b9efff-briollora-logo.avif";
+        logo.alt = "BRIOLLORA logo";
+        mark.replaceWith(logo);
+      }
+    }
     const stage = document.querySelector(".product-seo-image");
     const main = stage?.querySelector("img");
     if (!stage || !main || stage.dataset.galleryReady) return;
