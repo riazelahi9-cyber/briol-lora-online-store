@@ -11,10 +11,11 @@
     if(!slug&&!id){notFound();return;}
     if(!window.supabase||!cfg.SUPABASE_URL||!cfg.SUPABASE_PUBLISHABLE_KEY){root.textContent="Product details are temporarily unavailable.";return;}
     const db=window.supabase.createClient(cfg.SUPABASE_URL,cfg.SUPABASE_PUBLISHABLE_KEY);
-    let query=db.from("products").select("id,name,slug,category,description,highlights,image_url,images,min_price,max_price,min_regular,stock_quantity,variants,seo_title,seo_description,status").eq("status","published");
+    let query=db.from("products").select("id,name,slug,category,description,highlights,image_url,images,min_price,max_price,min_regular,stock_quantity,variants,seo_title,seo_description,status");
     query=slug?query.eq("slug",slug):query.eq("id",id);
     const {data,error}=await query.maybeSingle();
     if(error||!data){notFound();return;}
+    if(data.status!=="published"){const {data:{session}}=await db.auth.getSession();if(!session){notFound();return;}const {data:role,error:roleError}=await db.from("user_roles").select("role").eq("user_id",session.user.id).maybeSingle();if(roleError||role?.role!=="admin"){notFound();return;}}
     const p=data,images=[p.image_url,...(Array.isArray(p.images)?p.images:[])].filter((x,i,a)=>x&&a.indexOf(x)===i);
     const variants=Array.isArray(p.variants)?p.variants:[];
     const prices=variants.map(v=>Number(v.price)).filter(Number.isFinite);
