@@ -63,7 +63,9 @@
     @media(max-width:760px){.dynamic-zoom-overlay{padding:55px 12px}.dynamic-zoom-overlay>img{max-width:96vw;max-height:78vh}.dynamic-gallery-arrow{width:38px;height:38px}.dynamic-zoom-arrow{width:38px;height:38px}.dynamic-zoom-arrow.prev{left:8px}.dynamic-zoom-arrow.next{right:8px}.dynamic-gallery-thumbs button{flex-basis:64px;width:64px;height:64px}}
     @media(prefers-reduced-motion:no-preference){.dynamic-gallery-zoom img{transition:opacity .18s ease}.dynamic-gallery-thumbs button{transition:border-color .18s ease}}
 </style>
-  <link rel="manifest" href="/manifest.webmanifest">\n  <link rel="apple-touch-icon" href="/assets/pwa-icon.svg">\n</head>
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="apple-touch-icon" href="/assets/pwa-icon.svg">
+</head>
 <body>
   <div class="announcement" aria-label="BRIOLLORA announcements"><span class="announcement-slide" aria-hidden="false">Thoughtful finds, creative details · Pakistan & international enquiries</span><span class="announcement-slide" aria-hidden="true">Little details, lovely things · Discover your everyday favourites</span><span class="announcement-slide" aria-hidden="true">Curated accessories & creative essentials · Made to add your own touch</span><span class="announcement-slide" aria-hidden="true">Find a little something special · Shop BRIOLLORA</span></div>
   <header class="site-header">
@@ -77,5 +79,6 @@
   <script src="assets/config.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <script src="assets/product-detail.js"></script>
-  <script>if ("serviceWorker" in navigator) { window.addEventListener("load", () => navigator.serviceWorker.register("/service-worker.js").catch((error) => console.warn("PWA service worker registration failed:", error))); }</script>\n</body>
+  <script>if ("serviceWorker" in navigator) { window.addEventListener("load", () => navigator.serviceWorker.register("/service-worker.js").catch((error) => console.warn("PWA service worker registration failed:", error))); }</script>
+</body>
 </html>
