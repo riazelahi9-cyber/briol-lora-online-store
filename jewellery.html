@@ -19,7 +19,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/style.css">
-</head>
+  <link rel="manifest" href="/manifest.webmanifest">\n  <link rel="apple-touch-icon" href="/assets/pwa-icon.svg">\n</head>
 <body data-category="jewellery">
   <div class="announcement" aria-label="BRIOLLORA announcements"><span class="announcement-slide" aria-hidden="false">Thoughtful finds, creative details · Pakistan & international enquiries</span><span class="announcement-slide" aria-hidden="true">Little details, lovely things · Discover your everyday favourites</span><span class="announcement-slide" aria-hidden="true">Curated accessories & creative essentials · Made to add your own touch</span><span class="announcement-slide" aria-hidden="true">Find a little something special · Shop BRIOLLORA</span></div>
   <header class="site-header">
@@ -95,5 +95,5 @@
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <script src="assets/app.js"></script>
   <script src="assets/auth.js"></script>
-</body>
+  <script>if ("serviceWorker" in navigator) { window.addEventListener("load", () => navigator.serviceWorker.register("/service-worker.js").catch((error) => console.warn("PWA service worker registration failed:", error))); }</script>\n</body>
 </html>
