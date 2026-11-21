@@ -16,7 +16,9 @@
     const {data,error}=await query.maybeSingle();
     if(error||!data){notFound();return;}
     if(data.status!=="published"){const {data:{session}}=await db.auth.getSession();if(!session){notFound();return;}const {data:role,error:roleError}=await db.from("user_roles").select("role").eq("user_id",session.user.id).maybeSingle();if(roleError||role?.role!=="admin"){notFound();return;}}
-    const p=data,images=[p.image_url,...(Array.isArray(p.images)?p.images:[])].filter((x,i,a)=>x&&a.indexOf(x)===i);
+    const p=data;
+    if(p.status==="published"){db.from("product_views").insert({product_id:String(p.id)}).then(({error:viewError})=>{if(viewError)console.warn("Product view tracking is not configured yet:",viewError.message)});}
+    const images=[p.image_url,...(Array.isArray(p.images)?p.images:[])].filter((x,i,a)=>x&&a.indexOf(x)===i);
     const variants=Array.isArray(p.variants)?p.variants:[];
     const prices=variants.map(v=>Number(v.price)).filter(Number.isFinite);
     const price=prices.length?Math.min(...prices):Number(p.min_price||0);

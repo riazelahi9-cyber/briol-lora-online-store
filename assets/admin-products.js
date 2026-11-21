@@ -33,11 +33,20 @@ function setTab(){
 }
 async function loadProducts(){
  if(!active){await verify();if(!active){state("Please sign in with the authorized admin account.");return}}
- state("Loading products…");
- const {data,error}=await db.from("products").select("*").order("updated_at",{ascending:false});
+ state("Loading products and statistics…");
+ const [{data,error},{data:viewRows,error:viewError},{data:itemRows,error:itemError}]=await Promise.all([
+  db.from("products").select("*").order("updated_at",{ascending:false}),
+  db.from("product_views").select("product_id").limit(100000),
+  db.from("order_items").select("product_id,order_id,product_name").limit(100000)
+ ]);
  if(error){state("Could not load products: "+error.message);return}
- records=data||[];state(records.length+" products · Drafts are hidden from customers.");
- $("productCards").innerHTML=records.length?records.map(p=>'<article class="product-row"><img src="'+esc(p.image_url||"https://placehold.co/120x140?text=Product")+'" alt=""><div><h3>'+esc(p.name)+'</h3><p>'+esc(p.category||"Uncategorised")+' · '+money(p.min_price)+' · Stock '+Number(p.stock_quantity||0)+'</p><p class="product-status">'+esc(p.status||"draft")+'</p>'+(p.status==="published"?'<p><a href="'+esc(productUrl(p))+'" target="_blank" rel="noopener">View product page ↗</a></p>':'<p><a href="'+esc(productUrl(p))+'" target="_blank" rel="noopener">Preview draft page ↗</a></p><p class="admin-note">Only admins can preview drafts. Publish to make it public.</p>')+'</div><div class="product-row-actions"><button type="button" data-edit-product="'+esc(p.id)+'">Edit</button><button type="button" data-delete-product="'+esc(p.id)+'">Delete</button></div></article>').join(""):"<p>No products in database yet. Add your first product above.</p>";
+ if(viewError){state("Products loaded, but view statistics need the database migration: "+viewError.message);return}
+ if(itemError){state("Products loaded, but order statistics could not be read: "+itemError.message);return}
+ records=data||[];const viewCounts={},orderSets={};
+ (viewRows||[]).forEach(v=>{if(v.product_id)viewCounts[v.product_id]=(viewCounts[v.product_id]||0)+1});
+ (itemRows||[]).forEach(i=>{let productId=i.product_id;if(!productId){const p=records.find(x=>i.product_name===x.name||String(i.product_name||"").startsWith(x.name+" — "));productId=p?.id;}if(productId){orderSets[productId]??=new Set();orderSets[productId].add(i.order_id)}});
+ state(records.length+" products · Total views and orders shown per product.");
+ $("productCards").innerHTML=records.length?records.map(p=>'<article class="product-row"><img src="'+esc(p.image_url||"https://placehold.co/120x140?text=Product")+'" alt=""><div><h3>'+esc(p.name)+'</h3><p>'+esc(p.category||"Uncategorised")+' · '+money(p.min_price)+' · Stock '+Number(p.stock_quantity||0)+'</p><p class="product-status">'+esc(p.status||"draft")+'</p>'+(p.status==="published"?'<p><a href="'+esc(productUrl(p))+'" target="_blank" rel="noopener">View product page ↗</a></p>':'<p><a href="'+esc(productUrl(p))+'" target="_blank" rel="noopener">Preview draft page ↗</a></p><p class="admin-note">Only admins can preview drafts. Publish to make it public.</p>')+'<div class="product-stats"><span><strong>'+Number(viewCounts[p.id]||0).toLocaleString("en-PK")+'</strong><small>Total views</small></span><span><strong>'+Number(orderSets[p.id]?.size||0).toLocaleString("en-PK")+'</strong><small>Total orders</small></span><span><small>Stats from</small><strong>'+esc(p.published_at?new Date(p.published_at).toLocaleDateString("en-PK"):"—")+'</strong></span></div></div><div class="product-row-actions"><button type="button" data-edit-product="'+esc(p.id)+'">Edit</button><button type="button" data-delete-product="'+esc(p.id)+'">Delete</button></div></article>').join(""):"<p>No products in database yet. Add your first product above.</p>";
  document.querySelectorAll("[data-edit-product]").forEach(b=>b.addEventListener("click",()=>editProduct(b.dataset.editProduct)));
  document.querySelectorAll("[data-delete-product]").forEach(b=>b.addEventListener("click",()=>deleteProduct(b.dataset.deleteProduct)));
 }
@@ -83,7 +92,7 @@ async function saveProduct(e){
  description:$("pDescription").value.trim(),highlights:$("pHighlights").value.trim(),image_url:image,images,
  min_price:Math.min(...variants.map(v=>v.price)),max_price:Math.max(...variants.map(v=>v.price)),min_regular:variants.map(v=>v.regular).filter(v=>v!==null).length?Math.min(...variants.map(v=>v.regular).filter(v=>v!==null)):regular,stock_quantity:variants.reduce((sum,v)=>sum+v.stock,0),variants,
  seo_title:$("pSeoTitle").value.trim()||name,seo_description:$("pSeoDescription").value.trim()||$("pDescription").value.trim().slice(0,300),
- status:$("pStatus").value,updated_at:new Date().toISOString()};
+ status:$("pStatus").value,published_at:$("pStatus").value==="published"?(records.find(p=>String(p.id)===String(id))?.published_at||records.find(p=>String(p.id)===String(id))?.created_at||new Date().toISOString()):null,updated_at:new Date().toISOString()};
  const btn=$("saveProductBtn");btn.disabled=true;btn.textContent="Saving…";state("Saving product…");
  const {error}=await db.from("products").upsert(payload,{onConflict:"id"});
  btn.disabled=false;btn.textContent="Save product";
