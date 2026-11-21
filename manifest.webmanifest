@@ -1,0 +1,16 @@
+{
+  "id": "/",
+  "name": "BRIOLLORA",
+  "short_name": "BRIOLLORA",
+  "description": "Shop jewellery, accessories, bags, gifts and DIY supplies at BRIOLLORA.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "display_override": ["standalone", "minimal-ui"],
+  "background_color": "#f8f5f0",
+  "theme_color": "#f8f5f0",
+  "icons": [
+    { "src": "/assets/pwa-icon.svg", "sizes": "192x192", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "/assets/pwa-icon.svg", "sizes": "512x512", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}
